@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------
+
+Template:Interio
+Version: 1.2.0
+Last change:16/05/17 [fixed bug, zn]
+Author:Azelab
+
+-------------------------------------------------------------------*/
+
+/* TABLE OF CONTENTS:
+
+0. RESET
+1. BOOTSTRAP
+2. FONTS
+3. MIXINS
+4. TYPOGRAPHY
+5. HELP CLASSES
+6. SLIDER STYLES
+7. SLIDER NAV BUTTON STYLES
+8. SLIDER PAGINATION STYLES
+9. HEADER
+10. FOOTER
+11. POPUP & PANEL
+12. RESPONSIVE
+13. SHOP PAGE
+14. SHOP PAGE TOP SIDEBAR
+15. BLOG PAGE
+16. BLOG SIDEBAR
+17. BLOG POST
+18. ABOUT PAGE
+19. CONTACT PAGE
+20. PROJECT PAGE
+21. GALLERY
+22. PROJECT LIST SLIDER
+23. PRICE PAGE
+24. REGISTRETION PAGE
+25. SERVICE PAGE
+26. TEAM PAGE
+27. PRODUCT PAGE
+28. SINGLE 1
+29. SINGLE 2
+30. SINGLE 3
+31. Onepage v5
+32. Mini
+33. Solo
+34. Onepage v6
+35. Index (dark)
+*/
+
+
+@import "reset";
+@import	"bootstrap";
+@import	"main";
+@import "shop";
+@import "blog";
+@import "about";
+@import "contact";
+@import "project";
+@import "page";
+@import "fullpage";
+@import "single";
+@import "onepage_5";
+@import "mini";
+@import "solo";
+@import "onepage_6";
+@import "index";

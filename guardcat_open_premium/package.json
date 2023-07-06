@@ -1,0 +1,24 @@
+{
+  "name": "guardcat",
+  "version": "1.0.0",
+  "description": "Comply to the European cookie law",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "cookie",
+    "law",
+    "rgpd",
+    "gdpr",
+    "cookie"
+  ],
+  "author": "AIC Agency SAS Design Tweak :13",
+  "license": "MIT",
+  "homepage": "https://2points13.fr/guard_cat_rgpd_tool.html"
+}

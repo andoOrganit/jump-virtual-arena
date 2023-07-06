@@ -1,0 +1,137 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 21. PROJECT PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.izotope-container {position: relative; }
+.wh-50 {width: 50%;}
+.wh-25 {width: 25%;}
+.wh-100 {width: 100%;}
+.grid-sizer {width:0;}
+.item {position: relative; float: left; display: block;
+	& img {width: 100%; height: auto; display: block;}
+}
+.project-item {position: relative; width: 100%; height: 100%; @include transition (all 0.25s ease-out);
+	& .layer-bg-3 {opacity: 0;}
+}
+.project-title {position: absolute; left: 60px; top: 60px; max-width: 660px; 
+	& .sub-title {color: $col-text3; margin-bottom: 20px; font-size: 14px;}
+	& .title a {color: $col-text3;}
+	& .title a:hover {color: $bg-type1;}
+	&.sm {max-width: 470px;}
+	&.sm .title {font-size: 40px; line-height: 50px;}
+	&.lg  {max-width: 1280px;}
+	&.lg .title {font-size: 80px; line-height: 90px;}
+}
+.filter-list {text-align: center; padding-bottom: 30px;
+	& .link-style-1 {position: relative; display: inline-block; height: 30px; font-size: 15px; line-height: 26px; color: $col-text; padding: 0px 15px; border-radius: 20px; overflow: hidden; z-index: 1; cursor: pointer; margin: 0 5px; @include transition (all 0.25s ease-out);}
+	& .link-style-1 span {z-index: 5; position: relative;}
+	& .link-style-1:before {content: ''; position: absolute; left: 0px; top: 0px; border-radius: 50px;background: $col-text; width: 100%; height: 100%; border-radius: 20px; @include transform(translateX(110%)); @include transition (all 0.25s ease-out);}
+	& .link-style-1:hover:before, & .link-style-1.active:before {@include transform(translateX(0%));}
+	& .link-style-1:hover, & .link-style-1.active {color: $col-text3;}
+}
+
+.height-lg {height: 870px;}
+.height-md {height: 435px;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 22. GALLERY */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.mobile-toggle-slide {text-align: center; position: relative; margin: 0 auto; width: 100%;}
+.slide-lidt-text {position: relative; width: 100%; display: none; padding: 0px 20px; height: 50px; border: 2px solid #d2d2d3; line-height: 46px; margin: 0 auto 30px; cursor: pointer;}
+.slide-lidt-text i {position: absolute; right: 20px; top: 0px;}
+.gallery-slide-1  {padding-top: 50px;}
+.gallery-slide-1 .swiper-slide {width: auto;}
+.gallery-slide {text-align: center;
+	& .text {max-width: 570px; display: block; margin: 50px auto 80px; padding: 0px 15px; opacity: 0;@include transition (all 0.25s ease-out);}
+	& .title {padding-bottom: 10px; color: $col-text; display: block;}
+	& .image img {max-width: 100%;}
+}
+.gallery-title {text-align: center; padding-top: 60px; position: relative; width: 100%;
+	& i {font-size: 30px;line-height: 55px;display: inline-block;vertical-align: bottom;}
+}
+.swiper-slide-active .gallery-slide .text {opacity: 1;}
+
+@media (min-width: 992px) {
+    .item.scale-hover:hover .project-item {@include transform(scale(1.05)); z-index: 5; box-shadow: $item-shadow8;}
+	.item.scale-hover:hover .project-item .layer-bg-3 {opacity: 1;}
+}
+@media (max-width: 1200px) {
+	.project-title {left: 30px; top: 30px; right: 30px;}
+	.project-title .title, .project-title.sm .title, .project-title.lg .title {font-size: 30px; line-height: 40px;}
+	.project-title .sub-title {margin-bottom: 10px;}
+    .height-lg {height: 600px;}
+    .height-md {height: 300px;}
+}
+@media (max-width: 992px) {
+    .project-item .layer-bg-3 {opacity: 1;} 
+	.wh-50 {width: 100%;}
+	.slide-lidt-text {display: inline-block;}
+	.mobile-toggle-slide {max-width: 320px;}
+	.mobile-toggle-slide ul {position: absolute; left: 0px; top: 50px; background: #fff; padding: 20px;min-width: 100%; z-index: 50; box-shadow: $item-shadow3;
+		& .link-style-1 {width: 100%; display: block; border-radius: 0px; margin: 0px;}
+		& .link-style-1:before {border-radius: 0px;}
+	}
+	.slide-toggle-list{display: none;}
+	.gallery-slide .text {margin-top: 30px;}
+	.gallery-slide-1 .swiper-slide {width: 100%;}
+    .height-lg {height: 300px;}
+    .height-md {height: 300px;}
+}
+@media (max-width: 768px) {
+	.main-baner-full {display: inline-block;}
+}
+@media (max-width: 480px) {
+	.project-title {left: 15px; top: 15px; right: 15px;}
+	.project-title .title, .project-title.sm .title, .project-title.lg .title {font-size: 20px; line-height: 26px;}
+	.project-title .sub-title {font-size: 11px;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 23. PROJECT LIST SLIDER */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.main-list-content {position: relative; width: 100%; overflow: hidden; padding:20px 0px 50px;}
+.project-list {height: auto; padding: 20px 0px; overflow: visible;;
+	& .swiper-slide {width: auto; height: auto;}
+	& .swiper-slide:first-child .bg {transform-origin: left center; -webkit-transform-origin: left center;-moz-transform-origin: left center;-ms-transform-origin: left center;}
+	& .swiper-slide:last-child .bg {transform-origin: right center; -webkit-transform-origin: right center;-moz-transform-origin: right center;-ms-transform-origin: right center;}
+}
+.project-item-2 { position: relative; display: block; width: 210px; height: 210px; margin: 0px 20px;
+	& .layer {position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; display: block; z-index: 5; opacity: 0; background: $col-text2; backface-visibility: hidden;}
+	& .bg {@include transition (all 0.25s ease-out);}
+	& .main-img {max-width: 100%; height: auto;}
+}
+.slider-list-container {position: relative; width: 100%; display: inline-block;}
+.slider-list-desc {position: absolute; left: 0px; top: 0px; width: 300px; height: 100%; padding: 20px 20px 0px 0px; background:$bg-type2; z-index: 5; font-size: 0px;
+	.title {position: relative; text-align: right; font-size: 35px; line-height: 35px}
+	&:before {content: ''; position: absolute; left: 0px; bottom: -100%; width: 100%; height: 100%; background: inherit;}
+}
+.slider-list-gallery {position: relative; float: left; width: 100%; padding-left: 300px; background:$bg-type2;}
+.first-list .slider-list-desc {top: -20px; padding-top: 40px;}
+
+@media (min-width: 992px) {
+    .project-item-2:hover .layer {opacity: 1;} 
+	.project-item-2:hover .bg {@include transform(scale(1.37)); box-shadow: $item-shadow8; z-index: 1;}
+	.project-item-2:hover .vertical-align img {@include transform(scale(0.63));}
+}
+@media (max-width: 992px) {
+	.slider-list-desc {position: relative; width: 100%; height: auto; display: inline-block; text-align: center; padding-top: 20px;}
+	.first-list .slider-list-desc {top: auto; padding: 20px 0px 0px 0px;}
+	.slider-list-desc .title {text-align: center;}
+	.slider-list-gallery {padding-left: 0px;}
+}
+@media (max-width: 768px) {
+	.project-item-2 {width: 150px; height: 150px; margin: 0 10px;}
+	.slider-list-desc .title {font-size: 26px; line-height: 32px;}
+}
+
+
+
+
+
+
+
+
+
+

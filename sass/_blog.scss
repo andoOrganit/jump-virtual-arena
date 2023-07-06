@@ -1,0 +1,205 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 16. BLOG PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.blog-item {position: relative; display: inline-block; width: 100%; background: $col-text3; margin-bottom: 55px; padding: 35px 70px 40px;
+	& .title {padding-bottom: 15px;}
+	& .title a {color: $col-text;}
+	& .title a:hover {color:$col-text10;}
+	& .simple-text {padding-bottom: 20px;}
+	& .simple-text p {color: $col-text2;}
+	&.full-w {padding: 0px;}
+	&.full-w .text {padding: 20px 70px 20px; position: relative; display: inline-block; width: 100%;}
+	&.full-w .like-item {float: left;}
+	&.full-w .like-item a {padding-right: 40px;}
+	&.full-bg .title a, &.full-bg .date-line a {color: $col-text3;}
+	&.full-bg .simple-text p {color: $col-text12;}
+	&.full-bg .date-line span {color: $col-text4;}
+}
+.date-line {position: relative; display: inline-block; width: 100%; font-size: 12px; font-weight: 900; text-transform: uppercase; @extend .font-type-2; padding-bottom: 15px;
+	& a {color: #4d4d4e; display: inline-block; padding-right: 20px;}
+	& a:hover {color: $bg-type1;}
+	& span {color: $col-text2;}
+}
+.like-item {display: inline-block; position: relative; float: right; font-size: 13px; text-transform: uppercase; font-weight: 700; @extend .font-type-2; padding: 25px 0px;
+	& a {color: $col-text9;}
+	& i {font-size: 18px; padding-right: 10px; vertical-align: middle;}
+	& span {line-height: 18px; vertical-align: middle;}
+	& a:hover {color: #75acff;}
+}
+.wh-img .image {position: absolute; width: 50%; height: 100%; top: 0px; @include transition(all 300ms ease-out);}
+.wh-img .simple-text {padding-bottom: 75px;}
+.blog-item.right-img .image {right: 0px;}
+.blog-item.right-img .text {position: relative; float: left; width: 50%; display: inline-block; height: 100%; padding-right: 60px;}
+.blog-item.left-img .image {left: 0px;}
+.blog-item.left-img .text {position: relative; float: right; width: 50%; display: inline-block; height: 100%; padding-left: 60px;}
+
+.load-more {position: relative; cursor: pointer; margin-bottom: 60px; width: 100%; text-align: center; font-size: 13px; color: $col-text; @extend .font-type-2; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; overflow: hidden; height: 75px; line-height: 75px; background: $bg-type2; box-shadow: $item-shadow3;
+	& span {z-index: 5; position: relative; display: inline-block;}
+	&:before {content: ''; width: 100px; height: 100px; background: #dedfdd; border-radius: 50%; left: 50%; bottom: 0%; margin: 0px 0px -50px -50px; position: absolute; @include transition(all 300ms ease-out);}
+	&:hover:before {@include transform(scale(5)); opacity: 0;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 17. BLOG SIDEBAR */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.search-input {position: relative; width: 100%; margin-bottom: 20px;
+	& .input-text {position: relative; width: 100%; height: 50px; border: 2px solid #d2d2d3; border-radius: 5px; line-height: 46px; @extend .font-type-2; font-size: 14px; font-weight: 700; text-transform: uppercase; padding: 0px 50px 0px 15px; background: none;}
+	& .send-button {position: absolute; right: 0px; top: 0px; width: 50px; height: 100%; line-height: 50px; text-align: center; color: #a8a9a8;}
+	& .send-button input {@extend .pos-absol; z-index: 5; cursor: pointer; background: none; border: 0px none;}
+}
+.sidebar-item.no-bg {background: none;}
+.inst-row {margin-left: -7px; margin-right: -7px;}
+.inst-item {position: relative; float: left; display: inline-block; width: 33.333%;padding: 0px 7px 14px; border-radius: 5px; overflow: hidden; height: 70px;
+	& a {position: relative; display: inline-block; width: 100%; height: 100%;}
+	& .bg {border-radius: 5px; @include transition(all 300ms ease-out);}
+	&:hover .bg {opacity: 0.5;}
+}
+.sidebar-item .title .link-inst {color: $col-text10; border-bottom: 0px none;}
+.list-toggle {
+    & li {border-bottom: 1px solid #ededed; position: relative; width: 100%; display: block;}
+	& li a {@extend .font-type-2; padding: 15px 20px; z-index: 5; font-weight: 700; font-size: 13px; line-height: 16px; text-transform: uppercase;color: $col-text2; position: relative; display: inline-block; width: 100%;}
+	& li:hover a {color: $col-text;}
+	& .arrow {position: absolute; right: 20px; top: 0px; line-height: 45px; display: block; font-size: 10px; @include transition(all 300ms ease-out); color: $col-text2;}
+	& .arrow.act {@include transform(rotate(180deg));}
+	& li ul {border-top: 1px solid #ededed; display: none;}
+	& li ul li a {padding: 15px 20px 15px 35px; font-weight: 400;}
+	& li ul li:last-child {border-bottom: 0px none;}   
+}
+.sidebar-slider {position: relative; width: 100%; height: 300px; overflow: hidden;
+	& .bg {border-radius: 5px;}
+	& .title {color: $col-text3; position: absolute; left: 0px; top: 0px; width: 100%; border-bottom: 1px solid $col-text8; z-index: 5;}
+	& .small-arrow-style .swiper-button{line-height: 50px;}
+	& .small-arrow-style .swiper-arrow-right {right: 10px;}
+	& .small-arrow-style .swiper-arrow-left {right: 25px;} 
+}
+
+@media (min-width: 992px) {
+    .wh-img:hover .image  {box-shadow: $item-shadow4;} 
+}
+@media (max-width: 992px) {
+    .blog-item.left-img .text {padding-left: 30px;}
+	.blog-item.right-img .text {padding-right: 30px;}
+	.blog-item {padding: 30px;}	
+}
+@media (max-width: 768px) {
+    .wh-img .image {position: relative; width: 100%; height: 300px;}
+	.blog-item.left-img .text, .blog-item.right-img .text {width: 100%; padding: 30px;}
+	.wh-img .simple-text {padding-bottom: 40px;}
+	.blog-item, .load-more {margin-bottom: 30px;}
+	.blog-item {padding: 0px;}
+	.blog-item.no-img {padding: 30px;}
+	.blog-item.full-w .text {padding: 20px 30px;}
+}
+@media (max-width: 480px) {
+    .like-item {padding: 10px 0px; font-size: 11px;
+		& i {font-size: 16px;}
+	} 
+	.blog-item.left-img .text, .blog-item.right-img .text, .blog-item.no-img {padding: 20px 15px;}
+	.date-line a {padding-right: 10px;}
+	.date-line {font-size: 11px;}
+	.load-more {font-size: 11px; line-height: 45px; height: 45px;}
+	.blog-item.full-w .text {padding: 20px 15px;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 18. BLOG POST */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.align-wrap {margin-left: -25px; position: relative; width: 100%; height: 100%;}
+.blog-post-img {position: relative; float: right; width: 50%; height: inherit;}
+.padd-wrap {position: relative; width: 100%; padding: 90px 0px 95px; display: inline-block; height: 100%;}
+.blog-post-desc {position: absolute; width: 50%; left: 0px; top: 90px; bottom: 0px; overflow-y: auto; padding: 70px 70px 70px 80px;
+	& .title {line-height: 70px; padding-bottom: 25px; display: block;}
+	& .sub-title-black {color: $col-text9; padding-bottom: 20px;}
+	& article .simple-text {padding-bottom: 25px;}
+	& .tags {margin-bottom: 35px;}
+}
+.back-button {position: relative; width: 30px; text-align: center; height: 60px; display: block; margin-bottom: 30px;
+	& i {color: #b1b2b0; font-size: 55px; line-height:57px; display: block;}
+}
+.quote-text {border: 1px solid #b6b7b5; position: relative; padding: 35px 35px 50px; margin: 20px 0px 70px;
+	& .sub-title {color: $col-text10; font-size: 12px; padding-bottom: 20px; z-index: 1; position: relative;}
+	& p {font-size: 19px; line-height: 28px; color: $col-text;}
+	& p i {font-style: italic; font-weight: 700;}
+	& .bq {display: block; position: absolute; left: -55px; top: 0px; font-size: 250px; line-height: 110px; color: #eceeeb; text-shadow: 0px 39px 54px rgba(4,5,5,0.35);}
+}
+.post-author {position: relative; text-align: center; padding-bottom: 30px;
+	& .image {position: relative; display: inline-block;}
+	& .image span {font-size: 85px; @extend .font-type-3; color: rgba(77,77,78,0.15); letter-spacing: 1.4px; line-height: 90px; display: block; position: relative; text-transform: uppercase;}
+	& .image img {position: absolute; left: 50%; @include transform(translateX(-50%)); top: 0px;}
+	& h5 {font-size: 15px; @extend .font-type-3; color: $col-text; line-height: 18px; text-transform: uppercase; letter-spacing: 1.4px;}
+}
+.post-share {position: relative; display: inline-block; width: 100%; text-align: center; margin-bottom: 50px; 
+	& .share {position: relative; width: 33.333%; height: 59px; border: 1px solid #b2b3b1; border-right: 0px none; line-height: 54px; display: block; float: left; color: rgba(77,77,78,0.4);}
+	& .share:hover {color: $col-text;}
+	& .share span {display: inline-block; font-size: 12px; letter-spacing: 5.4px; font-weight: 700; text-transform: uppercase; @extend .font-type-2;}
+	& .share i {display: inline-block; padding-right: 15px; font-size: 18px;}
+	& .comm {position: relative; float: left; display: block; width: 60px; line-height: 56px; color: rgba(77,77,78,0.4); border: 1px solid #b2b3b1; font-size: 18px;}
+	& .comm:hover {color: $col-text;}
+}
+.share-wrap {position: relative; width: 100%; padding-right: 60px;}
+.block-comment {position: relative; width: 100%; margin-bottom: 55px; display: inline-block;
+	& .image {position: relative; float: left;}
+	& .image img {max-width: 75px; height: auto;}
+	& .text {position: relative; padding-left: 100px;}
+	& .text textarea {background: $col-text3; resize: none; border-radius: 5px; height: 135px; width: 100%; padding: 25px; font-size: 14px; color: $col-text; position: relative; margin-bottom: 15px;}
+	& .text .button-type-1 {margin-bottom: 30px;}
+	& .caption {@extend .font-type-2; position: relative; display: block; padding-bottom: 15px;}
+	& .caption a {font-size: 14px; letter-spacing: 1.4px; @extend .font-type-3; color: $col-text; padding-right: 10px; text-transform: uppercase;}
+	& .caption span {font-size: 13px; color: $col-text10;}
+}
+.comment-wrapper .title-comment {display: block; margin-bottom: 40px; font-size: 12px; text-transform: uppercase; font-weight: 700; letter-spacing: 5.4px;@extend .font-type-2; color: $col-text; text-align: center;}
+
+.post-navigation {position: relative; width: 100%; display: inline-block; padding-bottom: 70px;
+	& .nav-arr {position: relative; width: 50%; float: left; padding: 0px 45px;}
+	& .nav-arr i {display: block; font-size: 60px; line-height: 60px; color: #b1b2b0; position: absolute; @include transition(all 300ms ease-out);}
+	& h5 {font-size: 15px; line-height: 21px; color: $col-text; display: block; padding-bottom: 10px;}
+	& .sub-title-black {font-size: 11px; color: $col-text9;}
+	& .nav-arr:hover i {color: $col-text;}
+}
+.right-post-nav {text-align: right;& i {right: 0px;} &:hover i {margin-right: 15px;}}
+.left-post-nav {text-align: left;& i {left: 0px;} &:hover i {margin-left: 15px;}}
+
+@media (max-width: 1500px) {
+	.post-navigation .right-post-nav {padding: 0px 50px 0px 0px;}
+	.post-navigation .left-post-nav {padding: 0px 0px 0px 50px;}
+	.blog-post-desc {padding: 70px 30px;}
+	.quote-text .bq {left: 0px;}
+	.block-comment .text .button-type-1 {margin-bottom: 0px;}
+}
+@media (max-width: 1400px) {
+	.blog-post-desc {top: 66px;}
+}
+@media (max-width: 1200px) {
+	.blog-post-desc {padding: 50px 30px;}
+	.post-share .share span {font-size: 11px; letter-spacing: 1.4px;}
+}
+@media (max-width: 992px) {
+	.blog-post-img {width: 100%; height: 450px; margin-top: 66px;}
+	.blog-post-desc {position: relative; width: 100%; top: auto;}
+	.back-button {margin-bottom: 20px;}
+	.blog-post-desc .title {font-size: 40px; line-height: 50px; padding-bottom: 15px;}
+	.blog-post-desc article .simple-text.large p {font-size: 20px; line-height: 28px;}
+	.post-navigation {padding-bottom: 0px;}
+}
+@media (max-width: 500px) {
+	.post-navigation h5, .post-navigation .sub-title-black, .post-share .share span {display: none;}
+	.post-share .share i {padding-right: 0px;}
+	.post-navigation .right-post-nav, .post-navigation .left-post-nav {padding: 0px;}
+	.post-navigation .nav-arr i {position: relative;}
+	.quote-text {padding: 35px 25px; }
+	.quote-text .bq {font-size: 150px; line-height: 90px;}
+	.post-author .image span {font-size: 50px;}
+	.tags .tag-link {margin: 0px 3px 6px;}
+	.block-comment .text {padding-left: 0px;}
+	.block-comment .image {display: block; float: none;}
+	.block-comment .image img {margin: 0 auto 20px; display: block;}
+	.blog-post-desc {padding: 30px 15px;}
+	.block-comment {margin-bottom: 30px;}
+}
+
+
+
+

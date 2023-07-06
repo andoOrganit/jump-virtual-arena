@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/fontello.css" rel="stylesheet" type="text/css" />
+  <link href="css/fontello_2.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <title>JUMP Virtual Arena | Réalité Virtuelle | Espace VR | 45000 Orléans</title>
+
+  <script type="text/javascript" src="guardcat_open_premium/guardcat.js"></script>
+
+
+  <script type="text/javascript">
+    guardcat.init({
+      "privacyUrl": "https://jump-virtualarena.fr/docs/RGPD%20-%20mentions%20l%c3%a9gales%20jump.pdf",
+      /* Privacy policy url */
+
+      "hashtag": "#guardcat",
+      /* Open the panel with this hashtag */
+      "cookieName": "guardcat",
+      /* Cookie name */
+
+      "orientation": "bottom",
+      /* Banner position (top - bottom) */
+      "showAlertSmall": false,
+      /* Show the small banner on bottom right */
+      "cookieslist": true,
+      /* Show the cookie list */
+
+      "adblocker": false,
+      /* Show a Warning if an adblocker is detected */
+      "AcceptAllCta": true,
+      /* Show the accept all button when highPrivacy on */
+      "highPrivacy": true,
+      /* Disable auto consent */
+      "handleBrowserDNTRequest": false,
+      /* If Do Not Track == 1, disallow all */
+
+      "removeCredit": false,
+      /* Remove credit link */
+      "moreInfoLink": false,
+      /* Show more info link */
+      "useExternalCss": false,
+      /* If false, the guardcat.css file will be loaded */
+
+      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+
+      "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+    });
+  </script>
+  <script type="text/javascript">
+    (guardcat.job = guardcat.job || []).push('facebooklikebox');
+  </script>
+
+  <script type="text/javascript">
+    guardcat.user.facebookpixelId = 'YOUR-ID';
+    tarteaucitron.user.facebookpixelMore = function () {
+      /* add here your optionnal facebook pixel function */
+    };
+    (guardcat.job = guardcat.job || []).push('facebookpixel');
+  </script>
+
+  <script type="text/javascript">
+    (guardcat.job = guardcat.job || []).push('youtube');
+  </script>
+
+  <script type="text/javascript">
+    (guardcat.job = guardcat.job || []).push('vimeo');
+  </script>
+
+  <script type="text/javascript">
+    (guardcat.job = guardcat.job || []).push('dailymotion');
+  </script>
+
+  <script type="text/javascript">
+    (guardcat.job = guardcat.job || []).push('datatrack');
+  </script>
+
+  <script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "//2points13.fr/track/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '3']);
+      var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + 'matomo.js';
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+
+  <script type="text/javascript">
+    <!--
+    if (screen.width <= 699) {
+      document.location = "event_mobile.html";
+    }
+    //
+    -->
+  </script>
+
+
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".Video").click(function () {
+        var iframe = $(this).html();
+        $(".VideoPlayer").html("");
+        $("#Title").html($(this).data("title"));
+        $("#Description").html($(this).data("desc"));
+
+        $(".VideoPlayer").html(iframe);
+        $(".Player").addClass("active");
+        setTimeout(function () {
+          $(".Info").addClass("active");
+        }, 1000);
+      });
+      $(".Cross").click(function () {
+        $(".Info").removeClass("active");
+        setTimeout(function () {
+          $(".VideoPlayer").html("");
+          $(".Player").removeClass("active");
+        }, 1000);
+      });
+    })
+  </script>
+
+
+
+  <style type="text/css">
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Montserrat', sans-serif
+    }
+
+    a:hover,
+    a:active {
+      text-decoration: none;
+    }
+
+    .home {
+      width: 100%;
+    }
+
+    .home:before {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .home h1 {
+      position: absolute;
+      text-align: left;
+      margin-left: 15px;
+    }
+
+    .stage {
+      width: auto;
+      margin-top: 15px;
+      height: 100px;
+    }
+
+    .cubespinner {
+      -webkit-animation-name: spincube;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-duration: 8s;
+      animation-name: spincube;
+
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 8s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform-origin: 40px 40px 0;
+      -moz-transform-origin: 40px 40px 0;
+      -ms-transform-origin: 40px 40px 0;
+      transform-origin: 40px 40px 0;
+    }
+
+    .cubespinner div {
+      position: absolute;
+      width: 400px;
+      height: 80px;
+      text-align: left;
+      color: #109393;
+      font-family: 'Raleway', sans-serif;
+      font-size: 74px;
+      font-weight: 700;
+    }
+
+    .cubespinner .face1 {
+      color: #1e76e2;
+      -webkit-transform: translateZ(40px);
+      -moz-transform: translateZ(40px);
+      -ms-transform: translateZ(40px);
+      transform: translateZ(40px);
+      -webkit-backface-visibility: hidden;
+    }
+
+    .cubespinner .face2 {
+      color: #fff;
+      -webkit-transform: rotateX(90deg) translateZ(40px);
+      -moz-transform: rotateX(90deg) translateZ(40px);
+      -ms-transform: rotateX(90deg) translateZ(40px);
+      transform: rotateX(90deg) translateZ(40px);
+      -webkit-backface-visibility: hidden;
+    }
+
+    .cubespinner .face3 {
+      color: #1e76e2;
+      -webkit-transform: rotateX(180deg) translateZ(40px);
+      -moz-transform: rotateX(180deg) translateZ(40px);
+      -ms-transform: rotateX(180deg) translateZ(40px);
+      transform: rotateX(180deg) translateZ(40px);
+      -webkit-backface-visibility: hidden;
+    }
+
+    .cubespinner .face4 {
+      color: #fff;
+      -webkit-transform: rotateX(270deg) translateZ(40px);
+      -moz-transform: rotateX(270deg) translateZ(40px);
+      -ms-transform: rotateX(270deg) translateZ(40px);
+      transform: rotateX(270deg) translateZ(40px);
+      -webkit-backface-visibility: hidden;
+    }
+
+
+    .cubespinner .face5 {
+      color: #fff;
+      -webkit-transform: rotateX(360deg) translateZ(40px);
+      -moz-transform: rotateX(360deg) translateZ(40px);
+      -ms-transform: rotateX(360deg) translateZ(40px);
+      transform: rotateX(360deg) translateZ(40px);
+      -webkit-backface-visibility: hidden;
+    }
+
+
+    /*Cubical Flipping or rotation*/
+    @-webkit-keyframes spincube {
+
+      from,
+      to {
+        -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+
+      15% {
+        -webkit-transform: rotateX(90deg);
+      }
+
+      25% {
+        -webkit-transform: rotateX(90deg);
+      }
+
+      40% {
+        -webkit-transform: rotateX(180deg);
+      }
+
+      50% {
+        -webkit-transform: rotateX(180deg);
+      }
+
+      65% {
+        -webkit-transform: rotateX(270deg);
+      }
+
+      75% {
+        -webkit-transform: rotateX(270deg);
+      }
+
+      95% {
+        -webkit-transform: rotateX(360deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(360deg);
+      }
+    }
+
+    @keyframes spincube {
+
+      from,
+      to {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+      }
+
+      15% {
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        -ms-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+      }
+
+      25% {
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        -ms-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+      }
+
+      40% {
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+      }
+
+      50% {
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+      }
+
+      65% {
+        -webkit-transform: rotateX(270deg);
+        -moz-transform: rotateX(270deg);
+        -ms-transform: rotateX(270deg);
+        transform: rotateX(270deg);
+      }
+
+      75% {
+        -webkit-transform: rotateX(270deg);
+        -moz-transform: rotateX(270deg);
+        -ms-transform: rotateX(270deg);
+        transform: rotateX(270deg);
+      }
+
+      90% {
+        -webkit-transform: rotateX(360deg);
+        -moz-transform: rotateX(360deg);
+        -ms-transform: rotateX(360deg);
+        transform: rotateX(360deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(360deg);
+        -moz-transform: rotateX(360deg);
+        -ms-transform: rotateX(360deg);
+        transform: rotateX(360deg);
+      }
+
+      @media (max-width: 1400px) {
+        .nav-menu {
+          margin-top: -40px;
+        }
+      }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="preload loading" style="background: #000;">
+    <div class="loader">Chargement...</div>
+  </div>
+
+  <div class="container-perspective">
+    <div class="effect-push">
+
+      <div class="wrap-over">
+        <div class="pusher-layer"></div>
+
+        <!--==========HEADER============-->
+
+        <header class="header style-center style-fullpage scroll-show">
+          <div class="header-wrap container" style="text-align: right;">
+            <div class="burger vertical-align"><i></i></div>
+            <a href="index.html" class="logo vertical-align"><img src="img/logo_onepage_7.png" alt="" style="margin-top: 0px;"></a>
+            <nav>
+              <div class="nav-menu" style="margin-top: 10px; ">
+
+                <ul>
+
+
+
+
+
+                  <li><a href="index.html" class="anchor-link" style="color: #fff;"><b>Home</b></a></li>
+                  <li><a href="trampoline.html" class="anchor-link" style="color: #fff;"><b>Trampoline</b></a></li>
+                  <li><a href="virtual_arena.html" class="anchor-link" style="color: #fff;"><b>Réalité virtuelle</b></a></li>
+                  <li><a href="event.html" class="anchor-link" style="color: #1e76e2;"><b>Event</b></a></li>
+                  <li><a href="index.html#Venir" class="anchor-link" style="color: #fff;"><b>Plan</b></a></li>
+                  <li><a href="contact.html" class="anchor-link" style="color: #fff;"><b>Contact</b></a></li>
+                  <li><a href="tel:+33238440244" class="anchor-link" style="color: #fff;"><b style="color: #fff;">02 38 44 02 44</a></b></li>
+                </ul>
+                <div class="align-bottom">
+                  <div class="mobile-footer">
+
+                    <span class="copyright">&copy; 2019 JUMP Virtual Arena</span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <div class="header-icon vertical-align">
+            </div>
+
+            <div class="popup search-panel popup-data-search">
+              <div class="wrap">
+                <div class="close"><i class="fa-cancel"></i></div>
+                <div class="table-view">
+                  <div class="cell-view">
+                    <form action="#" class="serch-form">
+                      <input type="text" placeholder="Search..." required>
+                      <div class="close-result vertical-align">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!--==========MAIN CONTENT============-->
+
+
+        <section class="section-fullpage bg-section-1 scroll-down-block" style="font-family: 'Montserrat', sans-serif!important;padding-top:10%;background: #232526;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        ">
+          <div class="container">
+            <div class="title-second type-2 col-style-1">
+              <h2 class="title h5" style="font-weight:700; margin-bottom: 25px;color: #f07043;">VOTRE PARANTHÈSE LUDIQUE</h2>
+            </div>
+            <div style="text-align: center; font-size:30px; padding-right:10%;padding-left: 10%;padding-bottom: 5%;">
+              <p class="title" style="font-weight:400; color: #fff;">Renforcer la cohésion de vos équipes avec notre gamme de divertissements sportifs et numériques</p>
+            </div>
+            <div class="margin-custom " style="padding-bottom: 5%;">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div style="display:flex; justify-content: center;">
+                    <img src="img/logo_onepage_trampo.png" />
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div style="display:flex; justify-content: center;">
+                    <img src="img/logo_onepage_vr.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; font-size:35px; padding-right:10%;padding-left: 10%;padding-bottom: 5%;">
+              <p class="title" style="font-weight:400; color: #fff;">Découvrez nos offres sur mesure pour développer l'esprit d'équipe de vos collaborateurs !</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-fullpage" style=" background: #111; opacity: 1;">
+          <div class="bg">
+            <div class="layer-bg-2" style="background: #111;"></div>
+          </div>
+          <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div style="display:flex; justify-content: center;">
+                  <img src="img/logo_onepage_trampo.png" />
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12" style="font-family: 'Montserrat', sans-serif!important;text-align: center; font-size:30px; padding-right:10%;padding-left: 10%;padding-bottom: 5%;">
+                <p class="title" style="font-weight:500; color: #f07043;">Faites bondir vos salariés !</p>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="section-fullpage">
+
+
+          <div class="container-fluid" style="margin-top: 30px;">
+
+            <div class="margin-custom">
+              <div class="row" style="text-align: center; font-size:30px; padding-right:10%;padding-left: 10%;padding-bottom: 5%;">UNE PRIVATISATION DU TRAMPOLINE ARENA</div>
+
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="item-type-1">
+                    <div class="image">
+                      <div class="bg" style="background-image: url(img/jump-trampoline-arena_trampoline_1019.jpg);"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="item-type-1">
+                    <div class="image">
+                      <div class="bg" style="background-image: url(img/DSC02182.jpg);"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="item-type-1">
+                    <div class="image">
+                      <div class="bg" style="background-image: url(img/DSC02129.jpg);"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row" style="font-family: 'Montserrat', sans-serif!important;color:black;font-size: medium;">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div style="padding-right:10%;padding-left:10%;display:flex; justify-content: center;">
+                  <ul style="font-weight:600">
+                    <li>- Des matchs de dodgeball, badminton, basket arbitrés par nos animateurs</li>
+                    <li>- un parcours au-dessus du vide sur la slackline</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div style="padding-right:10%;padding-left:10%;display:flex; justify-content: center;">
+                  <ul style="font-weight:600">
+                    <li>- Des sauts de l'ange sur le big air-bag</li>
+                    <li>- Des paniers de basket pour tenter un dunk</li>
+                    <li>- Des accessoires pour des sauts freestyle</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+  <section style="padding-bottom:5%;background: #111; opacity: 1; " >
+    <div class="container" style="margin-top: -25px;">
+
+      <div style="display:flex">
+      <div class="col-md-6 col-sm-6 col-xs-12" >
+        <div class="blog-item full-w full-bg" style="height:100%!important;background-color: #f07043;border-radius: 20px;">
+          <div style="color:white; padding: 20px 20px 20px;" >
+
+            <div class="sub-title" style="text-align:center;font-weight:bold"><b>FORMULE TRAMPOLINE</b></div></br>
+
+            <div class="row" style="display:flex">
+              <div class="col-md-2 col-sm-2 col-xs-2" style="font-weight: 600;display:flex; align-items:center">Frénésie</div>
+              <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Free zone, air bag, slackline</div>
+              <div class="col-md-5 col-sm-5 col-xs-5">Jusqu'a 70 personnes pendant 2 heures.</div>
+            </div>
+            <hr style="margin-top: 5%;   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex">
+              <div class="col-md-2 col-sm-2 col-xs-2" style="font-weight: 600;display:flex; align-items:center">Compétition</div>
+              <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Tournois sportifs organisés avec filets, ballons ou raquettes selon la discipline</div>
+              <div class="col-md-5 col-sm-5 col-xs-5">Arbre à tournoi 4 pers. par équipe matchs de 10 minutes</div>
+            </div>
+            <hr style="margin-top: 5%;   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex">
+              <div class="col-md-2 col-sm-2 col-xs-2" style="font-weight: 600;display:flex; align-items:center">Fitness</div>
+              <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Chacun sa toile de saut pour transpirer en rythme</div>
+              <div class="col-md-5 col-sm-5 col-xs-5">12 personnes pendant 30 minutes</div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="blog-item full-w full-bg" style="background-color: #f07043;border-radius: 20px;">
+          <div style="color:white; padding: 20px 20px 20px;">
+
+            <div class="sub-title" style="text-align:center;font-weight:bold"><b>FORMULE TRAMPOLINE</b></div></br>
+            <div style="margin-bottom:5%">1/2 journée team-building, le mardi de 16h à 20h pour 36 personnes<br>Budget : 1800&euro; soit 50/personne<br>
+            - 30 min de fitness sur trampoline<br>
+            - Tournoi dodgeball<br>
+            - Découverte de la réalité virtuelle ou escape game VR<br>
+            - Clôture et cocktail<br>
+            </div>
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">Heures/8 groupes</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">TRAMPO Fitness</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">TRAMPO Tournoi</div>
+              <div class="col-md-3 col-sm-3 col-xs-3">VR Escape game</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">VR Découverte</div>
+            </div>
+            <hr style="   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">16h</div>
+              <div class="col-md-8 col-sm-8 col-xs-8"style="text-align:center">Accueil - Briefing</div>
+            </div>
+            <hr style="   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">16h 15</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">C + D</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">A>&#60;B </div>
+              <div class="col-md-3 col-sm-3 col-xs-3">E</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">G</div>
+            </div>
+            <hr style="   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">17h</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">A + B</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">C>&#60;D</div>
+              <div class="col-md-3 col-sm-3 col-xs-3">F</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">H</div>
+            </div>
+            <hr style="   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">17h 45</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">G + H</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">E>&#60;F</div>
+              <div class="col-md-3 col-sm-3 col-xs-3">A</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">C</div>
+            </div>
+            <hr style="   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">18h 30</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">E + F</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">G>&#60;H</div>
+              <div class="col-md-3 col-sm-3 col-xs-3">B</div>
+              <div class="col-md-2 col-sm-2 col-xs-2">D</div>
+            </div>
+            <hr style="   border-top: 1px solid #ccc;">
+            <div class="row" style="display:flex;font-size: small">
+              <div class="col-md-2 col-sm-2 col-xs-2">19h 30</div>
+              <div class="col-md-8 col-sm-8 col-xs-8"style="text-align:center">Cocktail - Clôture</div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- VR  -->
+  <section class="section-fullpage" style=" background: #111; opacity: 1;">
+    <div class="bg">
+      <div class="layer-bg-2" style="background: #111;"></div>
+    </div>
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div style="display:flex; justify-content: center;margin-bottom: 2%;">
+            <img src="img/logo_onepage_vr.png" />
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" style="font-family: 'Montserrat', sans-serif!important;text-align: center; font-size:30px; padding-right:10%;padding-left: 10%;padding-bottom: 5%;">
+          <p class="title" style="font-weight:500; color: #1e76e2;">Faites découvrir la réalité virtuelle à vos salariés !</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <section class="section-fullpage" style="background:white">
+
+
+    <div class="container-fluid" style="margin-top: 30px;">
+
+      <div class="margin-custom">
+        <div class="row" style="text-align: center; font-size:30px; padding-right:10%;padding-left: 10%;padding-bottom: 5%;">UNE PRIVATISATION DES 8 STATIONS DE RÉALITÉ VIRTUELLE POUR UN CONTENU VARIÉ</div>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="item-type-1">
+              <div class="image">
+                <div class="bg" style="background-image: url(img/stat.png);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="item-type-1">
+              <div class="image">
+                <div class="bg" style="background-image: url(img/TheBlu.jpg);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="item-type-1">
+              <div class="image">
+                <div class="bg" style="background-image: url(img/Incarna.png);"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row" style="font-family: 'Montserrat', sans-serif!important;color:black;font-size: medium;">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div style="padding-right:10%;padding-left:10%;display:flex; justify-content: center;">
+            <ul style="font-weight:600">
+              <li>- Des escape games VR</li>
+              <li>- Des compétitions e-sports</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div style="padding-right:10%;padding-left:10%;display:flex; justify-content: center;">
+            <ul style="font-weight:600">
+              <li>- Des immersions dans des univers insolites</li>
+              <li>- Des jeux d'adresses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section style="padding-bottom:5%;background: #111; opacity: 1; " >
+  <div class="container" style="margin-top: -25px;">
+
+<div style="display:flex">
+<div class="col-md-6 col-sm-6 col-xs-12" >
+  <div class="blog-item full-w full-bg" style="height:100%!important;background-color: #1e76e2;border-radius: 20px;">
+    <div style="color:white; padding: 20px 20px 20px;" >
+
+      <div class="sub-title" style="text-align:center;font-weight:bold"><b>CHOISISSEZ VOS EXPERIENCES</b></div></br>
+
+      <div class="row" style="display:flex">
+        <div class="col-md-2 col-sm-2 col-xs-12" style="font-weight: 600;display:flex; align-items:center">Escape Game VR</div>
+        <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Jeu incarna</div>
+        <div class="col-md-5 col-sm-5 col-xs-5">4 personnes durée 45 minutes</div>
+      </div>
+      <hr style="margin-top: 5%;   border-top: 1px solid #ccc;">
+      <div class="row" style="display:flex">
+        <div class="col-md-2 col-sm-2 col-xs-2" style="font-weight: 600;display:flex; align-items:center">Compétition esports VR</div>
+        <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Tournois After h "First Player Shooter"</div>
+        <div class="col-md-5 col-sm-5 col-xs-5">Arbre à tournoi 4 pers. par équipe matchs de 10 minutes</div>
+      </div>
+      <hr style="margin-top: 5%;   border-top: 1px solid #ccc;">
+      <div class="row" style="display:flex">
+        <div class="col-md-2 col-sm-2 col-xs-2" style="font-weight: 600;display:flex; align-items:center">Découverte VR</div>
+        <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Multi-jeux<br>Choix large et évolutif</div>
+        <div class="col-md-5 col-sm-5 col-xs-5">8 stations 15 minutes/pers</div>
+      </div>
+      <hr style="margin-top: 5%;   border-top: 1px solid #ccc;">
+      <div class="row" style="display:flex">
+        <div class="col-md-2 col-sm-2 col-xs-2" style="font-weight: 600;display:flex; align-items:center">Vos contenus VR</div>
+        <div class="col-md-5 col-sm-5 col-xs-5" style="padding:0 30px">Studios de création partenaires</div>
+        <div class="col-md-5 col-sm-5 col-xs-5">Sur mesure</div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+  <div class="blog-item full-w full-bg" style="height:100%!important;background-color: #1e76e2;border-radius: 20px;">
+    <div style="color:white; padding: 20px 20px 20px;">
+
+      <div class="sub-title" style="text-align:center;font-weight:bold"><b>BÉNÉFICIEZ D'UN ACCOMPAGNEMENT COMPLET</b></div></br>
+      <div style="margin-bottom:5%">Nos coachs seront avec vous pendant toute la durée de votre événement pour accompagner les participants et les guider vers les activités
+      </div>
+      <div style="display:flex; justify-content: center;">
+        <img style="" src="img/vr_3.png" />
+      </div>
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="section-fullpage bg-section-1 scroll-down-block" style="font-family: 'Montserrat', sans-serif!important;padding-top:10%;background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+  <div class="container">
+    <div class="title-second type-2 col-style-1">
+      <h2 class="title h4" style="font-weight:700;color: #f07043;">LES BÉNÉFICES </h2>
+      <h3 class="title h5" style="font-weight:600; margin-bottom: 25px;color: #f07043;"">pour votre entreprise</h3>
+    </div>
+    <div style="text-align: center; font-size:40px;padding-bottom: 5%;">
+      <h3 class="title" style="font-weight:600;color: #fff;margin-bottom: 10px;">"L'ambiance, facteur clef du bonheur au travail"</h3>
+      <p style="font-size: small; color: #fff;">(Les echos - selon l'étude HappyIndex AtOrk 2018, réalisée par ChooseMyCompany)</p>
+    </div>
+    
+    
+  </div>
+
+  <div class="container-fluid">
+    <div style="text-align: center; font-size:30px; padding-right:5%;padding-left: 5%;padding-bottom: 1%;">
+      <p class="title" style="font-weight:300; color: #fff;">Les travailleurs citent toujours l'ambiance et l'esprit d'équipe comme des éléments essentiels de leur satisfaction.</p>
+    </div>
+    <div style="text-align: center; font-size:30px; padding-right:15%;padding-left: 15%;padding-bottom: 5%;">
+      <p class="title" style="font-weight:300; color: #fff;">Les entreprises l'ont bien compris et multiplient ces dernières années les opérations de team building ou les séminaires.</p>
+    </div>
+    <div style="text-align: center; font-size:30px; padding-right:15%;padding-left: 15%;padding-bottom: 5%;">
+    <a href="contact.html" class="anchor-link active" style="color: #222; font-weight: 700;
+    color: #222;
+        font-family: 'Montserrat', sans-serif;
+
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    padding: 0px 20px;
+    height: 60px;
+    line-height: 60px;
+    background:white;
+margin-bottom: 60px;
+box-shadow: 12px 12px 2px 1px #f07043;
+    "><b>DEMANDE DEVIS</b></a>
+    </div>
+
+    <div style="text-align: center; font-size:30px;padding-bottom: 5%;">
+      <h3 class="title" style="font-weight:600;color: #fff;margin-bottom: 10px;">
+        <span style="color:#f07043">#</span>TEAM BUILDING
+        <span style="color:#1e76e2">#</span>SEMINAIRE
+        <span style="color:#f07043">#</span>EVENEMENT CORPORATE
+        <span style="color:#1e76e2">#</span>AFTERWORK
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+
+
+  
+  <span id="Venir"></span>
+  <section class="section-fullpage bg-section-2" style="background: #222; margin-bottom: -70px">
+    <div class="container" id="horaires" style="background: #222;">
+      <div class="title-second type-2 col-style-2">
+        <h2 class="title h5" style="color: #fff;     text-align: center;
+    padding-bottom: 0px;
+    position: relative; font-weight: 700;">VENIR AU </br>JUMP <span style="color: #1e76e2;">VIRTUAL ARENA</span></h2></br></br>
+        <b>
+          <div class="sub-title" style="padding-bottom: -20px; color: #fff;"><b>A 5<sup>min</sup> du centre ville d'Orléans</b></div></br>
+          <div class="sub-title" style="padding-bottom: -20px; color: #fff;">23/25 avenue de la Libération, 45000 Orléans</div></br>
+          <div class="sub-title" style="color: #fff;">Arrêt libération TRAM A / ligne 25</div>
+        </b>
+      </div></br></br>
+  </section>
+
+  <section class="section-fullpage" style="max-height: 300px; margin-top: -140px;">
+    <div class="bg" style="height: 390px;">
+
+      <iframe width="100%" height="390" frameborder="0" scrolling="no" marginheight="65" marginwidth="65" src="https://www.openstreetmap.org/export/embed.html?bbox=1.7825317382812502%2C47.867652991892086%2C2.0204544067382817%2C47.969237986685364&amp;layer=mapnik&amp;marker=47.91847042181842%2C1.9014930725097656" style="border: 25px solid #222;"></iframe><br />
+
+      <div class="container" style="margin-left: 70px; background-color: #222;">
+        <div class="title-second type-2 col-style-1">
+
+
+        </div>
+        <div class="slider-swiching testi-container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="swiper-container container-swich swich-parent" data-autoplay="0" data-effect="slide" data-slides-per-view="1" data-loop="0" data-speed="800" data-center="0">
+                <div class="swiper-wrapper">
+
+
+
+
+  </section>
+  <section style="background-color: #222; ">
+    <center>
+      </br>
+
+      </h2>
+
+
+      </br>
+
+
+
+
+
+
+
+
+
+
+
+
+      <a href="contact.html" class="anchor-link active" style="color: #222; font-weight: 700;
+    color: #222;
+        font-family: 'Montserrat', sans-serif;
+
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    padding: 0px 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #1e76e2;
+    border-radius: 30px;
+    margin-top: 165px;
+margin-bottom: 60px;
+    "><b>Contactez-nous</b></a>
+
+
+
+      </div></br></br>
+  </section>
+
+
+  </center>
+
+  <footer class="footer type-2" style="background: #222;">
+    <div class="top-bar">
+      <div class="container">
+        <center>
+          <ul class="footer-nav" style="text-align: center;">
+            <li><a href="trampoline.html">Trampo</a></li>
+            <li><a href="virtual_arena.html">Réalité virtuelle</a></li>
+            <li><a href="index.html#Venir">Plan</a></li>
+            <li><a href="docs/CGU_Jump_Virtual_Arena.pdf" target="_blanc">CGU</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:+33238440244">02 38 44 02 44</a></li>
+          </ul>
+        </center>
+      </div>
+    </div>
+    <div class="bottom-bar" style="background: #000; text-align: center;">
+      <div class="container">
+        <div class="simple-text">
+          <span class="copyright" style="margin-right: 0px">
+            <center>&copy; 2019 JUMP Virtual Arena</center>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+  </div>
+  </div>
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.jquery.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script src="js/all.js"></script>
+</body>
+
+</html>

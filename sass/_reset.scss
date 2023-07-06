@@ -1,0 +1,17 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 0. RESET
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+body *{-webkit-text-size-adjust:none; box-sizing: border-box;}
+input:focus, select:focus, textarea:focus, button:focus, input:invalid {outline: none; box-shadow: none;}
+input, textarea, select{font-weight: 400; -webkit-appearance: none; appearance: none; border-radius: 0; border: 0px none;}
+select::-ms-expand{display: none;}
+a, a:link, a:visited, a:active, a:hover{cursor: pointer; text-decoration: none; outline: none;}
+body{font-weight: normal; font-size: 14px; line-height: 1;}
+ul, ol{list-style: none;}
+b {font-weight: 700;}
+input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea:-moz-placeholder ,textarea:-ms-input-placeholder {color:rgba(255,255,255,0.8); opacity: 1;}

@@ -1,0 +1,215 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 13. SHOP PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.shop-panel {position: fixed; right: 0px; top: 0px; width: 540px; background: $col-text; height: 100%; z-index: 550; @include transform (translateX(100%)); @include transition(all 0.5s);}
+.popup.active {@include transform (translateX(0%));}
+.popup .close {width: 26px; height: 26px; top: 65px; right: 50px; z-index: 5;}
+.counter {position: relative; display: inline-block; min-width: 110px; border: 2px solid $col-text3; height: 40px; border-radius: 20px; text-align: center; color: #fff; padding: 0px 14px; line-height: 36px; font-size: 10px;
+     & input {display: inline-block; background: none; border: 0px none; max-width: 70px; text-align: center; color: #fff; line-height: 34px; font-size: 13px; font-weight: 700;}
+}
+.plus-val {float: right; cursor: pointer;}
+.minus-val {float: left; cursor: pointer;}
+.shop-panel-wrap {position: absolute; width: 100%; top: 0; bottom: 210px; padding: 50px 40px 0px; overflow-y: auto;
+	& .title {color: #fff; padding-bottom: 70px;}
+	& .title .h6 {padding-bottom: 15px;}
+	& .title p {color: $col-text7;}
+}
+.shop-item {position: relative; width: 100%; border-bottom: 1px solid #717171; padding-bottom: 25px; margin-bottom: 25px; display: inline-block;
+	& .image {position: relative; float: left; overflow: hidden; max-width: 117px;}
+	& .image img {width: 100%; height: auto; border-radius: 50%;}
+	& .text {position: relative; padding-left: 140px;}
+	& .text a {font-size: 18px; line-height: 27px; color: $col-text3; display: block; padding-bottom: 15px;}
+	& .price-val {display: inline-block; padding-left: 30px; font-size: 16px; font-weight: 700; @extend .font-type-2; color: $col-text8; line-height: 40px;}
+	& .close-item {right: 0px; cursor: pointer; z-index: 5;}
+	&:last-child {border-bottom: 0px none;}
+	& .text:hover a {color: $col-text4;}
+}
+
+.shop-total-wrap {padding: 0px 40px 40px;}
+.shop-total {position: absolute; left: 0px; bottom: 0px; width: 100%; background: $col-text; z-index: 8; height: 210px;
+	& .title-numb {display: inline-block;width: 100%; @extend .font-type-2; padding:25px 0px 40px; border-top: 1px solid #717171; }
+	& .title-numb .h14 {color: $col-text8; text-transform: uppercase; float: left; line-height: 26px;} 
+	& .title-numb .price-val {color: $col-text3; font-size: 26px; font-weight: 700; float: right;}
+	& .button-type-2 {width: 100%;}
+}
+
+.main-content {position: relative; border: 90px solid $col-text3; height: 100%; padding: 45px 0px 20px; border-bottom: 0px none;
+	&.no-top {padding: 0px; border-top-width: 0px;} 
+	&.no-padd {padding: 45px 0px 0px;}
+}
+.card-item {position: relative; width: 100%; z-index: 2; overflow: hidden; border-radius: 5px; background: $col-text3; text-align: center; margin-bottom: 30px; @include transition(all 300ms ease-out);
+	&.full {min-height:380px; text-align: left;}
+	&.full .text {position: relative; max-width: 630px; padding: 50px 40px 40px 45px; height: 100%;}
+	&.full .text .title {font-size: 27px; color: $col-text3; line-height: 32px; padding-bottom: 26px; display: block;}
+	&.full .text .title:hover {color: $col-text4;}
+	&.full .sub-title {color: $col-text4; padding-bottom: 7px;}
+	&.full .simple-text {max-width: 330px; padding-bottom: 70px;}
+	&.full .simple-text p {color: $col-text4;}
+	&.full .button {position: relative;}
+	&.full .button-type-3 {position: absolute; left: 45px; bottom: 40px;}
+	&.full.lg {height: 480px;}
+	
+	& .image {position: relative; display: block; height: 180px; margin-bottom: 15px;} 
+	& .text {padding: 0px 20px;}
+	& .text .title {font-size: 16px; line-height: 26px; padding-bottom: 17px; display: inline-block; color: $col-text;}
+	& .text .title:hover {color: $col-text10;}
+	& .button-type-3.type-2 {margin-bottom: 25px;}
+	& .sub-title {padding-bottom: 5px;}
+	& .swiper-container {height: 100%;}
+	&:hover {box-shadow: $item-shadow;}
+	&.type-2 .image {height: 285px;}
+}
+.sub-title {font-size: 11px; text-transform: uppercase; font-weight: 700; @extend .font-type-2; display: block; letter-spacing: 1.6px;}
+.sidebar-item {position: relative; background: $col-text3; border-radius: 5px; margin-bottom: 15px;
+	& .title {border-bottom: 1px solid #d2d2d3; padding: 20px 15px;}
+	& .h13 {display: inline-block;}
+	& .title a {float: right; display: inline-block; color: $bg-type1; @extend .font-type-2; border-bottom: 2px solid #caddff;}
+	& .wrap {padding: 15px 15px 0px 15px; position: relative; display: inline-block;width: 100%;}
+}
+.input-entry {display: inline-block; cursor: pointer; position: relative; width: 100%; margin-bottom: 20px;
+    & .checkbox-form {display: none;}
+	& .sp-check {position: relative; float: left; width: 17px; height: 17px; background: #c1c1c1; border-radius: 4px;}
+	& .sp-check img {visibility: hidden; opacity: 0; position: absolute; top: 50%; left: 50%; margin-top: -7px; margin-left: -9px; @include transform(scale(0)); @include transition(all 0.25s ease-out);}
+	&.act .sp-check {background: $bg-type1;}
+	&.act .sp-check img {visibility: visible; opacity: 1; @include transform(scale(1));}
+	&.radio .sp-check {border-radius: 50%;}
+	&.act .label-text {color: $col-text;}
+	&.radio .sp-check img {margin-left: -7.5px; margin-top: -5.5px;}
+}
+.label-text {position: relative; padding-left: 28px; font-size: 13px; display: block;font-weight: 700; @extend .font-type-2; color: $col-text2; text-align: left; line-height: 18px; text-transform: uppercase;}
+.tab-room {margin-left: -6px; margin-right: -6px; padding-bottom: 20px;
+    & a {width: 50px; height: 50px; border: 2px solid #d2d2d3; line-height: 46px; font-size: 16px; font-weight: 700; color: $col-text; @extend .font-type-2; text-align: center; display: inline-block; margin: 0 4px; border-radius: 50%; background: $col-text3;}
+	& a.act {border-color: $bg-type1; box-shadow: $item-shadow2;}
+}
+
+.slider-range { display: block; margin-top: 5px;}
+.range-title {font-size: 10px;  display: block; padding-bottom: 25px; text-transform: uppercase;}
+.slider-range .ui-slider { margin-bottom: 10px; }
+.ui-slider-horizontal { position: relative; height: 4px; text-align: left; background: #efefef;}
+.ui-slider .ui-slider-range { position: absolute; top: 0; height: 100%; display: block; border: 0; background-position: 0 0; z-index: 1; background: #4d4d4e;}
+.ui-slider .ui-slider-handle { position: absolute; top: -6px; cursor: default; -ms-touch-action: none; width: 16px; height: 16px; margin-left: -6px; border-radius: 50%; z-index: 2; background: #75acff; cursor: pointer;}
+.ui-slider .ui-slider-handle:focus { outline: none; }
+
+.amount-start { float: left;}
+.amount-end { float: right;}
+.input-range {position: relative; width: 100%; display: inline-block; margin-bottom: 20px;}
+.amount-wrap {position: relative; display: inline-block; width: 100%; margin-bottom: 24px;
+	& input {background: transparent; border: none; width: 100px; height: 35px; font-size: 11px; font-weight: 700; @extend .font-type-2; line-height: 35px; border: 2px solid #d2d2d3; border-radius: 20px; color:$col-text10; padding: 0px 15px; display: inline-block; position: relative;}
+	& .amount-end {margin-right: 20px;}
+	& .val {right: 0px; font-size: 11px; color: $col-text10; text-transform: uppercase; font-weight: 700;  @extend .font-type-2, .vertical-align; letter-spacing: -2px;}
+	& .val sup {font-size: 8px; margin-top: -5px; display: inline-block; vertical-align: top;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 14. RESPONSIVE*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media (max-width: 1400px) {
+	.main-content {border-width: 30px; border-top-width: 66px;}
+	.shop-panel-wrap {padding: 30px 20px 0px; bottom: 130px;
+	     & .title {padding-bottom: 30px;}
+	}
+	.shop-item:last-child {margin-bottom: 0px;}
+	.popup .close {top: 50px; right: 20px;}
+	.shop-total {height: 130px;}
+	.shop-total .title-numb {padding: 10px 0px 15px;}
+	.shop-total-wrap {padding: 0px 20px 20px;
+		& .button-type-2 {height: 57px; line-height: 53px;}
+	}
+}
+@media (max-width: 768px) {
+    .main-content {border-width: 15px; border-top-width: 66px;}
+	.card-item.full .text {max-width: 100%; left: 0px; top: 0px; padding: 30px;}
+	.card-item.full .button {left: 30px; bottom: 30px;}
+    .counter input {line-height: 28px;}
+}
+@media (max-width: 540px) {
+	.shop-panel {width: 100%;}	
+}
+@media (max-width: 480px) {
+	.shop-item .text a {font-size: 16px; line-height: 22px;}
+	.shop-item .image {max-width: 80px;}
+	.shop-item .text {padding: 0px 20px 0px 100px;}
+	.shop-panel-wrap .title .h6 {padding-bottom: 10px;}
+	.popup .close {top: 34px;}
+	.shop-item .price-val {padding-left: 0px; display: block;}
+	.card-item.full .text {padding: 15px;}
+	.card-item.full .text .title {font-size: 24px; line-height: 30px;}
+	.tab-room a {margin: 0 3px;}
+	.back-cramps-list li {padding: 0px 15px;}
+}
+	
+.drop-down.type-1 {position: relative; display: inline-block;  @extend .font-type-2; max-width: 160px;
+	& .drop-down-text {position: relative; min-width: 130px; height: 30px; border-radius: 15px; background: $col-text; font-size: 11px; text-transform: uppercase; color: $col-text4; padding: 0px 15px; display: inline-block; line-height: 30px; cursor: pointer; z-index: 100;}
+	& .drop-down-text span {padding-right: 10px;}
+	& .drop-down-list {background: $col-text; padding: 15px 15px 5px 15px; min-width: 130px; margin-top: -15px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;}
+	& .drop-down-list li {font-size: 11px; color: $col-text4; line-height: 30px; display: block; text-transform: uppercase; cursor: pointer;}
+	& .drop-down-list li:hover {color: $col-text3;}
+	& .drop-down-text i {position: absolute; right: 15px; top: 0px;}
+}
+.drop-down.act {z-index: 450;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 15. SHOP PAGE TOP SIDEBAR */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.drop-down-list {position: absolute; left: 0px; top: 100%; display: none; width: 100%;}
+.top-shop-nav {position: relative; display: inline-block; width: 100%; background: $col-text3; border-radius: 5px; margin-bottom: 40px; padding: 20px 70px 20px 0px; z-index: 5;}	
+.top-shop-item {position: relative; display: inline-block;}
+.top-shop-item .title {position: relative; display: inline-block; text-transform: uppercase; font-size: 13px; font-weight: 700; letter-spacing: 1.6px; @extend .font-type-2; padding: 0px 10px 0px 30px;}
+
+.top-shop-item .input-entry {padding-left: 30px;margin-bottom: 0px;}
+.filter-button{position: absolute; right: 0px; top: 0px; width: 70px; height: 100%; background: $bg-type1; text-align: center; line-height: 70px; font-size: 24px; color: $col-text3; cursor: pointer; border-top-right-radius: 5px; border-bottom-right-radius: 5px;
+	& i {display: inline-block; position: relative; text-shadow: 0px 10px 10px rgba(4,5,5,0.44);}
+} 
+.page-pagination {position: relative; width: 100%; padding: 10px 60px; text-align: center; display: inline-block; font-size: 0px; background: $col-text3; border-radius: 5px; margin:10px 0px 65px;
+	& a {width: 50px; height: 50px; display: inline-block; position: relative; line-height: 50px; font-size: 14px; font-weight: 700; @extend .font-type-2; color: $col-text; border-radius: 50%; margin: 0 10px;}  
+	& .left-nav {float: left;}
+	& .right-nav {float: right;}
+	& a:hover {box-shadow: 0px 12px 23px rgba(2,2,2,0.24); text-decoration: none; color: $col-text10; background: $col-text3;}
+} 
+
+.range-theme-2 {position: relative; display: inline-block;}
+.range-theme-2 .theme-green .back-bar .pointer {width: 55px; height: 16px; background: none; border-radius: 8px; text-align: center; border: 0px none;}
+.range-theme-2 .slider-container .back-bar .pointer-label {top: -5px; height: 16px; line-height: 16px; border-radius: 8px; background: $col-text; color: $col-text4; font-size: 11px; text-transform: uppercase; @extend .font-type-2; padding: 0px 10px;}
+.range-theme-2 .theme-green .back-bar .selected-bar {background: $col-text;}
+.slider-container .scale {display: none;}
+.slider-container .back-bar .pointer {cursor: pointer;}
+
+.range-theme-1 {position: relative; width: 100%; margin-bottom: 30px;}
+.range-theme-1 .slider-container {display: inline-block;}
+.range-theme-1 .theme-green .back-bar .pointer {width: 16px; height: 16px; background: $bg-type1; border-radius: 50%; text-align: center; border: 0px none;}
+.range-theme-1 .slider-container .back-bar .pointer-label {opacity: 0;}
+.range-theme-1 .theme-green .back-bar .selected-bar {background: $col-text;}
+
+@media (max-width: 1200px) {
+	.top-shop-item {width: 50%; float: left; margin-bottom: 20px; text-align: center;}
+	.top-shop-item:nth-child(3) {clear: both;}
+	.top-shop-item .title {padding: 0px 0px 10px 0px; display: block;}
+	.top-shop-item .input-entry {padding-left: 0px;}
+	.top-shop-nav {padding: 20px 70px 0px 20px;}
+	.top-shop-item .input-entry {width: auto;}
+}
+@media (max-width:992px) {
+	.page-pagination a {margin: 0px;}
+	.page-pagination {padding: 10px; margin: 0px 0px 30px;}
+}
+@media (max-width: 768px) {
+	.card-item.full .button-type-3 {left: 30px; bottom: 30px;}
+	.page-pagination a {width: 30px; height: 30px; line-height: 30px; font-size: 11px;}
+}
+@media (max-width: 650px) {
+	.top-shop-item {width: 100%;}
+	.top-shop-nav {padding: 20px 50px 0px 10px;}
+	.filter-button {width: 50px; height: 50px; line-height: 50px; border-radius: 5px; font-size: 16px;}
+	.card-item.full.lg {height: 380px;}
+	.card-item.type-2 .image {height: 185px;}
+}
+@media (max-width: 480px) {
+	.top-shop-nav {padding: 70px 10px 0px;}
+    .card-item.full .button-type-3 {left: 15px; bottom: 15px;}
+	.page-pagination a {width: 25px; height: 25px;  line-height: 25px;}
+	.page-pagination {padding: 10px 5px;}
+}

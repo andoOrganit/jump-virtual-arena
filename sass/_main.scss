@@ -1,0 +1,613 @@
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 2. FONTS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:400,400italic,700,900|Quicksand:400,300,700);
+@font-face { font-family: 'montserratthin'; src: url("../font/montserrat-hairline-webfont.woff2") format("woff2"), url("../font/montserrat-hairline-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'montserratthin'; src: url("../font/montserrat-thin-webfont.woff2") format("woff2"), url("../font/montserrat-thin-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face{font-family:'Montserrat Black';font-style:normal;font-weight:400;src:local('Montserrat Black'),local('Montserrat-Black'),url(../font/montserrat-black.woff) format('woff'),url(../font/montserrat-black.ttf) format('truetype');}
+@font-face{font-family:'Montserrat Light';font-style:normal;font-weight:400;src:local('Montserrat Light'),local('Montserrat-Light'),url(../font/montserrat-light.woff) format('woff'),url(../fonts/montserrat-light.ttf) format('truetype');}
+
+
+$col-text: #4d4d4e;
+$col-text2: rgba(77,77,78,0.7);
+$col-text9: rgba(77,77,78,0.3);
+$col-text10: rgba(77,77,78,0.5);
+$col-text11: rgba(77,77,78,0.6);
+$col-text3: #fff;
+$col-text5: #000;
+$col-text6: rgba(0,0,0,0.5);
+$col-text7: rgba(255,255,255,0.4);
+$col-text8: rgba(255,255,255,0.25);
+$col-text4: rgba(255,255,255,0.5);
+$col-text12: rgba(255,255,255,0.6);
+$col-button: #b1b1b1;
+$col-button-border1: #b1b1b1;
+$col-button-border2: #75acff;
+$col-type1: #bdbec0;
+$bg-type1: #75acff; 
+$bg-type2: #eceeeb; 
+$bg-type3: #7f7f7f; 
+$bg-type4: rgba(0,0,0,0.8);
+$bg-type5: #484848; 
+$bg-type6: #ededed; 
+$col-stroke: rgba(4,5,5,0.05);
+$item-shadow: 0px 93px 122px rgba(2,2,2,0.47);
+$item-shadow2: 0px 13px 27px rgba(4,5,5,0.3);
+$item-shadow3: 0px 35px 79px rgba(4,5,5,0.4);
+$item-shadow4: 0px 15px 90px rgba(4,5,5,0.75);
+$item-shadow5: 0px 73px 76px rgba(5,5,6,0.75);
+$item-shadow6: 0px 40px 87px rgba(5,5,6,0.3);
+$item-shadow7: 0px 0px 51px rgba(5,5,6,0.2);
+$item-shadow8: 0px 59px 89px rgba(5,5,6,0.75);
+$item-shadow9: 0px 100px 139px rgba(5,5,6,0.45);
+
+$fullmaincolor: #a3de15;
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 3. MIXINS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@mixin transform ($value) {
+  -webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}
+@mixin transition ($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+      -ms-transition: $value;
+          transition: $value;
+}
+@mixin transition-delay ($value) {
+  -webkit-animation-delay: $value;
+     -moz-animation-delay: $value;
+      -ms-animation-delay: $value;
+          animation-delay: $value;
+}
+@mixin animation ($value) {
+  -webkit-animation: $value;
+     -moz-animation: $value;
+      -ms-animation: $value;
+          animation: $value;
+}
+
+$color-loader: #a3de15;
+.preload {position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: #fff; z-index: 5000;}
+.loader {width: 250px;height: 50px;line-height: 50px;text-align: center; position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%); @extend .font-type-2; text-transform: uppercase;font-weight: 900;color: #7f7f7f;
+letter-spacing: 0.2em;
+   &::before, &::after {content: ""; display: block; width: 15px;height: 15px; background:#7f7f7f; position: absolute;animation: load .7s infinite alternate ease-in-out; -webkit-animation: load .7s infinite alternate ease-in-out;}
+   &::before {top: 0;}
+   &::after { bottom: 0;}
+}
+
+.preload.version2 {background: #2d333c; 
+	& .load-wave {position: absolute; width: 0%; height: 10px; top: 50%; left: 0px; animation: wave .7s infinite alternate ease-in-out;
+	  &:before {content: ''; position: absolute; left: 0px; bottom: 0px; height: 8px; width: 100%; background: url(../img/word_wave.png) repeat-x; }
+	}
+}
+
+@keyframes wave {
+  0% { width: 0;}
+  100% { width: 100%;}
+}
+@-webkit-keyframes wave {
+  0% { width: 0;}
+  100% { width: 100%;}
+}
+@-moz-keyframes wave {
+  0% { width: 0;}
+  100% { width: 100%;}
+}
+@-ms-keyframes wave {
+  0% { width: 0;}
+  100% { width: 100%;}
+}
+
+@keyframes load {
+  0% { left: 0; height: 30px; width: 15px }
+  50% { height: 8px; width: 40px }
+  100% { left: 235px; height: 30px; width: 15px}
+}
+@-webkit-keyframes load {
+  0% { left: 0; height: 30px; width: 15px }
+  50% { height: 8px; width: 40px }
+  100% { left: 235px; height: 30px; width: 15px}
+}
+@-moz-keyframes load {
+  0% { left: 0; height: 30px; width: 15px }
+  50% { height: 8px; width: 40px }
+  100% { left: 235px; height: 30px; width: 15px}
+}
+@-ms-keyframes load {
+  0% { left: 0; height: 30px; width: 15px }
+  50% { height: 8px; width: 40px }
+  100% { left: 235px; height: 30px; width: 15px}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 4. TYPOGRAPHY*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+body, html { width: 100%; 
+    &.full-h {height: 100%;}
+}
+body {font-family: 'Playfair Display', serif; color: $col-text;
+	&.overflow {overflow: hidden;}
+}
+input, textarea {font-family: 'Montserrat', sans-serif;}
+.font-type-1 {font-family: 'Playfair Display', serif;}
+.font-type-2 {font-family: 'Montserrat', sans-serif;}
+.font-type-3 {font-family: 'Montserrat Black', sans-serif;}
+.font-type-4 {font-family: 'Montserrat Light', sans-serif;}
+.font-type-5 {font-family: 'montserratthin';}
+.font-type-6 {font-family: 'Quicksand', sans-serif;}
+
+.h1 {font-size: 118px;}
+.h2 {font-size: 105px;}
+.h3 {font-size: 94px;}
+.h4 {font-size: 70px;}
+.h5 {font-size: 64px;}
+.h6 {font-size: 50px;}
+.h7 {font-size: 26px; line-height: 34px;}
+.h8 {font-size: 27px; line-height: 40px;}
+.h9 {font-size: 19px;}
+.h10 {font-size: 18px;}
+.h11 {font-size: 16px;}
+.h12 {font-size: 14px;}
+.h13 {font-size: 13px; @extend .font-type-2; letter-spacing: 1.6px; font-weight: 700; text-transform: uppercase;}
+.h14 {font-size: 11px;}
+
+.title-counter {text-align: center; padding-bottom: 45px; position: relative;
+	& .title {padding-bottom: 25px;}
+	& span {position: relative; display: inline-block; width: 32px; height: 32px; font-size: 10px; color: $col-text3; background: $col-text; line-height: 32px; border-radius: 50%; @extend .font-type-2; font-weight: 700; vertical-align: middle;}
+	&.no-padd {padding-bottom: 0px;}
+	& i {font-size: 30px; line-height: 55px; display: inline-block; vertical-align: bottom;}
+	&.col-white {color: $col-text3;
+		&.col-white .title {color: $col-text3} 
+	}
+	&.no-margin {padding-bottom: 0px; margin: 0px; 
+		& .title {padding-bottom: 0px;}
+	}
+}
+.title-second {text-align: center; padding-bottom: 70px; position: relative;
+	& .title {padding-bottom: 20px;}
+	&.box-style {max-width: 700px; margin: 0 auto;}
+	&.type-2 .title {font-size: 65px; line-height: 65px; @extend .font-type-2; padding-bottom: 0px;}
+	&.type-2 .sub-title {@extend .font-type-5; font-size: 14px; line-height: 16px; letter-spacing: 6.2px;}
+	&.type-2.col-style-1 {color: $col-text3;}
+	&.type-2.col-style-2 {color: $bg-type5;}
+}
+.simple-text {position: relative;
+	& p {font-size: 14px; line-height: 22px; font-weight: 400;}
+	&.large p {font-size: 25px; line-height: 36px;}
+	&.lg p {font-size: 22px; line-height: 30px;}
+	&.mdl p {font-size: 18px; line-height: 34px;}
+	&.md p {font-size: 16px; line-height: 24px;}
+	&.sm p {font-size: 15px; line-height: 23px;}
+	&.xs p {font-size: 14px; line-height: 22px;}
+	&.col-type-1 p {color: $col-text11;}
+	&.col-type-2 p {color: $col-text;}
+	&.col-type-3 p {color: $col-text12;}
+	&.col-type-4 p {color: $col-text2;}
+    &.col-type-5 p {color: $col-text3;}
+	&.col-type-6 p {color: $col-text4;}
+}
+.back-cramps-list {font-size: 0px;}
+.back-cramps-list li {display: inline-block; font-size: 15px; line-height: 18px; padding: 0px 20px; position: relative; overflow: hidden;
+	& a {color: $col-text; position: relative;}
+	&:before {content: ''; position: absolute; right: -100%; margin-right: 10px; height: 1px; background: $col-text; top: 50%; width: 100%; margin-top: 2px;}
+	&:after {content: ''; position: absolute; left: -100%; margin-left: 10px; height: 1px; background: $col-text; top: 50%; width: 100%; margin-top: 2px;}
+	&:first-child:after, &:last-child:before {display: none;}
+}
+
+.button-type-1 {position: relative; display: inline-block; height: 55px; border-radius: 27px; background: $bg-type1; padding: 0px 35px; font-weight: 700; color: $col-text3; text-align: center; @extend .font-type-2; border: 2px solid rgba(0,0,0,0); font-size: 13px; letter-spacing: 1.2px; line-height: 51px; text-transform: uppercase; overflow: hidden;
+	&:hover {background: none; border-color: $bg-type1;}
+	& span {position: relative; display: inline-block; @include transition (all 0.25s ease-out);}
+	& span:before {content: attr(data-text); position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; line-height: 51px; color: $bg-type1; @include transition (all 0.25s ease-out); @include transform(translateY(-100%));}
+	&:hover span {@include transform(translateY(100%));} 
+	&.type-2 {border-radius: 0px; border-color: $col-text; color: $col-text; background: none; padding: 0px;}
+	&.type-2 span {padding: 0px 75px;}
+	&.type-2 span:before {color: $col-text3; background: $col-text; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px;}
+	& i {font-size: 16px; display: inline-block; padding-right: 15px; @include transition (all 0.25s ease-out);}
+	&:hover i {color: $bg-type1;}
+	&.lg-padding {padding: 0px 60px;}
+}
+
+.button-type-2 {position: relative; display: inline-block; height: 77px; line-height: 73px; box-shadow:inset 0px 0px 0px 2px $col-text3; color: $col-text3; font-size: 13px; overflow: hidden; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; text-align: center; @extend .font-type-2;
+	& span:before {content: ''; position: absolute; left: 0px; top: 0px; width: 0%; height: 2px; background: #333; z-index: 5; @include transition (all 0.25s ease-out 0.75s);}
+	&:before {content: ''; position: absolute; right: 0px; bottom: 0px; height:2px; width: 0%; background: #333; z-index: 5; @include transition (all 0.25s ease-out 0.25s);}	
+	& span:after {content: ''; position: absolute; right: 0px; top: 0px; width: 2px; height: 0%; background: #333; z-index: 5; @include transition (all 0.25s ease-out 0.5s);}	
+	&:after {content: ''; position: absolute; left: 0px; bottom: 0px; height: 0%; width: 2px; background: #333; z-index: 5; @include transition (all 0.25s ease-out 0s);}
+	&:hover span:before, &:hover:before {width: 100%;}
+	&:hover span:after, &:hover:after {height: 100%;}
+	&:hover span:before {transition-delay: 0s;}
+	&:hover span:after {transition-delay: 0.25s;}
+	&:hover:before {transition-delay: 0.5s;}
+	&:hover:after {transition-delay: 0.75s;}
+	&:hover {letter-spacing: 5px;}
+}
+
+.button-type-3 {position: relative; display: inline-block; height: 46px; border-radius: 25px;  font-size: 0px; @extend .font-type-2; overflow: hidden; z-index: 5; text-transform: uppercase; backface-visibility: hidden;
+	&.type-1 {color: $col-text3;}
+	&.type-2 {color: #b1b1b1;}
+	&.type-1 span:first-child {border-right: 2px solid $col-text3;}
+	&.type-2 span:first-child {border-right: 2px solid #b1b1b1;}
+	& > span {position: relative; display: inline-block; text-align: center; padding: 0px 25px; line-height: 46px; font-size: 14px; font-weight: 700; white-space: nowrap; @extend .transition-def; overflow: hidden;}
+	& i {font-style: normal; display: inline-block; position: relative;}
+	&:before {content: ''; position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 5; border-radius: 25px; z-index: 2;}
+	&.type-1:before {box-shadow: inset 0px 0px 0px 2px $col-text3;}
+	&.type-2:before {box-shadow: inset 0px 0px 0px 2px #b1b1b1;}
+	&.type-2 span:first-child {background: $col-text3; z-index: 1; position: relative; display: inline-block;}
+	& span:last-child:before {content: ''; background: $bg-type1; width: 100%; height: 100%; left: 0%; opacity: 0; top: 1px; position: absolute; @include transform(translateX(-100%)); @extend .transition-def;}
+	&:hover span:last-child:before {@include transform(translateX(0%)); opacity: 1; transition-delay: 0s;}
+	&:hover span:last-child {color: $col-text3;}
+	&.type-1 span:first-child:before {content: ''; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;  background: $col-text3; @include transform(translateX(-100%));@include transition(all 0.35s ease-out 0.15s);}
+	&.type-1:hover span:first-child {color: $bg-type1;}
+	&.type-1:hover span:first-child:before { @include transform(translateX(0%));}
+}
+
+.button-type-4 {font-size: 14px; font-weight: 700; @extend .font-type-2; color: $bg-type5; position: relative; display: inline-block; z-index: 1; text-align: center; padding: 0px 60px; height: 60px; line-height: 60px; background:$fullmaincolor; border-radius: 30px; text-transform: uppercase; overflow: hidden;@include transition(all 0.45s ease-out);
+	& span {position: relative;}
+	&:before {content: ''; position: absolute; left: 50%; bottom: -40px; margin-left: -40px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.5); @include transition(all 0.35s ease-out); opacity: 0;}
+	&:hover:before {@include transform(scale(2)); background: $col-text3; opacity: 1;}
+	&:hover {color: $fullmaincolor; background: $col-text3;}
+}
+.tag-link {position: relative; display: inline-block; padding: 0px 20px; font-size: 11px; height: 30px; line-height: 30px; color: $col-text4; text-transform: uppercase; border-radius: 15px; background: $col-text;@include transition(all 0.35s ease-out); 
+	&:hover {background:  $col-text4; color: $col-text;}
+}
+.tags {text-align: center; position: relative;
+    & .tag-link {margin: 0 7px;}
+}
+.tag-link-2 {position: relative; display: inline-block; margin: 0px 14px 14px 0px; padding: 0px 30px; text-align: center; height: 38px; border-radius: 19px; background: #dadbd9; text-transform: uppercase; font-size: 12px; letter-spacing: 1.4px; font-weight: 700; color: $col-text11; @extend .font-type-2; line-height: 38px; @include transition(all 0.35s ease-out);
+	&:hover {background: $bg-type1; color: $col-text3;}
+}
+
+.section {position: relative;
+	&.xxs-padding {padding: 0px 0px 70px 0px;}
+	&.sm-padding {padding: 80px 0px 40px;}
+	&.xs-padding {padding: 40px 0px 60px;}
+}
+.section-fullpage {position: relative; padding: 70px 0px 80px;
+	&.full {height: 1080px; height: 100vmin; min-height: 800px;}
+}
+.full-h-section { height: 700px; height: 100vmin; min-height: 650px;} 
+.content-bg {padding:160px 0px 180px; position: relative;}
+.main-baner-align {padding-top: 90px; position: relative; width: 100%; display: table; height: 100%;}
+  
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 5. HELP CLASSES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.bg-grey {background: $bg-type2;}
+.bg-grey2 {background: #f1f1f1;}
+.bg-section-1 {background: $bg-type5;}
+.bg-section-2 {background: $bg-type6;}
+.pos-absol {position:absolute; left:0px; top:0px; width:100%; height:100%;}
+.transition-def {transition: all 0.35s ease-out; -webkit-transition: all 0.35s ease-out; -ms-transition: all 0.35s ease-out;-moz-transition: all 0.35s ease-out;}
+a {@extend .transition-def;}
+.bg { @extend .pos-absol;overflow:hidden; background-position: 50% 50%; background-repeat: no-repeat; background-attachment: scroll;-webkit-background-size: cover;-moz-background-size: cover; -ms-background-size: cover; background-size: cover; backface-visibility: hidden;
+    &.fix {background-attachment: fixed;}}
+.vertical-align {@include transform(translateY(-50%)); top: 50%; position: absolute;
+	&.full {left: 0px; width: 100%; text-align: center;}}
+.table-view {display: table; width: 100%; height: 100%;}
+.cell-view {display: table-cell; vertical-align: middle; height: inherit;}
+.clear{clear:both; overflow:hidden; height:0px; font-size:0px; display: block;}
+.layer-bg-1 {@extend .pos-absol; background: rgba(104,106,176,0.54); backface-visibility: hidden;}
+.layer-bg-2 {@extend .pos-absol; background: rgba(49,46,73,0.6); backface-visibility: hidden;}
+.layer-bg-3 {@extend .pos-absol; background: rgba(0,0,0,0.5); @include transition (all 0.25s ease-out); backface-visibility: hidden;}
+.layer-bg-4 {@extend .pos-absol; background: $col-text2; backface-visibility: hidden;}
+.layer-bg-5 {@extend .pos-absol; background: rgba(39,31,69,0.68); backface-visibility: hidden;} 
+.layer-bg-6 {@extend .pos-absol; background: rgba(43,44,56,0.5); backface-visibility: hidden;}
+.layer-bg-7 {@extend .pos-absol; background: rgba(40,33,33,0.38); backface-visibility: hidden;} 
+.col-white {color: $col-text3;}
+.column-50 {width: 50%; position: relative;}
+.align-parent {display: inline-block; vertical-align: middle;}
+.full-h {height: 100%;}
+.align-bottom {display: table-row;}
+.vertical-wrap {font-size: 0px;}
+.vertical-wrap > div[class*="col"] { display: inline-block; vertical-align: middle; position: relative; float: none; }
+.wr-last-child > div:last-child {padding-bottom: 0px; margin-bottom: 0px;}
+.resp-img {width: 100%; height: auto; display: block;}
+div.no-padding-block {padding-bottom: 0px;}
+.sub-title-black {font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; @extend .font-type-3; line-height: 16px;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 6. SLIDER STYLES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.full-h .swiper-container {height: 100%;}
+.swiper-wrapper{cursor:url(../img/drag.png) 16 16, ew-resize!important;}
+.pagination {text-align: center; position: absolute; bottom: 15px; left: 0px; width: 100%; z-index: 5;}
+.swiper-pagination-bullet {position: relative; display: inline-block; width: 10px; height: 10px; background: #7d798f; margin: 0px 4px; opacity: 1;}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {margin: 0px 4px;}
+.swiper-pagination-bullet-active {background:$col-text3;}
+.pagination.hidden {display: none;}
+.style-type-1 i {display: none;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 7. SLIDER NAV BUTTON STYLES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.swiper-button {position: absolute; @include transition (all 0.35s ease-out); text-align: center; cursor: pointer; z-index: 15;}
+.small-arrow-style .swiper-button {position: absolute; width: 15px; height: 15px; line-height: 15px; font-size: 15px; color: $col-text3;  top: 0px; opacity: 0.5;
+	&:hover {opacity: 1;}
+}
+.circle-arrow-style {position: absolute; left: 0px; bottom: 180px; max-width: 970px; width: 100%; left: 50%; z-index: 50; @include transform(translateX(-50%)); }
+.circle-arrow-style .swiper-button {width: 97px; height: 97px; border-radius: 50%; border: 2px solid $col-text9; top: 0px; line-height: 93px; color: $col-text9; overflow: hidden;}
+.circle-arrow-style .swiper-button i {font-size: 40px; line-height: 90px; position: relative; display: inline-block; width: 100%; height: 100%;}
+.circle-arrow-style .swiper-button i:after {font-family: "fontello"; position: absolute; left: 50%; top: 50%;font-size: 40px; color:$bg-type1; z-index: 5; width: 100%; height: 100%; @include transition (all 0.35s ease-out); opacity: 0;}
+.circle-arrow-style .swiper-arrow-right {right: 0px;}
+.circle-arrow-style .swiper-arrow-right i:after {content: '\e811';  @include transform(translate(20%, -50%)); }
+.circle-arrow-style .swiper-arrow-left i:after {content: '\e810'; @include transform(translate(-120%, -50%)); }
+.circle-arrow-style i:before {@include transition (all 0.35s ease-out);}
+.circle-arrow-style .swiper-arrow-left {left: 0px;}
+.circle-arrow-style .swiper-button:hover {border-color: $bg-type1;}
+.circle-arrow-style .swiper-arrow-left:hover i:after {@include transform(translate(-50%, -50%)); opacity: 1;}
+.circle-arrow-style .swiper-arrow-right:hover i:after {@include transform(translate(-50%, -50%)); opacity: 1;}
+.circle-arrow-style .swiper-arrow-right:hover i:before {@include transform(translateX(-300%)); opacity: 0;}
+.circle-arrow-style .swiper-arrow-left:hover i:before {@include transform(translateX(300%)); opacity: 0;}
+@media (max-width: 992px) {
+	.circle-arrow-style .swiper-button {width: 50px; height: 50px; line-height: 43px;}
+	.circle-arrow-style .swiper-button i:after, .circle-arrow-style .swiper-button i {font-size: 20px; line-height: 43px;} 
+}
+@media (max-width: 768px) {
+	.circle-arrow-style {bottom: 65px;}
+	.circle-arrow-style .swiper-arrow-right {right: 15px;}
+	.circle-arrow-style .swiper-arrow-left {left: 15px;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 8. SLIDER PAGINATION STYLES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.pagination.style-type-2 {bottom: 120px;
+	& .swiper-pagination-bullet {width: 45px; height: 30px; border-radius: 0px; background: none; margin: 0px 5px; position: relative;}
+	& .swiper-pagination-bullet i {font-size: 12px; text-align: center; text-transform: uppercase; font-weight: 700; @extend .font-type-2; color: $col-text3; opacity: 0; @include transition (all 0.35s ease-out);}
+	& .swiper-pagination-bullet:before {content: ''; position: absolute; left: 0px; bottom: 0px; width: 100%; height: 3px; background: rgba(255,255,255,0.3);@include transition (all 0.35s ease-out);}
+	& .swiper-pagination-bullet:after {content: ''; position: absolute; left: 13px; bottom: 9px; width: 0%; height: 3px; background: $col-text3; }
+	& .swiper-pagination-bullet-active {background: none; width: 70px;}
+	& .swiper-pagination-bullet-active i {opacity: 1;}
+	& .swiper-pagination-bullet-active:before {bottom: 9px; background: none;}
+	& .swiper-pagination-bullet-active:after {width: 44px; @include transition (all 0.35s ease-out 0.35s);}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 9. HEADER*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.header.style-center {position: fixed; left: 0px; top: 0px; height: 90px; width: 100%; background: $col-text3; z-index: 500; text-align: center; backface-visibility: hidden;}
+.style-fullpage.header.bg-scroll {background:$bg-type5;}
+.scroll-hidden {@include transition (all 0.35s ease-out 0.35s);}
+.scroll-hidden.active {@include transform (translateY(-100%));}
+.logo-mobile, .open-menu {display: none;}
+.header-wrap {position: relative; margin: 0px 90px; height: 100%;}
+.style-fullpage.header {background: none;
+	& .nav-menu > ul > li > a, & .header-icon a i {color: #fff;}
+	& .logo {left: 15px;}
+	& .header-icon {right: 15px;}
+	& .nav-menu ul > li.active > a, & .nav-menu ul > li:hover > a {color: #1a205a;}
+    & .nav-menu ul .sub-menu > li.active > a, & .nav-menu ul .sub-menu > li:hover > a {color: #fff;}
+	& .nav-menu > ul > li > a:before {background: #fff;}
+}
+.style-fullpage .header-wrap {margin: 0px auto;}
+nav li {position: relative;}
+.nav-menu > ul > li {position: relative; display: inline-block; margin: 0px 8px; padding: 5px 0px;
+	& span {position: relative; z-index: 1;}
+	& a {@extend .font-type-2; display: block; font-size: 13px; color: $col-text; text-transform: uppercase; font-weight: 700; letter-spacing: 1.4px; padding: 5px 10px; line-height: 13px; position: relative; overflow: hidden;}
+	& > a:before {@extend .pos-absol, .transition-def; content: ''; background: $bg-type3;@include transform (translateX(-110%));}}
+.nav-menu ul > li.active > a, .nav-menu ul > li:hover > a {color: $col-text3;
+    &:before {@include transform (translateX(0%))}}
+.header.style-center nav {position: relative; padding: 29px 0px; display: inline-block;}
+.logo {left: 0px; width: 102px;
+	& img { width: 100%; height: auto;}
+}
+.header-icon {right: 0px;
+    & a {position: relative; float: left; margin: 0px 0px 0px 10px;}
+	& a span {width: 14px; height: 14px; line-height: 14px; position: absolute; right: -5px; bottom: -3px; background: #888; color:$col-text3; border-radius: 50%; font-size: 8px; font-weight: 400; @extend .font-type-2;}
+	& a i {color: #888888; font-size: 20px;}
+}
+.sub-menu {position: absolute; top: 100%; min-width: 220px; left: 0px; background: $col-text3; border:1px solid $col-stroke; text-align: left; box-shadow: $item-shadow; padding: 10px 0px; @include transform (translateX(-35px)); visibility: hidden; opacity: 0; @include transition(all 250ms cubic-bezier(0.75, 0.35, 0.48, 1.145));
+	& li {padding: 0px 20px;}
+	& li:last-child a {border-bottom: 0px none;}
+	& .sub-menu {position: absolute; left: 100%; top: 0px;}
+}
+.nav-menu > ul > li .sub-menu li a {padding: 0px 10px; line-height: 35px; border-bottom: 1px solid #f2f2f2; font-size:12px;}
+.burger {position: absolute; cursor: pointer; display: none; padding: 9px 0px; width: 50px; height: 100%; left: 0px; z-index: 50; @include transition(all 250ms ease-in 0.35s);
+	& i {position: relative; width: 60%; display: block; margin: 20px auto 0;}
+	& i:before, & i:after {content: ''; position: absolute; left: 0px; top: 0px; width: 100%; display: block; height: 2px; background: $bg-type3; transform-origin: center center; @include transition(all 250ms cubic-bezier(0.75, 0.35, 0.48, 1.145));}
+	& i:after {top: -3px;}
+	& i:before {top: 3px;}
+	&.active i:after {@include transform (rotate(45deg)); top: 0;}
+	&.active i:before {@include transform (rotate(-45deg)); top: 0;}
+}
+.mobile-footer {display: none; position: relative; width: 100%; text-align: center;
+	& .folow {width: 100%; position: relative; display: inline-block; margin-bottom: 20px;}
+	& .folow a {margin: 0 10px;}
+	& .copyright {color: $col-text8; font-weight: 300; @extend .font-type-2; font-size: 10px; margin-bottom: 20px; float: none;}
+}
+
+.solo-close-menu {position: absolute; text-align: center; width: 60px; height: 60px; top: 25px; left: 50%; margin-left: -30px; line-height: 60px; color: $col-text3; font-size: 18px; cursor: pointer;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 10. FOOTER*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer {position: relative; margin: 0 90px; height: 90px; background: $col-text3; padding: 36px 0px;}
+.footer.type-2 {background: $bg-type5; margin: 0px; padding: 0px; display: inline-block; width: 100%; height: auto; @extend .font-type-4;}
+.footer.fix-footer {position: absolute; bottom: 0px; left: 0px; width: 100%; z-index: 500; margin: 0px; padding: 36px 90px; height: auto;}
+.logo-f {display: block; z-index: 5; position: absolute; left: 0px;
+    & img {width: 100px; height: auto; display: block;}
+}
+.footer.type-2 .top-bar .folow {right: 0px; position: absolute; z-index: 5;}
+.top-bar {position: relative; width: 100%; border-bottom: 1px solid #6d6d6d; padding: 40px 0px;
+	& .container {position: relative;}
+}
+.bottom-bar {position: relative; padding: 30px 0px 25px;
+	& .simple-text {float: left; max-width: 450px;}
+	& .simple-text p {color: $col-text7;}
+	& .copyright {float: right; font-size: 14px; @extend .font-type-4; line-height: 16px; color: $col-text7;}
+}
+.footer-nav {position: relative; display: inline-block; text-align: center;width: 100%;
+	& li {display: inline-block; margin: 0 18px; line-height: 25px; font-size: 16px;}
+	& li a {color: $col-text7; }
+	& li a:hover {color: $col-text3;}
+}
+.copyright {position: relative; float: left; display: inline-block; font-size: 13px; line-height: 24px; color: $bg-type3; @extend .font-type-2;}
+.footer .folow {position: relative; float: right; display: inline-block;}
+.folow a {font-size: 16px; color: $col-type1; display: inline-block; margin: 0px 0px 0px 20px; position: relative;
+    &:after {content: ''; font-family: "fontello"; position: absolute; display: block; width: 100%; text-align: center; line-height: 16px; font-size: 16px; color: #000; left: 0px; top: 0px; @include transform (translateY(-10px)); opacity: 0; @include transition(all 310ms cubic-bezier(0.75, 0.35, 0.48, 1.145));}
+	&:before {@include transition(all 310ms cubic-bezier(0.75, 0.35, 0.48, 1.145));}
+}
+.folow.folow-title {text-align: center;
+	& span {font-size: 12px; padding-bottom: 20px;}
+	& a {margin: 0 13px;}
+	& a:after {color: $col-text3;}	
+}
+.folow .fa-twitter:after {content: '\e806';}
+.folow .fa-facebook:after {content: '\e805';}
+.folow .fa-gplus:after {content: '\e804';}
+.folow .fa-tumblr:after {content: '\e807';}
+.folow .fa-pinterest:after {content: '\e808';}
+.folow .fa-linkedin:after {content: '\e809';}
+
+.folow.color-style a {width: 50px; height: 50px; line-height: 50px; border-radius: 50%; color: $col-text3; text-align: center; font-size: 18px;
+    &:after {line-height: 50px; font-size: 18px;}
+	&.fa-twitter {background: #4eccf0;}
+	&.fa-facebook {background: #567da9;}
+	&.fa-gplus {background: #ea6254;}
+	&.fa-pinterest {background: #c24149;}
+	&.fa-twitter:after {color: #4eccf0;}
+	&.fa-facebook:after {color: #567da9;}
+	&.fa-gplus:after {color: #ea6254;}
+	&.fa-pinterest:after {color: #c24149;}
+	&:hover {background: $col-text3;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 11. POPUP & PANEL*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.popup-wrap {position: relative; width: 100%; overflow: hidden;}
+.wrap-over {position: relative; overflow: hidden; height: 100%;}
+.pusher-layer {background: rgba(100,77,77,0.44); cursor: pointer; visibility: hidden; opacity: 0; z-index: 5500; @extend .pos-absol; @include transition(all 0.6s ease-out);}
+.effect-push {position: relative;left: 0;height: 100%; background: $col-text3; @include transition(all 0.5s); backface-visibility: hidden;
+	&.persp {perspective: 1000px; -webkit-perspective: 1000px;}
+}
+.container-perspective {position: relative; width: 100%; height: 100%; @include transition(all 0.5s); overflow: hidden;
+	&.persp {-webkit-perspective: 1500px; perspective: 1500px;}
+	&.add-effect {background: $bg-type3; cursor: pointer;}
+	&.add-effect .effect-push {@include transform(translate3d(0px, 0, -94px) rotateY(6deg)); -webkit-transform-style: preserve-3d;-ms-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;}
+	&.add-effect .pusher-layer {opacity: 1; visibility: visible;}
+	&.open-bottom .effect-push {@include transform(perspective(900px) translateY(-35%) scale(0.7) rotateX(10deg)); -webkit-transform-style: preserve-3d;-ms-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;}
+	&.open-bottom .pusher-layer {opacity: 1; visibility: visible;}
+}
+
+.search-panel {position: fixed; left: 0px; top: 0px; width: 100%; height: 90px; background: $col-text3; z-index: 600; visibility: hidden; opacity: 0; text-align: center; @include transition(all 0.5s);
+	&.active {visibility: visible; opacity: 1;}
+	&.popup .close {width: 26px; height: 26px; right: 0px; margin-top: 5px; @extend .vertical-align;}
+	& .wrap {position: relative; margin: 0 90px; height: inherit;}
+}
+.serch-form {position: relative; max-width: 770px; margin: 0 auto;
+    & input {position: relative; display: inline-block; padding: 10px 50px 10px 0px; width: 100%; height: 50px; background: none; color: $col-text10; font-size: 26px;}
+	& .close-result {right: 0px; cursor: pointer;}
+}
+.close {position: absolute; right: 0px; top: 0px; cursor: pointer; 
+	& img {@extend .transition-def;}
+	&:hover img {@include transform(scale(0.8));}
+}
+.close-item {
+    & img {@extend .transition-def;}
+	&:hover img {@include transform(scale(0.8));}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 12. RESPONSIVE*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 992px) {
+    .nav-menu > ul > li:hover > .sub-menu {visibility: visible; opacity: 1; @include transform (translateX(0px));}
+	.sub-menu > li:hover > a {color: $col-text3; background: #7f7f7f;}
+	.sub-menu li:hover .sub-menu  {opacity: 1; visibility: visible; @include transform (translateX(0px));}
+	.folow a:hover:after {@include transform(translateY(0px)); opacity: 1;}
+	.folow a:hover:before {opacity: 0; @include transform(translateY(10px));}
+}
+@media (max-width: 1400px) {
+    .header-wrap, .footer, .search-panel .wrap {margin: 0 30px;}
+	.header.style-center {height: 66px;
+	   & nav {padding: 16px 0px;}
+	}
+	.main-baner-align {padding-top: 66px;}
+	.search-panel {height: 66px;}
+    .footer .folow {margin-top: 5px;}
+    .footer {padding: 25px 0px; height: 66px;}
+}
+@media (max-width: 1200px) {
+	.nav-menu > ul > li {margin: 0px 7px;}
+	.footer {height: 70px; padding: 25px 0px;}
+	.search-panel {height: 66px;}
+	.serch-form input {font-size: 18px; height: 40px; padding: 5px 0px;}
+}
+@media (max-width: 992px) {
+	.h6 {font-size: 40px;}
+	.h4 {font-size: 60px;}
+	.title-counter .title {padding-bottom: 15px;}
+	.main-content {@include transition(all 0.5s);}
+	.burger {display: block;
+		&.active {@include transform(translateX(230px) translateY(0%)); background: $col-text3; top: 0px; text-align: center;}
+	 }
+	.nav-menu {display: table; width: 100%; height: 100%;}
+	.logo-mobile {display: block; margin-bottom: 75px; padding-left: 20px;}
+	.header.style-center nav {position: fixed; overflow-y: auto; z-index: 580; top: 0px; text-align: left; left: 0px; width: 250px; background: $bg-type3; height: 100%; @include transform(translateX(-100%)); @include transition(all 0.5s);
+		& .nav-menu > ul {position: relative; width: 100%; display: inline-block; padding: 0px 20px 60px 20px;}
+		& .nav-menu ul > li {display: block; padding: 0px; margin: 0px;}
+		& .nav-menu ul > li > a {color: $col-text3; padding: 0px 0px 30px; font-size: 14px;}
+		& .nav-menu ul > li .sub-menu li a {border-bottom: 0px none; color: $col-text4; font-size: 12px; line-height: 12px; padding-bottom: 20px;}
+	}
+	.style-fullpage .burger {left: 15px;}
+	.style-fullpage .header-wrap {width: 100%;}
+	.style-fullpage .burger.active {@include transform(translateX(250px) translateY(0%));}
+	.align-bottom .mobile-footer {display: table-cell; vertical-align: bottom;}
+	.open-menu {position: absolute; right: 0px; display: block; top: 0px; cursor: pointer; font-size: 13px;
+		&.act {@include transform(rotate(180deg));}
+	}
+	.header.style-center nav.slide {@include transform(translateX(0%));
+	   
+	}
+	.header.style-center .logo {left: 50%; @include transform(translate(-50%, -50%));}
+	.container-perspective.push-content {
+		& .main-content {@include transform(translateX(250px));}
+	}
+	.sub-menu {visibility: visible; display: none; padding: 0px 0px 10px 15px; opacity: 1; position: relative; top: auto; @include transform(translateX(0px)); box-shadow: none; background: none; border: 0px none; min-width: 100%; @include transition(none);
+		& li {padding: 0px;}
+	}
+	.sub-menu .sub-menu {position: relative; top: auto; left: auto; padding-bottom: 0px;}
+	.serch-form {max-width: 320px;}
+	.container-perspective.open-bottom .effect-push {@include transform(perspective(100px) translateY(-100%) scale(1) rotateX(0deg));}
+	.main-baner-align .cell-view {display: block; width: 100%;}
+}
+@media (max-width: 768px) {
+	.header-wrap, .footer, .search-panel .wrap {margin: 0px 15px;}
+	.burger.active {@include transform(translateX(235px) translateY(0%));}
+	.footer {text-align: center; height: auto; padding: 25px 0px 0px;}
+	.footer .folow, .footer .copyright {float: none; width: 100%; margin-bottom: 20px;}
+	.footer .folow a {margin: 0px 10px;}
+    .blog-post-img .video-block {margin: 0px;}
+}
+@media (max-width: 480px) {
+    .footer {height: auto; display: inline-block; padding: 25px 0px 20px;}
+	.h4 {font-size: 50px;}
+    .h6 {font-size: 30px;}
+	.h7 {font-size: 24px; line-height: 30px;}
+	.serch-form {max-width: 220px;}
+	.button-type-1 {height: 40px; line-height: 36px; padding: 0px 15px; font-size: 11px;
+		& span:before {line-height: 36px; font-size: 11px;}
+	}
+	.mobile-auto .main-baner-align {padding: 66px 15px 0px;}
+}

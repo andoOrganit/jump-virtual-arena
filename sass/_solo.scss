@@ -1,0 +1,271 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 33. SOLO */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.footer.fixed {position: fixed; left: 0px; bottom: 0px; width: 100%; background: $col-text3;
+	& .folow {float: left; padding-left: 30px;}
+	& .copyright {line-height: 16px;}
+}
+.solo-open-menu {position: relative; display: inline-block; width: 23px; height: 14px; margin: 35px 0px; cursor: pointer;
+	& i {position: relative; width: 19px; height: 2px; background: $bg-type3; margin: 6px auto 0px; display: block;}
+	& i:before {content: ''; position: absolute; left: -2px; top: -6px; width: 23px; height: 2px; background: $bg-type3; @include transition (all 0.25s ease-out);}
+	& i:after {content: ''; position: absolute; left: 2.5px; top: 6px; width: 15px; height: 2px; background: $bg-type3; @include transition (all 0.25s ease-out);}
+	&:hover i:before {width: 15px; left: 2px;}
+	&:hover i:after {width: 23px; left: -2.5px;}
+}
+.solo-header {position: fixed; left: 0px; top: 0px; text-align: center; z-index: 500; width: 100%; padding: 230px 0px 170px; opacity: 0; visibility: hidden; @include transition (all 0.25s ease-out); @include transform (translateY(-50px)); 
+	& nav {position: relative; width: 100%; @extend .font-type-2;}
+	& ul li {display: inline-block; position: relative; margin: 0 30px;}
+	& ul li a {position: relative; font-size: 25px; line-height: 30px; text-transform: uppercase; color: $col-text3; font-weight: 700; letter-spacing: 1.8px;}
+	& ul li a:before {content: ''; position: absolute; left: 50%; top: 0px; opacity: 0; width: 7px; height: 120px; background: #535353; z-index: -1; @include transform (rotate(45deg)); @include transition (all 0.25s ease-out);}
+	& ul li:hover a:before, & ul li.active a:before {top: -50px; opacity: 1;}
+	&.show-solo-menu {opacity: 1; visibility: visible; @include transform (translateY(0px)); }
+}
+.main-content.solo-type {height: 100vmin; padding: 0px; border-top-width: 0px;
+	& .content-load, & .ajax-load-content {height: inherit;}
+}
+.solo-baner {background: #ebebe9; position: relative; width: 100%; height: 100%; padding: 90px 0px;
+	& .main-img {position: absolute; right:-5%; bottom: 0px; width: 83%;}
+	& .main-img img {width: 100%; height: auto;}
+	&.overflowh {overflow: hidden;}
+}
+.solo-button.button-type-2.style-2 {color: #4d4d4e; box-shadow: inset 0px 0px 0px 2px #4d4d4e; font-size: 13px; @extend .font-type-2; font-weight: 700; letter-spacing: 1.4px; height: 53px; line-height: 53px; padding: 0px 50px; 
+	&:before, &:after, & span:before, & span:after {background: #25c5f9;}
+	&:hover {color: #25c5f9;}
+}
+.solo-main-title {padding: 0px 70px 0px 140px; z-index: 5;
+	& .simple-text {max-width: 540px; padding-bottom: 35px;}
+	& .title {font-size: 150px; line-height: 127px; padding-bottom: 30px;}
+	& .title-md {font-size: 98px; line-height: 90px; padding-bottom: 40px;}
+}
+.container-perspective {
+    &.persp {-webkit-perspective: 1500px; perspective: 1500px;}
+	&.open-solo-menu {background: $bg-type3;}
+	&.open-solo-menu .effect-push {@include transform(translate3d(0px, 23%, 0px) rotateX(48deg) scale(0.75)); -webkit-transform-style: preserve-3d;-ms-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;}
+	&.open-solo-menu .pusher-layer {opacity: 1; visibility: visible;}
+}
+.left-column {width: 65%; float: left; height: 100%; position: relative;}
+.right-column {width: 35%; float: left; height: 100%; position: relative;}
+.solo-sub-title {position: absolute; @extend .font-type-2; font-size: 13px; text-transform: uppercase; letter-spacing: 1.4px; font-weight: 700; color: $col-text; display: block; @include transform (rotate(-90deg)); left: 35px; top: 290px}
+
+.main-slider {position: relative; width: 100%; height: inherit; display: inline-block;}
+.circle-solo-point.point-circle-slider {position: relative; display: inline-block; width: 100%; left: 0px; bottom: auto;
+	& .swiper-slide {padding: 0px 15px 0px 0px;}
+	& .slide-point .path {stroke: #25c5f9; stroke-width: 2px;}
+	& .slide-point {width: 62px; height: 62px;}
+	& .slide-point:before {box-shadow: inset 0px 0px 0px 2px rgba(77,77,78,0.3); opacity: 1; backface-visibility: hidden;}
+	& .slide-point:hover:before, & .slide-point.active:before {box-shadow: inset 0px 0px 0px 2px rgba(77,77,78,1);}
+	& .slide-point span {position: absolute; font-size: 13px; font-weight: 700; @extend .font-type-2; left: 0%; top: 0%; width: 100%; height: 100%; line-height: 62px; text-align: center; color: rgba(77,77,78,0.3); @include transition (all 0.25s ease-out);}
+	& .slide-point:hover span,  & .slide-point.active span {color: $col-text;}
+}
+
+.solo-page3 .left-column {width: 55%;}
+.solo-page3 .right-column {width: 45%;}
+.slide-shadow img {box-shadow: $item-shadow; max-width: 100%;}
+.date-slide {position: relative; display: inline-block; padding: 25px 0px; background: $col-text; color: $col-text3; width: 100%; text-align: center; @extend .font-type-3;
+	& b {font-size: 45px; line-height: 45px;position: relative; display: block; padding-bottom: 8px;}
+	& span {font-size: 10px; text-transform: uppercase; display: block; position: relative; letter-spacing: 1.4px;}
+}
+
+.testi-slider {position: fixed; left: 0px; width: 100%; visibility: hidden; opacity: 0; z-index: 50; @include transform (translateY(-75px));}
+.testi-post-slider .swiper-slide {margin: 0px 20px; width: 110px;}
+.title-counter.solo-title-counter {padding: 70px 0px 30px;
+    & .title {padding-bottom: 0px;}
+	& .open-slider {cursor: pointer;
+		& b {position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; line-height: 33px; font-size: 10px; font-weight: 400; border-radius: 50%; background: $col-text3; color: $col-text; opacity: 0; visibility: visible; @include transition (all 0.25s ease-out);}
+	}
+} 
+.solo-comment-slider {position: relative; width: 100%; padding: 90px 0px 0px;
+	& .swiper-container {margin: 0px 80px; padding: 0px 60px;}
+}
+.solo-comment-slide {position: relative; width: 100%; padding: 0px 60px; min-height: 420px;
+	& p {font-size: 32px; line-height: 50px; color: $col-text; padding-bottom: 90px;}
+	& p a {font-weight: 700; color: $col-text;;}
+}
+.author-comm {position: absolute; bottom: 0px; width: 100%; padding: 20px 0px; @extend .font-type-3; text-transform: uppercase;
+	&:before {content: ''; position: absolute; left: 0px; top: 0px; width: 60%; height: 2px; background: $col-text;}
+	& .title {font-size: 15px; letter-spacing: 1.5px; padding-bottom: 13px;}
+	& .colmm-tags {font-size: 12px; color: $col-text9; letter-spacing: 1.4px;}
+}
+.comm-arrow {position: absolute; top: 50%; font-size: 24px; width: 50px; height: 50px; line-height: 50px; cursor: pointer; text-align: center; z-index: 15; margin-top: -25px;
+	&.swiper-arrow-right {right: 0px;}
+	&.swiper-arrow-left {left: 0px;}
+}
+.solo-baner .client-item {margin: 30px 0px;}
+.solo-projects-slider {position: fixed; left: 0px; top: 320px; width: 100%; z-index: 50;
+	& .swiper-slide {width: 370px; margin: 0 50px;}
+	& .swiper-container {padding-bottom: 230px;}
+}
+.solo-project-slide {position: relative; width: 100%; box-shadow: $item-shadow; min-height: 510px;
+	& .layer-bg-3 {opacity: 0; display: block;}
+	& .title {position: absolute; left: 0px; bottom: 55px; width: 100%; color: $col-text3; opacity: 0; @include transition (all 0.35s ease-out);}
+	& .title h4 {font-size: 43px; line-height: 50px; margin-bottom: 10px; position: relative;z-index: 1;}
+	& .title span {z-index: 5; position: relative;}
+	& .title:before {content: ''; position: absolute; left: -7px; top: -15px; width: 115px; height: 120px; background: $col-text; @include transform (skewX(-35deg) translateX(50px)); opacity: 0; @include transition (all 0.35s ease-out);}
+	&:hover .title:before {opacity: 1; @include transform (skewX(-45deg) translateX(0px));}
+	&:hover .layer-bg-3 {opacity: 1;}
+	&:hover .title {opacity: 1; left: 30px;}
+}
+.pagination.style-type-2.nubmer-point {bottom: 140px;
+	& .swiper-pagination-bullet {width: 44px;}
+	& .swiper-pagination-bullet i {color: $col-text;}
+	& .swiper-pagination-bullet:before {background: $bg-type3;}
+	& .swiper-pagination-bullet:after {background: $col-text; left: 0px;}
+	& .swiper-pagination-bullet-active:before {background: none;}
+}
+
+.filter-val-slide {position: relative; display: inline-block; @extend .font-type-3; color: $col-text3; text-align: center;
+	& b {font-size: 112px; line-height: 100px; }
+	& .h13 {font-size: 12px; display: block;}
+}
+.filter-number-slider {position: relative; padding: 120px 0px 130px; text-align: center; visibility: hidden; opacity: 0; @include transform (translateY(-80px));
+	& .swiper-container {width: auto; max-width: 1300px;}
+}
+
+.revers-color.active {background: #7f7f7f;
+	& .solo-title-counter, & .solo-comment-slide p, & .author-comm .title, & .solo-comment-slide p a, & .comm-arrow, & .filter-list .link-style-1, & .solo-sub-title, & .slide-lidt-text {color: $col-text3;}
+	& .open-slider {background: none;}
+	& .open-slider b {opacity: 1; visibility: visible;}
+	& .author-comm .colmm-tags {color: $col-text8;}
+	& .author-comm:before {background: $col-text3;}
+	& .testi-slider {visibility: visible; opacity: 1; @include transform (translateY(0px));}
+	& .solo-comment-slider {padding: 165px 0px 0px 0px;}
+	& .filter-number-slider {visibility: visible; opacity: 1; @include transform (translateY(0px));}
+	& .solo-projects-slider {top: 664px;}
+}
+
+.solo-title-counter, .solo-comment-slide p, .author-comm .title, .open-slider, .open-slider b, .author-comm .colmm-tags, .author-comm:before, .testi-slider, .solo-comment-slider, .comm-arrow, .solo-comment-slide p a, .solo-projects-slider, .filter-number-slider, .solo-sub-title, .slide-lidt-text { @include transition (all 0.35s ease-out);}
+
+@media (max-width: 1800px) {
+	.solo-main-title {padding: 0px 60px;}
+	.solo-sub-title {top: 160px; left: -30px;}
+	.solo-comment-slide p {font-size: 20px; line-height: 30px;}
+    .solo-main-title .title-md {font-size: 60px; line-height: 70px; padding-bottom: 25px;}
+}
+@media (max-width: 1400px) {
+	.solo-main-title .title {font-size: 90px; line-height: 95px;}
+	.solo-main-title .title-md {font-size: 50px; line-height: 50px;}
+	.solo-open-menu {margin: 25px 0px;}
+	.solo-header {padding: 130px 0px;}
+	.solo-header ul li a {font-size: 18px; line-height: 20px;}
+	.solo-baner {padding: 66px 0px;}
+	.solo-comment-slider .swiper-container {margin: 0px 60px; padding: 0px 30px;}
+	.solo-comment-slide {padding: 0px 30px;}
+}
+@media (max-width: 992px) {
+    .header.style-center .mobile-left.logo {left: 0px;  @include transform (translate(0,-50%));} 
+	.solo-header ul li {display: block; margin: 0px 0px 30px;}
+	.solo-header ul li a:before {height: 70px;}
+	.solo-header ul li:hover a:before, .solo-header ul li.active a:before {top: -25px;}
+	.container-perspective.open-solo-menu .effect-push {@include transform (translate3d(0px, 100%, 0px) rotateX(48deg) scale(0.75));}
+	.solo-header {height: 100%; background: #7f7f7f; overflow-y: auto; padding: 110px 0px;}
+	.main-content.solo-type {height: auto;}
+	.solo-baner {min-height: 780px;}
+	.footer.fixed {position: relative;}
+	.footer.fixed .folow {padding-left: 0px;}
+	.solo-main-title.vertical-align {position: relative; left: 0px; top: 0px;  @include transform (translateY(0)); padding: 60px;}
+	.slide-shadow.vertical-align {position: relative; left: 0px;  @include transform (translateY(0)); top: 0px;}
+	.left-column, .right-column, .solo-page3 .left-column, .solo-page3 .right-column {width: 100%; height: auto;}
+	.right-column .main-slider {height: 400px;}
+	.solo-baner.overflowh.slider-swiching {padding-bottom: 0px;}
+    .solo-baner.overflowh {padding-bottom: 0px;}
+	.bg-position > .bg {display: none;}
+	.right-column.bg-position .main-slider {height: auto;
+		& .swiper-container {padding-bottom: 60px;}
+	}
+	.solo-projects-slider {position: relative; top: 0px;}
+	.filter-number-slider {position: absolute; left: 0px; width: 100%; padding: 30px 0px 60px;}
+	.solo-projects-slider .swiper-container {padding-bottom: 110px;}
+	.pagination.style-type-2.nubmer-point {bottom: 40px;}
+	.solo-baner.solo-page4 {padding: 66px 0px 0px;}
+	.filter-val-slide b {font-size: 70px; line-height: 70px;}
+	.revers-color.active .solo-projects-slider {top: 180px;}
+	.solo-baner .slide-lidt-text {margin-bottom: 60px;}
+	
+	.solo-mobile-filter .filter-list {position: absolute; left: 0px; top: 50px; border: 2px solid #d2d2d3; z-index: 500; background: $col-text3; min-width: 320px; padding-bottom: 0px;}
+	.solo-mobile-filter .filter-list .link-style-1 {display: block; margin: 5px 0px;}
+	.solo-mobile-filter .filter-list .link-style-1:before {display: none;}
+	.solo-mobile-filter .filter-list .link-style-1:hover, .solo-mobile-filter .filter-list .link-style-1.active {color: #000;}
+	.solo-comment-slider {padding: 30px 0px 100px 0px;}
+	.solo-comment-slide {min-height: 100%;}
+	.author-comm {position: relative;}
+	.solo-comment-slide p {padding-bottom: 30px;}
+	.testi-slider {position: absolute;}
+    .solo-baner .title-second {padding-top: 60px;}
+}
+
+@media (max-width: 768px) {
+	.solo-main-title {padding: 0px 30px;}
+	.solo-main-title .title {font-size: 60px; line-height: 60px;}
+	.solo-baner {min-height: 780px;}
+	.footer.fixed {height: auto; margin: 0px;}
+	.footer.fixed .folow {padding-left: 0px;}
+	.solo-main-title.vertical-align {padding: 30px;}
+	.solo-sub-title {position: relative; left: 0px; top: 0px;  @include transform (rotate(0deg)); padding: 30px 0px 0px 30px;}
+	.solo-comment-slider .swiper-container {margin: 0px 30px;}
+	.solo-baner.solo-page4 {min-height: 100%;}
+}
+@media (max-width: 480px) {
+	.solo-main-title .title {font-size: 40px; line-height: 40px;}
+	.solo-main-title .title-md {font-size: 30px; line-height: 30px;}
+	.solo-main-title {padding: 0px 15px;}
+	.solo-baner {min-height: 630px;}
+	.solo-main-title.vertical-align {padding: 30px 15px;}
+	.solo-sub-title {padding: 30px 0px 0px 15px;}
+	.solo-projects-slider .swiper-slide {width: 320px; margin: 0px 10px;}
+	.solo-projects-slider .swiper-container.nubmer-point-style {padding: 0px 30px 100px; width: 100%;}
+	.title-counter.solo-title-counter {padding: 30px 0px;}
+	.solo-comment-slider .swiper-container {margin: 0px 15px; padding: 0px 15px;}
+	.solo-comment-slide p {font-size: 16px; line-height: 26px;}
+	.solo-comment-slide {padding: 0px 15px;}
+	.comm-arrow.swiper-arrow-left {left: -15px;}
+	.comm-arrow.swiper-arrow-right {right: -15px;}
+	.solo-comment-slider {padding: 30px 0px 80px;}
+	.testi-post-slider .swiper-slide {width: 80px; margin: 0px 10px;}
+	.date-slide b {font-size: 30px; line-height: 30px;}
+	.revers-color.active .solo-comment-slider {padding: 145px 0px 0px 0px;}
+	.date-slide span {letter-spacing: 0px;}
+    .right-column.bg-position .main-slider {height: auto;
+		& .swiper-container {padding-bottom: 0px;}
+	}
+}
+
+@media (max-height: 1000px) and (min-width: 992px) {
+	.title-counter.solo-title-counter {padding: 30px 0px;}
+	.solo-projects-slider {top: 285px;}
+	.solo-project-slide {min-height: 480px;}
+}
+
+@media (max-height: 900px) and (min-width: 992px) {
+	.solo-projects-slider {top: 230px;}
+	.title-counter.solo-title-counter .title {font-size: 40px;}
+	.title-counter.solo-title-counter {padding: 30px 0px 20px;}
+	.solo-project-slide {min-height: 250px;}
+    .solo-baner .client-item img {max-width: 180px;}
+    .solo-baner .title-second .title {font-size: 50px; line-height: 60px;}
+    .solo-baner .title-second {padding-bottom: 50px;}
+	.solo-project-slide .title {bottom: 30px;}
+	.solo-project-slide .title h4 {font-size: 25px; line-height: 25px;}
+	.filter-number-slider {padding: 60px 0px;}
+	.revers-color.active .solo-projects-slider {top: 490px;}
+	.solo-project-slide .title:before {top: -30px;}
+	.solo-comment-slide {min-height: 300px;}
+	.solo-comment-slider {padding: 60px 0px 0px;}
+	.date-slide b {font-size: 35px; line-height: 35px;}
+    .solo-projects-slider .swiper-container {padding-bottom: 220px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

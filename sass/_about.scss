@@ -1,0 +1,354 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 19. ABOUT PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.full-scroll-section {position: relative; width: 100%;} 
+.wrapper-full-scroll {@include transition (all 1s ease-out); padding-top: 90px;}
+.nav-page-pagination {
+    &.fixed-nav {position: fixed; top: 50%; @include transform (translateY(-50%)); z-index: 5;}
+    &.right {right: 0px; width: 90px;}
+    &.fixed-nav li {position: relative;}
+    &.fixed-nav li span {position: relative; display: block; width: 5px; height: 5px; background: $col-text2; margin: 0 auto 15px; border-radius: 50%; cursor: pointer; @extend .transition-def;}
+    &.fixed-nav li.active span, &.fixed-nav li:hover span {@include transform (scale(2.2)); background: $col-text;}
+}
+.tooltip-point {position: absolute; right: 0px; margin-right: 67px; top: -8px; font-size: 12px; z-index: 5; background:#75acff; color: #fff; border-radius: 10px; padding: 5px 8px 6px; opacity: 0; @include transition (all 0.35s ease-out); cursor: pointer;}
+.fixed-nav li:hover .tooltip-point {opacity: 1; margin-right: 57px; z-index: 1;}
+
+.full-height-baner {position: relative; width: 100%; height: 100vmin; min-height: 800px; z-index: -1;
+	&.section-scroll {min-height: 100%;}
+    &.over {overflow: hidden; z-index: 1;}
+}
+.scroll-fade.padd {left: 90px; right: 90px; width: auto;}
+.over-wrap-hidden {height: 100vmin; position: relative; width: 100%;}
+.typed-cursor{
+    opacity: 1;
+	@include animation (blink 0.7s infinite);
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+.main-title.type-1 {backface-visibility: hidden; position: relative;
+	& .h1 {font-size: 135px; line-height: 145px; padding-bottom: 15px;}
+	& .h14 {@extend .font-type-2; font-weight: 700; color: $col-text4; letter-spacing: 1.4px; text-transform: uppercase;}
+	&.text-left {padding: 0px 120px;}
+	&.vertical-align {position: absolute;}
+}
+.inside-img img {@extend .vertical-align; max-height: 580px;
+	&:first-child {left: -90px;}
+	&:last-child {right: -90px;}
+}
+.about-tags-block {text-align: center; padding: 130px 0px 205px; position: relative;
+	& .title {font-size: 42px; line-height: 55px; padding-bottom: 30px;}
+	& .simple-text {padding-bottom: 35px;}
+	& .simple-text p {line-height: 40px;}
+	& .button-type-1 {margin: 0px 8px 16px;}
+}
+.about-team-block {font-size: 0px; position: relative; height: 900px;}
+.desc-block {padding: 0px 35px 0px 85px;}
+.tab-item {visibility: hidden; opacity: 0; height: 100%; width: 100%; left: 0px; top: 0px; position: absolute;
+    &.active {visibility: visible; opacity: 1;}
+}
+.rel-item .tab-item {position: relative; height: auto; left: auto; top: auto;}
+
+.tumbs-item {margin-bottom: 25px; position: relative; display: inline-block;}
+.tumbs-item .slide-swich {position: relative; float: left; margin-right: 20px; width: 70px; height: 70px; z-index: 1; border-radius: 50%; overflow: hidden; background: #484848; cursor: pointer;
+	& img {width: 100%; height: auto; display: block; opacity: 0.2; @extend .transition-def;}
+	&.active img, &:hover img {opacity: 1;}
+}
+.team-desc { position: relative; width: 100%;
+	& .title {font-size: 77px; line-height: 86px; padding-bottom: 20px; display: block;}
+	& .simple-text {padding-bottom: 65px;}
+	& .simple-text.lg p {font-size: 20px; line-height: 34px;}
+}
+.team-follow {position: relative; display: inline-block; vertical-align: top;
+	& a {font-size: 30px; color: $col-text; display: inline-block; padding-right: 30px; line-height: 50px;}
+	& a:hover {color: $bg-type1;}
+}
+.analitic-block {text-align: center; font-size: 0px; padding: 65px 0px 30px; position: relative;}
+.circle-item {position: relative; width: 100%; display: inline-block; margin-bottom: 40px; text-align: center;
+	& .title {font-size: 12px; text-transform: uppercase; font-weight: 700; letter-spacing: 5.4px; @extend .font-type-2; padding-top: 20px;}
+}
+.client-block {padding: 70px 0px 50px;}
+.client-item {position: relative; width: 100%; margin-bottom: 140px; text-align: center;
+    & a {display: inline-block; width: 100%; opacity: 0.3;}
+	&:hover a {opacity: 1;}
+}
+.scroll-fade.bg {position: fixed;}
+.skill-line {@extend .vertical-align; left: 0px; width: 100%; text-align: center; color: #4d4d4e; font-size: 47px; font-weight: 700; @extend .font-type-2;
+	& b {font-size: 30px; display: inline-block; color: #4d4d4e;}
+}
+.skill-circle {position: relative; display: inline-block; width: 210px; height: 210px;}
+
+.slider-animation .swiper-slide .team-desc .title {opacity: 0;@include transform (translateX(-50px)); @include transition (all 0.35s ease-out);}
+.slider-animation .swiper-slide .team-desc .simple-text {opacity: 0;@include transform (translateX(50px)); @include transition (all 0.45s ease-out 0.25s);}
+.slider-animation .swiper-slide .team-follow-wrap {opacity: 0; @include transform (translateX(-50px));@include transition (all 0.65s ease-out 0.35s);}
+.slider-animation .swiper-slide.swiper-slide-active .team-desc .title, .slider-animation .swiper-slide.swiper-slide-active .simple-text, .slider-animation .swiper-slide.swiper-slide-active .team-follow-wrap {opacity: 1; @include transform (translateX(0px));}
+
+.service-item {position: relative; padding-bottom: 70px; text-align: center;
+	& .image {width: 120px; height: 120px; position: relative; background: $col-text3; border-radius: 50%; margin: 0 auto 15px; text-align: center; overflow: hidden;@include transition (all 0.35s ease-out);}
+	& .image img {position: absolute; left: 50%; top: 50%; @include transform(translate(-50%, -50%)); @include transition (all 0.35s ease-out); display: block; backface-visibility: hidden;}
+	& .text .title {padding-bottom: 10px;}
+	&:hover .image, &.active .image {background: $bg-type1;}
+	& .image img.img-in {opacity: 0; @include transform(translate(-50%, 150%));}
+	&:hover .image .img-out, &.active .image .img-out {@include transform(translate(-50%, -150%)); opacity: 0;}
+	&:hover .image .img-in, &.active .image .img-in {@include transform(translate(-50%, -50%)); opacity: 1;}
+	& .simple-text p {color: rgba(77,77,78,0.5);}
+}
+
+.video-item {height: 100%; position: absolute; width: 100%; left: 0px; top: 0px; overflow: hidden; z-index: -5; border-radius: 10px;}
+.play-button {cursor: pointer; z-index: 5;
+	& img {opacity: 0.4; @include transition (all 0.35s ease-out);}
+	& img:hover {opacity: 1;}}
+.close-video {width: 30px; height: 30px; background: #fff; z-index: 8; color: #272b2b; opacity: 0; position: absolute; right: 15px; top: 15px; line-height: 30px; text-align: center; font-size: 24px; cursor: pointer; backface-visibility: hidden;
+    & span {display: block; transform: rotate(45deg); -webkit-transform: rotate(45deg);}} 
+.video-item.act {z-index: 5;
+    & .video-title  {opacity: 0;}
+	& .close-video {opacity: 1;}
+	& .video-wrapper {opacity: 1; visibility: visible;}}
+.video-wrapper {position: relative; width: 100%; display: block;background: #000; height: 100%; opacity: 0; visibility: hidden;}
+.video-iframe {position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;
+    & iframe {position: absolute;left: 0;top: 0; width: 100%;height: 100%; border: none; outline: none;}} 
+.video-block {position: relative; width: 100%; overflow: hidden; height: 340px; box-shadow: $item-shadow5; border-radius: 10px;
+	& .bg, & .layer-bg-2 {border-radius: 10px;}
+    &.full-video {height: 100%; box-shadow: none; border-radius: 0px;}
+	&.full-video .bg,  &.full-video .layer-bg-2 {border-radius: 0px;}
+}
+.caption {position: relative;text-align: left;
+	& .title {padding-bottom: 10px;}
+	& .simple-text {padding-bottom: 30px;}
+}
+
+
+.history-slide {position: relative; width: 100%; padding-bottom: 0px; text-align: center;}
+.block-img { position: relative; max-width: 370px; margin: -85px auto 0px; display: inline-block;
+    & .image {margin:0px auto 20px; box-shadow: $item-shadow6; position: relative; width: 220px; height: 220px; border-radius: 50%;}
+	& .title {font-size: 22px; line-height: 35px; padding-bottom: 20px;}
+	& .title a {color: $col-text;}
+	& .title a:hover {color: $bg-type1;}
+}
+.mini-title {font-size: 12px; font-weight: 700; @extend .font-type-2; text-transform: uppercase; color: $col-text9;}
+.year-item {position: relative; text-align: center; overflow: hidden; 
+	& b {font-size: 218px; color: rgba(77,77,78,0.25); display: inline-block; line-height: 200px; @extend .font-type-3; font-weight: 900; position: relative; background: #eceeeb; padding: 0px 60px;}}
+.wrapp-line .swiper-slide:before {content: ''; position: absolute; left: 0%; width: 100%; background: url(../img/timeline_bg.png) repeat-x; height: 106px; top: 27px;} 
+.team-block {height: 580px; z-index: 5;
+	& .caption {text-align: center; position: relative; padding-top: 55px; backface-visibility: hidden;}
+}
+.gutter-15 .swiper-slide {padding: 0px 15px;}
+.test-item {position: relative; width: 100%; padding: 25px; background: $col-text3;
+	& .rate {float: right;}   
+	& h5 {position: relative; float: left; padding-bottom: 12px; letter-spacing: -0.2px;}
+	& .simple-text {display: block; padding-bottom: 10px; clear: both;}
+}
+.rate {position: relative; display: inline-block; line-height: 20px;
+	& i {font-size: 12px; color: #d4e51c; margin: 0 1px;}
+}
+.rev-title {position: relative; 
+	& .h6 {font-size: 53px; line-height: 55px; padding-bottom: 10px;}
+	& p {font-size: 18px;}
+}
+
+.team-item {position: absolute; bottom: 30px; left: 50%; margin-left: -115px; background: $col-text3; border-radius: 5px; padding: 25px 35px 30px; display: inline-block; width: 305px; text-align: center; z-index: 5; box-shadow: $item-shadow7; opacity: 0; visibility: hidden; @include transition (all 0.35s ease-out);
+	&:before {content: ''; position: absolute; left: 50%; top: -8px; margin-left: -8px; width: 0;height: 0;border-style: solid;border-width: 0 8px 8px 8px;border-color: transparent transparent #ffffff transparent;}
+	& .title {font-size: 25px; padding-bottom: 15px;}
+	& .simple-text {padding-bottom: 20px;}
+	& .share a {font-size: 20px; color: $col-text; margin: 0px 10px;}
+	& .share a:hover {color: $bg-type1;}
+	& .image {width: 110px; height: 110px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px;}
+}
+.hover-area {position: relative; width: 100%; height: 100%; float: left;
+	&:hover .team-item {opacity: 1; visibility: visible;}
+	&:last-child .team-item {left: auto; right: 0px; margin-left: 0px;}
+	&:first-child .team-item {left: 0px; margin-left: 0px;}
+}
+.button-wrapper {display: block; max-width: 785px; margin: 0 auto;}
+.no-overflow, .no-overflow .swiper-wrapper {overflow: visible!important;}
+#fp-nav.right {right: 34px;}
+
+.block-3 {position: relative; width: 100%; height: inherit;}
+.fix-footer.no-padd {padding-right: 0px; padding-left: 0px;}
+
+
+
+@media (min-width: 1200px) {
+   .section-scroll.section.sm-padding {padding: 0px; margin: 0px;}
+}
+
+@media (max-width: 1500px) {
+    .section-scroll .service-item {padding-bottom: 30px;}
+	.team-block {height: 420px;}
+	.section-scroll .title-second {padding-bottom: 30px;}
+    .year-item b {font-size: 118px; line-height: 160px;}
+    .block-img .image {width: 140px; height: 140px;}
+    .service-item .image {width: 90px; height: 90px;}
+    .service-item .image img {max-width: 36px;}
+    .main-title.type-1 .h1 {font-size: 90px; line-height: 100px;}
+    
+    .full-block .title-second .title, .full-block .rev-title .h6 {font-size: 40px; line-height: 50px;}
+    .full-block .title-second {padding-bottom: 40px;}
+    .full-block .service-item {padding-bottom: 50px;}
+    .full-block .caption .title {font-size: 40px; line-height: 50px;}
+    .full-block .simple-text.lg p {font-size: 18px; line-height: 22px;}
+    .full-block .team-block .caption {font-size: 40px; line-height: 50px;}
+}
+@media (max-width: 1400px) {
+	.main-title.type-1 .h1 {font-size: 74px; line-height: 84px;}  
+	.about-tags-block .title {font-size: 32px; line-height: 42px;}
+	.about-tags-block {padding: 80px 0px 100px;}
+	.inside-img img {max-height: 350px;}
+	.about-tags-block .button-type-1 {margin: 0px 5px 10px;}
+	.team-desc .title {font-size: 56px; line-height: 66px;}
+	.team-desc .simple-text.lg p {font-size: 18px; line-height: 32px;}
+	.client-item {margin-bottom: 60px;}
+	.desc-block {padding: 0px 35px;}
+	.about-team-block {height: 700px;}
+	.pagination.style-type-2 {bottom: 40px;}
+	.block-img {max-width: 280px;} 
+	#fp-nav.right {right: 0px;}
+	.footer.fix-footer {padding: 16px 30px;}
+    .scroll-fade.padd {left: 30px; right: 30px;}
+    .padd-wrap {padding: 66px 0px 54px;}
+    .wrapper-full-scroll {padding-top: 66px;}
+    
+    .full-block .service-item .text .title {font-size: 20px; line-height: 26px;}
+    .full-block .service-item {padding-bottom: 30px;}
+    .full-block .title-second {padding-bottom: 10px;}
+    .full-block .title-second .title {font-size: 30px; line-height: 40px;}
+    .full-block .block-img .title {font-size: 20px; line-height: 24px;}
+    .test-item .simple-text.xs p {font-size: 12px; line-height: 18px;}
+    .full-block .team-item {padding: 15px;}
+    .full-block .team-item .image {width: 80px; height: 80px;}
+    .full-block .team-item .image img {width: 100%; height: auto;}
+    .full-block .team-item .title {font-size: 18px; line-height: 22px;}
+    .full-block .team-item .simple-text.xs p {font-size: 12px; line-height: 16px;}
+    .full-block .team-item .share a {font-size: 18px;}
+    .nav-page-pagination.right {right: 0px; width: 30px;}
+    .tooltip-point {margin-right: 37px;}
+    .fixed-nav li:hover .tooltip-point {margin-right: 27px; }
+}
+
+@media (max-width: 1200px) {
+    .over-wrap-hidden {height: 600px;}
+    .full-height-baner {min-height: 600px;}
+	.client-item img {max-width: 100%; height: auto;}
+	.footer.fix-footer {position: relative; display: inline-block;}
+	.full-height-baner.section-scroll {min-height: 600px; height: auto;}
+    .scroll-fade.bg {position: absolute;}
+    .scroll-fade.padd {left: 0px; right: 0px;}
+    .padd-wrap {padding: 66px 0px 0px;}
+    .block-5 .footer.fix-footer {position: absolute;}
+}
+@media (max-width: 1024px) {
+    .full-block > .vertical-align.full {position: relative; top: auto; @include transform(translateY(0%));}
+    .full-block {padding: 100px 0px; position: relative;}
+    .full-block .video-slider .vertical-align.full {position: relative; top: auto; @include transform(translateY(0%)); padding: 100px 0px 130px;}
+    .full-block.block-3, .full-block.block-5 {padding: 0px;}
+    .block-1.full-block {min-height: 600px;}
+    .block-5 .footer.fix-footer {position: relative; display: inline-block;}
+    .nav-page-pagination {display: none;}
+}
+@media (max-width: 992px) {
+	.about-tags-block .simple-text p {font-size: 18px; line-height: 30px;}
+	.about-team-block {height: 600px;}
+	.team-desc .title {font-size: 32px; line-height: 42px;}
+	.team-desc .simple-text.lg p {font-size: 16px; line-height: 24px;}
+	.team-desc .simple-text {padding-bottom: 35px;}
+	.title-second h4.title {font-size: 40px; line-height: 50px;}
+	.title-second .simple-text.lg p {font-size: 18px;}
+	.button-type-1 {padding: 0px 25px; height: 45px; line-height: 41px; font-size: 11px; letter-spacing: 1px;}
+	.button-type-1 span:before {line-height: 41px;}
+	.title-second {padding-bottom: 40px;}
+	.client-block {padding: 30px 0px;}
+	.full-height-baner {height: auto;}
+	.about-tags-block {padding: 80px 0px;}
+	.analitic-block {padding: 75px 0px 10px;}
+	.tumbs-item .slide-swich {width: 60px; height: 60px; margin-right: 10px;}
+	.year-item b {font-size: 124px; line-height: 105px;}
+	.block-img {max-width: 230px; margin-top: -15px;}
+	.block-img .title {font-size: 16px; line-height: 26px; padding-bottom: 10px;}
+	.wrapp-line .swiper-slide:before {top: -5px;}
+	.section.full-h-section {height: auto; min-height: 400px;}
+	.caption h2.title {font-size: 55px; line-height: 65px;}
+	.simple-text.lg p {font-size: 18px; line-height: 30px;}
+	.video-slider .no-mobile.vertical-align {position: relative; top: auto; @include transform(translateY(0%)); padding: 80px 0px 120px;}
+	.team-block .caption {font-size: 55px; line-height: 65px;}
+	.rev-title {text-align: center; margin-bottom: 40px;}
+	.service-item .text .title {font-size: 20px; line-height: 30px;}
+	.service-item {padding-bottom: 40px;}
+	.history-slide {padding-bottom: 50px;}
+	
+	.team-item {visibility: visible; opacity: 1; bottom: auto; position: relative; left: auto; margin-left: 0px; width: 100%; padding: 30px 15px;}
+	.team-block .caption {position: relative; margin-bottom: 30px;}
+	.team-item:before {display: none;}
+	.no-overflow {overflow: hidden!important;}
+	.hover-area, .team-block {height: auto;}
+	.team-block .no-overflow {padding-bottom: 60px;}
+    .client-item a {padding: 0px 15px;}
+    .padd-wrap {padding: 0px;}
+    .full-block .team-block {height: auto;}
+    .full-block  {padding: 80px 0px;}
+}
+@media (max-width: 768px) {
+	.inside-img {display: none;}
+	.about-team-block .container-swich {height: 400px;}
+	.about-team-block {height: auto;}
+	.about-team-block .column-50 {width: 100%;}
+	.tumbs-item {width: 100%; margin: 35px 0px;}
+	.main-title.type-1.text-left {padding: 0px 30px;}
+	.video-block {margin: 30px 0px;}
+	.video-slider .no-mobile.vertical-align {padding-bottom: 100px;}
+	.block-img {margin-top: 20px;}
+	.wrapp-line .swiper-slide:before {display: none;}
+	.year-item b {font-size: 80px; line-height: 90px;}
+	.footer.fix-footer {padding: 25px 0px 0px;}
+} 
+@media (max-width: 480px) {
+	.section.sm-padding {padding: 60px 0px 20px;}
+    .main-title.type-1 .h1 {font-size: 50px; line-height: 56px;}
+	.about-tags-block {padding: 60px 0px;}
+	.desc-block {padding: 0px 15px;}
+	.analitic-block {padding: 55px 0px 10px;}
+	.client-block {padding: 20px 0px 10px;}
+	.client-item {margin-bottom: 40px;}
+	.team-follow a {padding-right: 20px; font-size: 20px;}
+	.tumbs-item .slide-swich {width: 50px; height: 50px;}
+	.main-title.type-1.text-left {padding: 0px 15px; text-align: center;}
+	.gutter-15 .swiper-slide {padding: 0px;}
+    .client-item img {max-width: 80%;}
+}
+@media (max-width: 340px) {
+	.serch-form {margin: 0px;}
+    .block-1.full-block {min-height: 500px;}
+    .team-follow a {padding-right: 10px;}
+}
+@media (max-height: 670px) and (min-width: 1200px) {
+	.footer.fix-footer {padding: 15px 30px;}
+    .footer.fix-footer.no-padd {padding: 15px 0px;}
+	.section-scroll .service-item .text .title {font-size: 20px; line-height: 30px; padding-bottom: 5px;}
+	.section-scroll .service-item .simple-text p {font-size: 12px; line-height: 20px;}
+	.section-scroll .service-item .image {width: 80px; height: 80px;}
+	.section-scroll .service-item .image img {max-width: 35px;}
+	.section-scroll .title-second .title {font-size: 40px; line-height: 50px; padding-bottom: 10px;}
+	.section-scroll .caption .title {font-size: 60px; line-height: 75px;}
+	.section-scroll .caption .simple-text.lg p, .section-scroll .title-second .simple-text.lg p, .section-scroll .block-img .title, .section-scroll .team-item .title {font-size: 18px; line-height: 20px;}
+	.section-scroll .pagination.style-type-2 {bottom: 80px;}
+	.section-scroll .year-item b {font-size: 150px; line-height: 150px; padding: 0px 50px;}
+	.section-scroll .block-img .image {width: 140px; height: 140px;}
+	.section-scroll .team-block .caption {font-size: 40px; line-height: 50px; padding-top: 90px;}
+	.section-scroll .team-block {height: 385px;}
+	.section-scroll .team-item {padding: 25px 15px 30px;}
+	.section-scroll .team-item .image {width: 80px; height: 80px;}
+	.section-scroll .team-item .image img {width: 100%; height: auto;}
+}

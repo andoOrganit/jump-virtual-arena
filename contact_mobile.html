@@ -1,0 +1,791 @@
+<!-- /// 
+
+/*------------------------------------------------------------------------------------------------------------
+
+© :13 Design Creative Lab — 2019   
+From : Paris, London, Orléans.
+https://2points13.fr
+
+Designed by https://zigmoon.com
+
+-------------------------------------------------------------------------------------------------------------*
+
+
+
+
+     d888   .d8888b.                                                                     
+    d8888  d88P  Y88b                                                                    
+      888       .d88P                                                                    
+d8b   888      8888"                                                                     
+Y8P   888       "Y8b.                                                                    
+      888  888    888                                                                    
+d8b   888  Y88b  d88P                                                                    
+Y8P 8888888 "Y8888P"                                                                     
+                                                                                         
+                                                                                         
+                                                                                         
+8888888888 8888888b.  8888888888 888b    888  .d8888b.  888    888                       
+888        888   Y88b 888        8888b   888 d88P  Y88b 888    888                       
+888        888    888 888        88888b  888 888    888 888    888                       
+8888888    888   d88P 8888888    888Y88b 888 888        8888888888                       
+888        8888888P"  888        888 Y88b888 888        888    888                       
+888        888 T88b   888        888  Y88888 888    888 888    888                       
+888        888  T88b  888        888   Y8888 Y88b  d88P 888    888                       
+888        888   T88b 8888888888 888    Y888  "Y8888P"  888    888                       
+                                                                                         
+                                                                                         
+                                                                                         
+8888888b.  8888888888 .d8888b. 8888888 .d8888b.  888b    888                             
+888  "Y88b 888       d88P  Y88b  888  d88P  Y88b 8888b   888                             
+888    888 888       Y88b.       888  888    888 88888b  888                             
+888    888 8888888    "Y888b.    888  888        888Y88b 888                             
+888    888 888           "Y88b.  888  888  88888 888 Y88b888                             
+888    888 888             "888  888  888    888 888  Y88888                             
+888  .d88P 888       Y88b  d88P  888  Y88b  d88P 888   Y8888                             
+8888888P"  8888888888 "Y8888P" 8888888 "Y8888P88 888    Y888                             
+                                                                                         
+                                                                                         
+                                                                                         
+ .d8888b.  8888888b.  8888888888        d8888 88888888888 8888888 888     888 8888888888 
+d88P  Y88b 888   Y88b 888              d88888     888       888   888     888 888        
+888    888 888    888 888             d88P888     888       888   888     888 888        
+888        888   d88P 8888888        d88P 888     888       888   Y88b   d88P 8888888    
+888        8888888P"  888           d88P  888     888       888    Y88b d88P  888        
+888    888 888 T88b   888          d88P   888     888       888     Y88o88P   888        
+Y88b  d88P 888  T88b  888         d8888888888     888       888      Y888P    888        
+ "Y8888P"  888   T88b 8888888888 d88P     888     888     8888888     Y8P     8888888888 
+                                                                                         
+                                                                                         
+                                                                                         
+888             d8888 888888b.                                                           
+888            d88888 888  "88b                                                          
+888           d88P888 888  .88P                                                          
+888          d88P 888 8888888K.                                                          
+888         d88P  888 888  "Y88b                                                         
+888        d88P   888 888    888                                                         
+888       d8888888888 888   d88P                                                         
+88888888 d88P     888 8888888P"                                                          
+                                                                                         
+                                                                                         
+                                                                                                          
+                                                                                                          
+-------------------------------------------------------------------------------------------------------------*
+
+
+
+                                              
+         +y-           :dd:           -y+         
+         -MMd+`      -hMMMMh.       /hMM.         
+          NMMMNs.  .yMMMMMMMMs`  `omMMMN          
+          yMMMMMMhsMMMMMMMMMMMNoyMMMMMMy          
+          /MMMMMMMMMMMMMMMMMMMMMMMMMMMM/          
+          `MMMMMMMMMMMMMMMMMMMMMMMMMMMM`          
+           dMMMMMMMMMMMMMMMMMMMMMMMMMMd           
+           oMMMMMMMMMMMMMMMMMMMMMMMMMMo           
+           -MMMMMMMMMMMMMMMMMMMMMMMMMM-           
+            ``````````````````````````       
+
+
+
+                       `+/                                                                           
+                  :` /mMN``/yo                                                                      
+                 yMsyMMMMdmMMs.:+:                                                                  
+              ss.MMNMMMMMMMMMNNMm-                             `-:::-.                              
+              hMdMMMMMMMMMMMMMMMo+-                         -odNNMMMNNmhs/.                         
+             .NMMMMMMMMMMMMMMMMMMMs                       :hNMMMMMMMMMMMMMNdo-                      
+            `mMMMMMMMMMMMMMhdmmdy/`                     .yNMMMMMMMMMMMMMMMMMMNd/`                   
+            `NMMMMMMMMMMMMMd+.``                       /mMMMMMMMMMMMMMMMMMMMMMMMd/                  
+             -mMMMMMMMMMMMMMMmo-                      +NMMMMMMMMMMMMMMMMMMMMMMMMMNh.                
+            `smNMMMMMMMMMMMMMMMN+                    /NMMMMMMMMMMMMMMMMMMMMMMMMMMMMm:               
+            `...yMMMMMMMMMMMMMMMM/                  -NMMMMMMMMMMMMMMMMMMMM+sdMMMMMMMN/              
+              `sNMMMMMMMMMMMMMMMMm                 `dMMMMMMMMMMMMMMMMMMMMMd:`+NMMMMMMN:             
+              yMMMMMMMMMMMMMMMMMMM:                +MMMMMMMMMMMMMMMMMMMMMMMNo`-mMMMMMMm.            
+             `NMMMMMMMMMMMMMMMMMMMo               `mMMMMMMMMMMMMMMMMMMMMMMMMMy`:MMMdMMMy            
+              dMMMMMMMMMMMMMMMMMMMm               +MMMMMMMMMMMMMMMMMMMMMMMMMMMs yMM.mMMN            
+              .smMMMMMMMMMMMMMMMMMM:             -NMMMMMMMMMMMMMMMMMMMMMMMMMMMM:-My +MMM`           
+                /MMMMMMMMMMMMMMMMMMd`           .mMMMMMMMMMMMMMMMMMMMMMMMyMMMyMs y` -MMh            
+               .NMMMMMMMMMMMMMMMMMMM+          -mMMMMMMMMMMMMMMMMMMMMMMMModMM/My `  -MM:            
+              `dMMMMMMMMMMMMMMMMMMMMN/        :mMMMMMMMMMMMMMMMMMMMMMMMMMhsMd`N/    /No             
+              +MMMMMMMMMMMMMMMMMMMMMMNo.    `oNMMMMMMMMMMMMMMMMMMMMMMMMMMy/N- :     s/              
+              mMMMMMMMMMMMMMMMMMMMMMMMMNs-./dMMMMMMMMMMMMMMMMMMMMMMMMMMMN-:-        `               
+             .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-                           
+             -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                           
+             .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.                          
+              mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+                          
+              sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNdM/                          
+              `NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMymMm`s`                          
+               /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-+Ms                             
+                /NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMhyoN`-m.                             
+                 -dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd`  - `.                              
+                  `+mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN.                                     
+                    `+dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                                      
+                      `:smMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                                       
+                         `:sdMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN/                                        
+                            `-+dMMMMMMMMMMMMMMMMMMMMMMMmho.                                         
+                               /MMMMMMMMMMMMMMMMMMMMMo-.                                            
+                               `yMMMMMMMMMMMMMMMMMMMM+                                              
+                                `sMMMMMMMMMshNMMMMMMMm-                                             
+                                  /mMMMMMMN` -+ydNMMMMNy:                                           
+                                   .omMMMMd     `.-/odMMm                                           
+                                     .oMMMN`         .mMN`                                          
+                                      `NMNo           -MM+                                          
+                                      /MM+             yMd                                          
+                                     `mMm              -MMo.+ys`                                    
+                                     oMM+               mMMNdoh.                                    
+                                    .NMd                hMMd`                                       
+                                    sMN.             `/yMMMo                                        
+                             `..```+MMm..-.        `oNMMNmMs                                        
+                           `yNMMNmNMMNNNNNN`      .dMMNdoNN:                                        
+                           ::omhddy+:.`.``+       ..yh..No.                                         
+                             --                      `  /`                                          
+
+
+
+
+-------------------------------------------------------------------------------------------------------------*
+
+© :13 Design Creative Lab — 2019   
+From : Paris, London, Orléans.
+https://2points13.fr
+
+Designed by https://zigmoon.com
+
+-------------------------------------------------------------------------------------------------------------*/ 
+
+/// -->   
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" /> 
+    <link rel="shortcut icon" href="favicon.ico"/> 
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/fontello.css" rel="stylesheet" type="text/css"/>    
+    <link href="css/style_d.css" rel="stylesheet" type="text/css"/>     
+    <title>JUMP Virtual Arena | Contact | 45000 Orléans</title>
+
+
+
+<!-- ///
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+
+
+   _____ _______       _____ _______   _____   _____ _____  _____  
+  / ____|__   __|/\   |  __ \__   __| |  __ \ / ____|  __ \|  __ \ 
+ | (___    | |  /  \  | |__) | | |    | |__) | |  __| |__) | |  | |
+  \___ \   | | / /\ \ |  _  /  | |    |  _  /| | |_ |  ___/| |  | |
+  ____) |  | |/ ____ \| | \ \  | |    | | \ \| |__| | |    | |__| |
+ |_____/   |_/_/    \_\_|  \_\ |_|    |_|  \_\\_____|_|    |_____/ 
+                                                                   
+                                                                  
+
+
+/*------------------------------------------------------------------------------------------------------------
+
+© :13 Design Creative Lab — 2019   
+From : Paris, London, Orléans.
+
+Designed by https://2points13.fr
+
+-------------------------------------------------------------------------------------------------------------*
+
+
+/// --> 
+
+
+
+       <!-- /// SCRIPT JS MAOU /// --> 
+
+        <script type="text/javascript" src="guardcat_open_premium/guardcat.js"></script>
+      
+
+        <script type="text/javascript">
+        guardcat.init({
+        "privacyUrl": "https://jump-virtualarena.fr/docs/RGPD%20-%20mentions%20l%c3%a9gales%20jump.pdf", /* Privacy policy url */
+
+        "hashtag": "#guardcat", /* Open the panel with this hashtag */
+        "cookieName": "guardcat", /* Cookie name */
+    
+        "orientation": "bottom", /* Banner position (top - bottom) */
+        "showAlertSmall": false, /* Show the small banner on bottom right */
+        "cookieslist": true, /* Show the cookie list */
+
+        "adblocker": false, /* Show a Warning if an adblocker is detected */
+        "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+        "highPrivacy": true, /* Disable auto consent */
+        "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+        "removeCredit": false, /* Remove credit link */
+        "moreInfoLink": false, /* Show more info link */
+        "useExternalCss": false, /* If false, the guardcat.css file will be loaded */
+
+        //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+                          
+        "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+        });
+        </script>
+
+
+       <!-- /// END SCRIPT JS MAOU /// --> 
+
+
+
+
+<!-- /// ALL SERVICES RGPD 
+ 
+
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+
+All services to activate or not (fill in your codes per service)
+
+-------------------------------------------------------------------------------------------------------------*
+
+/// --> 
+
+
+ <!-- /// SERVICES /// --> 
+
+        <!-- /// Facebook (likebox) /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('facebooklikebox');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="fb-like-box" data-href="page_url" data-width="width" data-height="height" data-colorscheme="light" data-show-faces="faces (true | false)" data-header="header (true | false)" data-stream="posts (false | true)" data-show-border="border (true | false)"></div>
+
+        <div class="fb-like-box" style="background:#141823" data-href="page_url" data-width="width" data-height="height" data-colorscheme="dark" data-show-faces="faces (true | false)" data-header="header (true | false)" data-stream="posts (false | true)" data-show-border="border (true | false)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }
+        (document, 'script', 'facebook-jssdk'));
+        </script>
+
+        /// --> 
+
+
+        <!-- /// Facebook (likebox) /// -->
+
+
+
+
+
+        <!-- /// Facebook Pixel /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.facebookpixelId = 'YOUR-ID'; tarteaucitron.user.facebookpixelMore = function () { /* add here your optionnal facebook pixel function */ };
+        (guardcat.job = guardcat.job || []).push('facebookpixel');
+        </script>
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script> !function(f,b,e,v,n,t,s) { if(f.fbq) return; n=f.fbq=function(){ n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments); }; if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[]; t=b.createElement(e); t.async=!0; t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s); } (window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', 'YOUR-ID'); fbq('track', 'PageView'); </script>
+
+        /// --> 
+
+
+        <!-- /// Facebook Pixel /// -->
+
+
+
+
+
+        <!-- /// Youtube /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('youtube');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="youtube_player" videoID="video_id" width="width" height="height" theme="theme (dark | light)" rel="rel (1 | 0)" controls="controls (1 | 0)" showinfo="showinfo (1 | 0)" autoplay="autoplay (0 | 1)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="width" height="height" src="//www.youtube.com/embed/video_id" frameborder="0" allowfullscreen></iframe>
+
+        /// --> 
+
+
+        <!-- /// Youtube /// -->
+
+
+
+
+
+        <!-- /// Vimeo /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('vimeo');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="vimeo_player" videoID="video_id" width="width" height="height"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="width" height="height" src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe>
+
+        /// --> 
+
+
+        <!-- /// Vimeo /// -->
+
+
+
+
+
+        <!-- /// Dailymotion /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('dailymotion');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="dailymotion_player" videoID="video_id" width="width" height="height" showinfo="showinfo (1 | 0)" autoplay="autoplay (0 | 1)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="width" height="height" src="//www.dailymotion.com/embed/video/video_id" frameborder="0" allowfullscreen></iframe>
+
+        /// --> 
+
+
+        <!-- /// Dailymotion /// -->
+
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('datatrack');
+        </script>
+
+
+<!-- /// RGPD DATA :13 REDESIGN TARTEAUXCITRONS.JS 
+
+/*------------------------------------------------------------------------------------------------------------
+
+© :13 Design Creative Lab — 2019   
+From : Paris, London, Orléans.
+https://2points13.fr
+
+Designed by https://2points13.fr
+
+-------------------------------------------------------------------------------------------------------------*
+
+
+  ______ _   _ _____    _____   _____ _____  _____  
+ |  ____| \ | |  __ \  |  __ \ / ____|  __ \|  __ \ 
+ | |__  |  \| | |  | | | |__) | |  __| |__) | |  | |
+ |  __| | . ` | |  | | |  _  /| | |_ |  ___/| |  | |
+ | |____| |\  | |__| | | | \ \| |__| | |    | |__| |
+ |______|_| \_|_____/  |_|  \_\\_____|_|    |_____/ 
+                                                    
+
+
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------                                
+
+/// --> 
+
+<!-- DATA SCRIPT :13 -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//2points13.fr/track/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- DATA SCRIPT :13 -->
+
+    
+
+<style type="text/css">body{
+  margin:0px;
+  padding:0px;
+}
+
+a:hover,a:active{
+  text-decoration:none;
+}
+.home{
+  width:100%;
+}
+.home:before{
+  content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.home h1{
+  position:absolute;
+  text-align: left;
+  margin-left:15px;
+}
+
+.stage{
+  width: auto;
+  margin-top: 15px;
+    height: 100px;
+  }
+  .cubespinner{
+  -webkit-animation-name:spincube;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-duration:8s;
+  animation-name:spincube;
+
+  animation-timing-function:ease-in-out;
+  animation-iteration-count:infinite;
+  animation-duration:8s;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  -webkit-transform-origin:40px 40px 0;
+  -moz-transform-origin:40px 40px 0;
+  -ms-transform-origin:40px 40px 0;
+  transform-origin:40px 40px  0;
+  }
+  .cubespinner div{
+    position:absolute;
+    width:400px;
+    height:80px;
+    text-align:left;
+    color:#109393;
+    font-family:'Raleway', sans-serif;
+    font-size:74px;
+    font-weight:700;
+    }
+  .cubespinner .face1{
+    color:#f07043;
+    -webkit-transform:translateZ(40px);
+    -moz-transform:translateZ(40px);
+    -ms-transform:translateZ(40px);
+    transform:translateZ(40px);
+    -webkit-backface-visibility: hidden;
+    }
+  .cubespinner .face2{
+    color:#fff;
+    -webkit-transform: rotateX(90deg) translateZ(40px);
+    -moz-transform: rotateX(90deg) translateZ(40px);
+    -ms-transform: rotateX(90deg) translateZ(40px);
+    transform: rotateX(90deg) translateZ(40px);
+    -webkit-backface-visibility: hidden;
+  }
+  .cubespinner .face3{
+    color:#f07043;
+    -webkit-transform:rotateX(180deg)  translateZ(40px);
+    -moz-transform:rotateX(180deg)  translateZ(40px);
+    -ms-transform:rotateX(180deg)  translateZ(40px);
+    transform:rotateX(180deg)  translateZ(40px);
+    -webkit-backface-visibility: hidden;
+    }
+  .cubespinner .face4{
+    color:#fff;
+    -webkit-transform:rotateX(270deg) translateZ(40px);
+    -moz-transform:rotateX(270deg) translateZ(40px);
+    -ms-transform:rotateX(270deg) translateZ(40px);
+    transform:rotateX(270deg) translateZ(40px);
+    -webkit-backface-visibility: hidden;
+  }
+
+
+    .cubespinner .face5{
+    color:#fff;
+    -webkit-transform:rotateX(360deg) translateZ(40px);
+    -moz-transform:rotateX(360deg) translateZ(40px);
+    -ms-transform:rotateX(360deg) translateZ(40px);
+    transform:rotateX(360deg) translateZ(40px);
+    -webkit-backface-visibility: hidden;
+  }
+
+
+/*Cubical Flipping or rotation*/
+@-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    15%      { -webkit-transform: rotateX(90deg);}
+    25%      { -webkit-transform: rotateX(90deg);}
+    40%      { -webkit-transform: rotateX(180deg);}
+    50%      { -webkit-transform: rotateX(180deg);}
+    65%      { -webkit-transform: rotateX(270deg);}
+  75%      { -webkit-transform: rotateX(270deg);}
+  95%      { -webkit-transform: rotateX(360deg);}
+  100%      { -webkit-transform: rotateX(360deg);}
+  }@keyframes spincube {
+    from,to {
+    -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      -ms-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+    15% {
+    -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+      -ms-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+    }
+  25% {
+    -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+      -ms-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+    }
+  40% {
+    -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      -ms-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
+  50% {
+    -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      -ms-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
+    65% {
+    -webkit-transform: rotateX(270deg);
+      -moz-transform: rotateX(270deg);
+      -ms-transform: rotateX(270deg);
+      transform: rotateX(270deg);
+    }
+  75% {
+    -webkit-transform: rotateX(270deg);
+      -moz-transform: rotateX(270deg);
+      -ms-transform: rotateX(270deg);
+      transform: rotateX(270deg);
+    }
+  90% {
+    -webkit-transform: rotateX(360deg);
+      -moz-transform: rotateX(360deg);
+      -ms-transform: rotateX(360deg);
+      transform: rotateX(360deg);
+    }
+    100% {
+    -webkit-transform: rotateX(360deg);
+      -moz-transform: rotateX(360deg);
+      -ms-transform: rotateX(360deg);
+      transform: rotateX(360deg);
+    }
+@media (max-width: 1400px) { .nav-menu { margin-top: -40px; }
+}
+
+  </style>
+
+
+  </head>
+
+
+<body>
+ 
+  <div class="container-perspective">
+    <div class="effect-push effect-push-2">
+     
+     <div class="wrap-over">
+     <div class="pusher-layer"></div>
+        
+     <!--==========HEADER============-->
+     
+    <header class="header style-center scroll-show">
+       <div class="header-wrap" style="text-align: right;">
+        <div class="burger vertical-align"><i></i></div>
+        <a href="index.html" class="vertical-align logo"><img src="img/logo_onepage_7_black.png" alt=""></a>
+        <nav>
+          <div class="nav-menu" style="margin-top: 10px;">
+            <ul>
+             
+              
+    
+                         
+                 <li><a href="index.html" class="anchor-link" style="color: #111;"><b>Home</b></a></li>
+                 <li><a href="trampoline.html" class="anchor-link" style="color: #111;"><b>Trampoline</b></a></li>
+            <li><a href="virtual_arena.html" class="anchor-link" style="color: #111;"><b>Réalité virtuelle</b></a></li>
+            <li><a href="event.html" class="anchor-link" style="color: #fff;"><b>Event</b></a></li>
+           		 <li><a href="index.html#Venir" class="anchor-link" style="color: #111;"><b>Plan</b></a></li>
+				  <li><a href="contact.html" class="anchor-link" style="color: #111;"><b>Contact</b></a></li>
+       		 <li><a href="tel:+33238440244" class="anchor-link" style="color: #111;"><b>02 38 44 02 44</a></b></li>
+       				 <!-- <li><a href="https://jumporleans.qweekle.com/shop/jump-arena?lang=fr" class="anchor-link" style="color: #fff; font-weight: 700;
+ color: #fff;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    padding: 0px 20px;
+    height: 30px;
+    line-height: 30px;
+    background: #f07043;
+    border-radius: 15px;"><b>Réserver</b></a></li> -->
+            </ul>
+        	<div class="align-bottom">
+				<div class="mobile-footer">
+					<div class="folow">
+						
+					</div>
+           <span class="copyright" style="margin-right: 0px"><center>&copy; 2019 JUMP Virtual Arena</center></span> 
+				</div>
+        	</div>
+          </div>	
+        </nav>
+        
+        
+      
+      </div> 
+     </header>
+     
+     <!--==========MAIN CONTENT============-->
+     
+     <section class="main-content no-margin">
+      <div class="main-baner-full bg-grey" style="background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    	  <div class="main-baner-align"> 
+     	  <div class="left-desc column-50">
+     	   <div class="vertical-align">
+     	  	<div class="caption">
+  <br> <br>  <br> <br>
+     	<h3 class="title h5" style="color: #fff;     text-align:left; font-family: 'Raleway', sans-serif;
+    padding-bottom: 0px;
+    position: relative; font-weight: 700;">CONTACTEZ </br>JUMP <span style="color: #f07043; font-weight: 900;">VIRTUAL </br>ARENA</span></h3> <br> <br> 
+     
+     	  	    <div class="addr-item-wrap" style="margin-bottom:0px;">
+				  <div class="addr-item">  </br>          </br> 
+					<div class="sub-title" style="color: #fff;">Adresse</div>
+					  <ul class="addr-list" style="margin-bottom: 40px;">
+						<li style="color: #fff; ">23/25 avenue de la Libération, <br>45000 Orléans</li>
+                          <li style="color: #fff; ">Téléphone : <a href="tel:+33238440244" class="anchor-link" style="color: #fff;">02 38 44 02 44</a></li>       <br>
+        <li style="color: #fff; "><a href="mailto:contact@jump-virtualarena.fr" class="anchor-link" style="color: #fff;">contact@jump-virtualarena.fr</a></li>
+		  </br>          </br>       </br>          </br>       </br>          </br>   
+					  </ul>
+				  </div>
+				
+   	  	        </div> 
+    	 </br>          </br>   
+     	  	</div>
+     	   </div>	 
+     	  </div>
+
+
+ </br>       </br>          </br>     </br>       </br>          </br>    
+      
+
+     	  <div class="right-desc column-50" style="margin-top: 135px;"> 
+     	   <div class="vertical-align" >
+              <div class="caption" style="padding: 25px;">
+  	  		        <!-- Contact Formular --> <center>
+                                <div id="contact-formular">
+                                
+                                    <div id="message"></div>
+                                     </br>          </br>  </br>                                      <form method="post" action="contact.php" name="contactform" id="contactform">                         <label for="coding"  style="font-size: 16px; line-height: 0.9; color: #fff; font-family: Arial;"></br></br></br>Votre nom<sup>*</sup><br> </label>    <br>                
+                                        <div class="name-box">        
+                                            <input name="name" type="text" id="name" size="30"  onfocus="if(this.value == 'Votre Nom') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Nom'; }" value="" ><label class="input_label"></label>
+                                        </div>  
+
+
+                                        <br>          <br>        <label for="coding"  style="font-size: 16px; line-height: 0.9; color: #fff; font-family: Arial;">Votre email<sup>*</sup><br> </label>    <br>                                                    
+                                        <div class="email-box">
+                                            <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'Votre E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="" ><label class="input_label"></label>
+                                        </div>        
+
+
+                                            <br>      <br>       <label for="coding"  style="font-size: 16px; line-height: 0.9; color: #fff; font-family: Arial;">Votre message<sup>*</sup><br> </label>    <br>             
+                                        <div class="message-box">
+                                            <textarea name="comments" cols="80" rows="4" id="comments" width="360" onfocus="if(this.value == 'Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Your Message'; }" ></textarea><label class="input_label slow" style="width:360px"></label>
+                                        </div>  
+
+                                        <div>
+   
+  </div></br>
+<div class="column-100"></br>
+      <div class="input-label" checked name="NewsletterRGPDGO" >
+        <label class="containercheck" checked><span style="margin-left: 40px; color: #fff; padding: 10px;font-size: 13px; font-family: arial; "></br></br>Recevoir promotions & animations via notre newsletter.</br></span><span style="margin-left: 0px; color: #fff; padding: 10px;font-size: 11px; font-family: arial; ">Vous pouvez vous désabonner en cliquant sur les liens </br> <span style="margin-left: 0px; color: #fff; padding: 10px;font-size: 11px; font-family: arial; ">de désabonnement situés en bas de nos e-mail </br>ou sur demande : </span></br><span style="margin-left: 0px; color: #fff; padding: 10px;font-size: 11px; font-family: arial;color: #fff; text-decoration: underline; "><a href="mailto:unsubscribe@jump-virtualarena.fr" style="color: #fff; text-decoration: underline;">unsubscribe@jump-virtualarena.fr</a></span></span>
+  <input type="checkbox" name="NewsletterRGPDGO" id="NewsletterRGPDGO" checked>
+  <span class="checkmark" name="NewsletterRGPDGO" id="NewsletterRGPDGO"></span><br>
+</label>  </div>  </div>
+                                         <div class="submit-box">           
+                                            <input type="submit" class="send_message clapat-button outline link" id="submit" value="Envoyer" /> 
+                                        </div>
+</br> </br></br>               <div class="column-100"><br>
+            </center>      <label for="coding"  style="font-size: 12px; font-family: arial; color: #fff;">(<sup>*</sup>Champs obligatoires). En fournissant votre e-mail,</br>vous reconnaissez avoir lu notre <a href="docs/RGPD%20-%20mentions%20légales%20jump.pdf" style="color: #fff; text-decoration: underline;">politique de confidentialité</a>      <br>          <br>                <br>          <br>                <br>          <br>         <br>          <br>                <br>          <br>                <br>          <br>   
+            </label>      <br>          <br>                <br>          <br>               </br>          </br>  
+  <br>          <br>     </br>          </br>     </div>  </br>          </br>     
+
+
+
+          <br>          <br>                <br>          <br>                 <br>                <br>          <br>         <br>         </br>          </br>  
+  <br>         </br>          </br>  
+
+
+
+  </br>          </br>     
+                                    </form>                           
+                                          </br>          </br>                         
+                                </div>  </br>          </br>     
+                                <!--/Contact Formular -->
+                                                    
+<script src="js/jquery.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/scrollreveal.min.js"></script>
+<script src="js/all.js"></script>
+</body>
+</html>				   

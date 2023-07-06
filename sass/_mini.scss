@@ -1,0 +1,403 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 32. Mini */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'GTWalsheimProLight';
+    src: url('../font/walsheim/GT-Walsheim-Pro-Light.eot');
+    src: url('../font/walsheim/GT-Walsheim-Pro-Light.woff') format('woff'),
+         url('../font/walsheim/GT-Walsheim-Pro-Light.ttf') format('truetype');
+	font-weight:300;
+    font-style: normal;	
+}
+@font-face {
+    font-family: 'GTWalsheimProRegular';
+    src: url('../font/walsheim/GT-Walsheim-Pro-Regular.eot');
+    src: url('../font/walsheim/GT-Walsheim-Pro-Regular.woff') format('woff'),
+         url('../font/walsheim/GT-Walsheim-Pro-Regular.ttf') format('truetype');
+	font-weight:400;
+    font-style: normal;	
+}
+@font-face {
+    font-family: 'GTWalsheimProBold';
+    src: url('../font/walsheim/GT-Walsheim-Pro-Bold.eot');
+    src: url('../font/walsheim/GT-Walsheim-Pro-Bold.woff') format('woff'),
+         url('../font/walsheim/GT-Walsheim-Pro-Bold.ttf') format('truetype');
+	font-weight:700;
+    font-style: normal;	
+}
+
+$mini_main_color: #39b2ff;
+
+.mini-title-h1, .mini-title-h2, .mini-title-h3, .mini-title-h4, .mini-title-h5, .mini-title-h6, .mini-title-h7 {font-family: 'GTWalsheimProRegular'; color: #423c3c;}
+.mini-title-h1.white-col, .mini-title-h2.white-col, .mini-title-h3.white-col, .mini-title-h4.white-col, .mini-title-h5.white-col, .mini-title-h6.white-col {color: #fff;}
+.mini-title-h1 {font-size: 115px; line-height: 126px;}
+.mini-title-h2 {font-size: 85px; line-height: 90px;}
+.mini-title-h3 {font-size: 75px; line-height: 80px;}
+.mini-title-h4 {font-size: 70px; line-height: 82px;}
+.mini-title-h5 {font-size: 55px; line-height: 60px;}
+.mini-title-h6 {font-size: 38px; line-height: 44px;}
+.mini-title-h7 {font-size: 35px; line-height: 40px;}
+.simple-text-mini {position: relative;
+	& p {font-size: 16px; line-height: 29px; color: #423c3c; font-family: 'GTWalsheimProLight';}
+	&.lg p {font-size: 18px; line-height: 38px;}
+}
+.sub-mini-title {font-size: 35px; line-height: 50px; @extend .font-mini-light; color: #423c3c;
+	&.sm {font-size: 28px; line-height: 45px;}
+	&.sm a {display: inline-block; position: relative; color: inherit;}
+	&.sm a:before {content: ''; position: absolute; left: 0px; bottom: 8px; width: 100%; height: 8px; z-index: -1; background: $mini_main_color;}
+	&.xs {font-size: 20px; line-height: 30px; color: rgba(66,60,60,0.5);}
+	&.xxs {font-size: 13px; text-transform: uppercase; line-height:30px; letter-spacing: 6px; color: $col-text4;}
+}
+
+.font-mini-light {font-family: 'GTWalsheimProLight'; font-weight:300;}
+.font-mini-regular {font-family: 'GTWalsheimProRegular'; font-weight:400;}
+.font-mini-bold {font-family: 'GTWalsheimProBold'; font-weight:700;}
+
+.pagination.style-type-4 {position: absolute; left: 0px; bottom: 85px; width: 100%;
+	& .swiper-pagination-bullet {width: 50px; display: block; border-radius: 0px; height: 4px; background: #fff; margin: 8px auto; @include transition (all 0.35s ease-out);}
+	& .swiper-pagination-bullet:before {content: ''; position: absolute; left: 0px; top: 0px; width: 0%; height: 100%; background:$mini_main_color; @include transition (all 0.45s ease-out 0.35s);}
+	& .swiper-pagination-bullet-active {width: 95px;}
+	& .swiper-pagination-bullet-active:before {width: 100%;}
+}
+
+.header.mini-style {z-index: 50; position: absolute; left: 0px; top: 0px; width: 100%;}
+.header.mini-style .logo-mini {max-width: 150px; position: absolute; top: 15px; left: 15px; width: 100%;
+	& img {width: 100%;height: auto;}
+}
+.header.mini-style .folow {position: absolute; right: 15px; top: 15px; z-index: 5;
+	& a {color: #fff; line-height: 16px;}
+	& a:after {color: $mini_main_color;}
+	&.dark a {color: #423c3c;}
+}
+.mini-nav {position: fixed; left: 0px; top: 50%; padding: 40px 30px; left: 10px; @include transform(translate(0%,-50%)); min-width: 150px; background: #423c3c; @extend .font-mini-light;
+	&:before {content: ''; position: absolute; left: -10px; top: 0px; width: 4px; height: 100%; background: $mini_main_color;}
+	& li a {font-size: 20px; line-height: 36px; color: #b1b0b0;}
+	& li a:hover, & li a.active {color: $mini_main_color;}
+}
+
+.mini-slider-layer {@extend .pos-absol; background: rgba(63,63,63,0.5); backface-visibility: hidden;}
+.content-load-wrap {position: relative; width: 100%; height: 1080px; height: 100vmin; min-height: 650px;
+	&.auto-h {height: auto;}
+}
+.footer-mini {position: absolute; left: 0px; bottom: 0px; width: 100%; padding: 20px 25px; z-index: 15;
+	& .copyright {font-size: 15px; line-height: 36px; color: $col-text4; float: left;  @extend .font-mini-light;}
+	& .copyright.dark {color: rgba(66,60,60,0.5);}
+	& .link-contact {float: right;  @extend .font-mini-light; 
+		& a {color: $col-text4; text-decoration: underline; display: inline-block; padding: 0px 0px 0px 20px; line-height: 36px;}
+		& a:hover {color: #fff;}
+		&.dark a {color: rgba(66,60,60,0.5);}
+		&.dark a:hover {color: #423c3c;}
+	}
+    & .folow {display: none;}
+}
+.main-mini-title { color: #fff;
+	& .mini-title-h2 span {display: inline-block; width: 85px; height: 85px; line-height: 75px; border: 5px solid #fff; text-align: center; border-radius: 50%; font-size: 44px; vertical-align: middle;}
+}
+
+.column-mini-baner.bg-dark {background: #2e2828;}
+.column-mini-baner.bg-grey2 {background: #f1f1f1;}
+.column-mini-baner {width: 100%; height: inherit; position: relative; font-size: 0px; background: #fff;
+	& .column-50 {display: inline-block; vertical-align: middle;}
+	& .column-30 {width: 33.333%; display: inline-block; vertical-align: middle; position: relative;}
+	& .column-60 {width: 66.666%; display: inline-block; vertical-align: middle; position: relative;}
+}
+.about-mini-img {height: inherit;}
+.about-mini-desc {padding: 0px 90px 0px 100px;
+	& .sub-mini-title {padding-bottom: 15px; }
+	& .simple-text-mini {padding-bottom: 30px; max-width: 800px;}
+	& .simple-text-mini p {padding-bottom: 30px;}
+}
+.about-mini-info {position: relative; width: 100%;}
+.info-item {display: inline-block; text-align: left; @extend .font-mini-bold; padding-right: 35px;
+	& .timer-info {font-size: 92px; line-height: 90px; color: rgba(66,60,60,0.3); display: inline-block; vertical-align: middle;}
+	& b {font-size: 35px; line-height: 35px; color: $mini_main_color; display: inline-block; margin-left: -15px; vertical-align: middle;}
+}
+
+.service-mini-img {height: inherit;}
+.service-mini-item {position: relative; width: 100%; padding-bottom: 50px;
+	& .text {position: relative; padding-left: 80px;}
+	& .value {font-size: 150px; @extend .font-mini-regular; line-height: 122px; color: $mini_main_color; position: relative; display: block; float: left;}
+	& .mini-title-h7 {padding-bottom: 10px;}
+}
+.blog-mini-item {position: relative;
+	&.lg {width: 100%; height: 538px; height: 50vmin; min-height: 500px; float: left; display: block;}
+	&.sm {width: 50%;  height: 538px; height: 50vmin; min-height: 500px; float: left; display: block;}
+}
+.blog-item-title {position: absolute; width: 100%; left: 0px; bottom: 0px; padding: 0px 45px 40px 45px;  @extend .font-mini-light;
+	& .blog-date {position: relative; display: inline-block; font-size: 14px; color: $col-text4; padding: 5px 10px; background: #423c3c; line-height: 14px; margin-bottom: 5px;}
+	& .title a {color: $col-text3;}
+	& .title a:hover {color: $mini_main_color;}
+}
+body.overflowh {overflow: hidden;}
+.popup-ajax {position: fixed; right: 0px; top: 0px; width: 100%; height: 100%; z-index: 50; overflow: hidden; visibility: hidden; opacity: 0;
+	& .image {width: 100%; height: 640px; position: relative;}
+	&.type-center {overflow-y: auto; }
+	&.type-center .popup-ajax-wrap {position: relative; max-width: 1170px; width: 100%; margin: 0 auto; background: $col-text3; @include transform(translateX(0%)); @include transition (all 0.35s ease-out); overflow: hidden; height: auto; visibility: hidden; opacity: 0;}
+	&.type-center .popup-ajax-layer {position: fixed;}
+}
+.popup-ajax-layer {position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(66,60,60,0.9); @include transition (all 0.35s ease-out); visibility: hidden; opacity: 0;}
+.popup-ajax-title .mini-title-h5 {text-align: center; color: $col-text3;}
+.text-popup-ajax {padding: 70px;
+	& .sub-mini-title {padding-bottom: 35px;}
+}
+.popup-ajax-wrap {position: absolute; right: 0px; width: 50%; top: 0px; background: $col-text3; height: 100%; overflow-y: auto; z-index: 500; @include transform(translateX(100%)); @include transition (all 0.35s ease-out 1.35s); }
+.close-ajax-popup {position: absolute; right: 45px; top: 45px; z-index: 5;}
+.popup-ajax.active {visibility: visible; opacity: 1;}
+.popup-ajax.active .popup-ajax-layer {visibility: visible; opacity: 1;}
+.popup-ajax.active .popup-ajax-wrap {@include transform(translateX(0%));}
+.popup-ajax.type-center.active .popup-ajax-wrap {visibility: visible; opacity: 1;}
+
+.client-mini-title {text-align: center; position: relative; padding-top: 70px;
+	& .sub-mini-title {padding-bottom: 10px;}
+	& .title {padding-bottom: 50px;}
+}
+.client-slide {display: block;
+	& img { margin: 0 auto; display: block; opacity: 0.4; @include transition (all 0.35s ease-out);}
+	& img:hover {opacity: 1;}
+}
+.client-slider-mini {margin-bottom: 45px;}
+.client-slider-mini .swiper-slide {min-height: 85px;;}
+
+.client-wrap-desc {position: relative; width: 100%; height: 100%; background: $col-text3; padding: 120px 100px 95px;
+	& .simple-text-mini p {padding-bottom: 40px;}
+}
+.author-name {position: relative;
+	& .mini-title-h6 {padding-bottom: 5px;}
+	& span {font-size: 14px; line-height: 29px; letter-spacing: 6px; color: rgba(66,60,60,0.5); text-transform: uppercase; display: block; @extend .font-mini-light;}
+}
+.client-mini-wrap {position: relative; width: 100%; display: inline-block;
+	& .bg {width: 50%;}
+	& .client-wrap-desc {position: relative; float: right; width: 50%;}
+}
+.address-item {padding: 0px 70px 0px 260px;}
+.mini-adr-item {position: relative; width: 100%; padding-bottom:60px;
+	& span {font-size: 20px; display: block; line-height: 30px; @extend .font-mini-light; color: $col-text4;}
+	& a, ul li {@extend .font-mini-light; font-size: 30px; line-height: 30px; color: $col-text3; display: block;}
+	& a:hover {color: $mini_main_color;}
+	&:last-child {padding-bottom: 0px;} 
+}
+.contact-form {position: relative; width: 100%;
+	& .column-50 {float: left; padding-right: 70px;}
+	& .column-100 {float: left; width: 100%; padding-right: 70px;}
+}
+.input-label {position: relative; width: 100%;display: inline-block; 
+	& label {font-size: 15px; color: #423c3c; @extend .font-mini-light; display: block; position: relative; float: left; padding-bottom: 10px;}
+	& .input-field {position: relative; display: inline-block; width: 100%; margin-bottom: 40px;}
+	& .input-field input, & .input-field textarea {position: relative; display: inline-block; width: 100%; height: 75px; line-height: 75px; padding: 0px 20px; background: $col-text3; font-size: 30px;  @extend .font-mini-light;}
+	& .input-field textarea  {height: 260px; resize: none;}
+}
+.send-mini-button {display: inline-block; background: $mini_main_color; color: $col-text3; padding: 0px 30px; height: 70px; position: relative; min-width: 430px; float: right; @include transition (all 0.35s ease-out);
+	& input {position: absolute; background: none;  left: 0px; top: 0px; width: 100%; height: 100%; z-index: 5; cursor: pointer;}
+	& span {position: relative; display: inline-block; line-height: 70px; font-size: 25px;@extend .font-mini-light;}
+	& i {position: absolute; right: 30px; top: 0px; font-size: 20px; line-height: 70px;}
+	&:hover {background: $col-text3; color: $mini_main_color;}
+}
+.project-slider-mini {padding-bottom: 70px;}
+.project-slider-mini .swiper-slide {max-width: 1340px; margin: 0 auto; opacity: 0.8; min-height: 650px; @include transform(scale(0.8)); @include transition (all 0.35s ease-out);}
+.project-slider-mini .swiper-slide-active.swiper-slide {@include transform(scale(1)); opacity: 1;}
+.project-mini-title .title {font-size: 64px; line-height: 64px; color: $col-text3; @extend .font-mini-light;
+	& a {color: inherit;}
+	& a:hover {color: $mini_main_color;}
+}
+.project-mini-title span {@extend .font-mini-light; font-size: 13px; text-transform: uppercase; color: $col-text4; letter-spacing: 6px; line-height: 16px; padding-bottom: 10px; display: block;}
+
+.project-filter {position: relative; width: 100%; display: inline-block; padding: 120px 0px 60px; text-align: center;
+	& a {font-size: 15px; line-height: 15px; color: #423c3c; @extend .font-mini-light; position: relative; display: inline-block; margin: 0 15px; padding-bottom: 10px;}
+	& a:before {content: ''; position: absolute;left: 0px; bottom: 0px; width: 0%; background: $mini_main_color; height: 4px; @include transition (all 0.35s ease-out);}
+	& a:hover:before, & a.active:before {width: 100%;}
+}
+
+.pagination.style-type-5 { position: absolute; left: 0px; bottom: 20px; width: 100%; z-index: 15;}
+.pagination.style-type-5 .swiper-pagination-bullet { width: 15px; display: inline-block; border-radius: 0px; height: 15px; background: none; margin: 0 auto; @include transition (all 0.35s ease-out);}
+.pagination.style-type-5 .swiper-pagination-bullet:before { content: ''; position: absolute; left: 50%; top:50%; margin: -2.5px 0px 0px -2.5px;  width: 5px; height: 5px; background: #c5c4c4; border-radius: 50%; @include transition (all 0.35s ease-out);}
+.pagination.style-type-5 .swiper-pagination-bullet-active:before {@include transform(scale(2.5));}
+
+.img-detail {position: relative;height: 580px; float: left;}
+.img-detail.full {width: 100%;}
+.quote-mini-block {position: relative; width: 100%; float: left;
+	& .bg {width: 50%;}
+	& .text {width: 50%; float: right; padding: 70px 50px 25px;}
+	& .text blockquote p {font-size: 25px; line-height: 45px; @extend .font-mini-light; padding-bottom: 40px; z-index: 1;}
+	& .text blockquote {position: relative;}
+	& .text blockquote .bq {position: absolute; display: block; line-height: 5px; z-index: -1; right: 0px; bottom: 0px; font-size: 240px; color: $mini_main_color; @extend .font-mini-light;} 
+}
+
+.arrow-mini-back {position: relative; width: 100%; display: inline-block; background: #2c2222; padding: 40px 50px;
+	& .circle-link {position: absolute; right: 50px; top: 45px;}
+	& .text {position: relative; width: 100%; padding-right: 120px;}
+	& .title {color: $col-text3;}
+	& .title a {color: inherit;}
+}
+.circle-link {width: 62px; height: 62px; border: 3px solid #fff; line-height: 58px; border-radius: 50%;text-align: center; font-size: 24px; color: $col-text3; display: block;}
+.text-popup-ajax .project-mini-title { text-align: center;
+	& span {color: rgba(66,60,60,0.5);}
+	& .title {color: #423c3c; padding-bottom: 70px;}
+}
+.popup-ajax.type-center .simple-text-mini p {padding-bottom: 35px;}
+.popup-ajax.type-center .simple-text-mini p:last-child {padding-bottom: 0px;}
+
+.burger.mini-mobile-open {position: absolute; left: 50%; top: 20px;
+	& i:before, & i:after {background: $mini_main_color;}
+	&.active {@include transform(translateY(0) translateX(0)); background: none;}
+}
+
+.text-change-field {position: relative; display: none; margin: 0 auto; height: 50px; line-height: 50px; border: 1px solid #423c3c; line-height: 50px; padding: 0px 15px; font-size: 15px; @extend .font-mini-light; cursor: pointer; max-width: 320px;
+    & i {position: absolute; right: 15px; top: 0px; line-height: inherit; font-size: 14px;}
+}
+
+@media (max-width: 1910px) {
+	.info-item .timer-info {font-size: 55px;}
+	.info-item b {font-size: 28px;}
+	.about-mini-info {text-align: center;}
+}
+
+@media (max-width: 1800px) {
+	.mini-title-h1 {font-size: 80px; line-height: 90px;}
+	.mini-title-h2 {font-size: 60px; line-height: 70px;}
+	.mini-title-h3 {font-size: 50px; line-height: 60px;}
+	.mini-title-h4 {font-size: 50px; line-height: 60px;}
+	.mini-title-h5 {font-size: 40px; line-height: 50px;}
+	.sub-mini-title {font-size: 30px; line-height: 35px;}
+	.service-mini-item {padding-bottom: 0px;}
+	.service-mini-item .value {font-size: 80px; line-height: 70px;}
+	.service-mini-item .text {padding-left: 60px;}
+	.contact-baner.column-mini-baner .column-30 {width: 100%; padding: 80px 0px 60px; display: inline-block; height: auto;}
+	.contact-baner.column-mini-baner .column-60 {width: 100%; height: auto; padding: 60px 60px 60px 220px;}
+	.address-item.vertical-align {position: relative; top: auto; @include transform(translateY(0)); padding: 0px 60px 0px 220px;}
+	.mini-adr-item {width: 50%; float: left; padding-bottom: 30px;}
+	.column-mini-baner.contact-baner {height: auto;}
+	.contact-form .column-50, .contact-form .column-100 {padding-right: 30px;}
+	.content-load-wrap.h-auto-desktop {height: auto;}
+}
+@media (max-width: 1600px) {
+	.about-mini-desc {padding: 0px 60px;}
+	.client-wrap-desc {padding: 60px;}
+	.project-filter {padding: 80px 0px 40px;}
+	.project-slider-mini .swiper-slide {min-height: 600px;}
+}
+@media (max-width: 1400px) {
+	.mini-title-h1 {font-size: 60px; line-height: 70px;}
+	.sub-mini-title {font-size: 20px; line-height: 28px;}
+	.simple-text-mini p {font-size: 14px; line-height: 22px;}
+    .project-filter {padding: 60px 0px 20px;}
+	.client-mini-title {padding-top: 60px;}
+	.client-mini-title .title {padding-bottom: 30px;}
+	.project-slider-mini {padding-bottom: 50px;}
+	.project-slider-mini .swiper-slide {min-height: 470px;}
+	.footer-mini {padding: 5px 15px;}
+	.pagination.style-type-4 {bottom: 35px;}
+	.blog-mini-item.lg, .blog-mini-item.sm {min-height: 380px;}
+	.input-label .input-field input, .input-label .input-field textarea {height: 55px; line-height: 55px; font-size: 20px;}
+	.input-label .input-field textarea {height: 180px;}
+	.input-label .input-field {margin-bottom: 30px;}
+	.send-mini-button {height: 55px; padding: 0px 20px; min-width: 230px;}
+	.send-mini-button span, .send-mini-button i {line-height: 55px; font-size: 20px;}
+	.popup-ajax .image {height: 450px;}
+	
+}
+@media (max-width: 992px) {
+	.content-load-wrap {height: auto;}
+	.header.mini-style {height: 62px; background: #fff; position: fixed;
+		& .folow a {color: #423c3c;}
+	}
+	.slider-mini-main .swiper-slide {min-height: 962px;}
+	.content-load-wrap {padding-top: 62px;}
+	.header.mini-style .logo-mini {top: 50%; @include transform(translateY(-50%));}
+	.mini-nav {@include transform(translate(-120%,0%)); top: 62px; padding: 20px 15px; @include transition (all 0.45s ease-out);}
+	.mini-nav.slide {@include transform(translate(0%,0%)); }
+	.address-item.vertical-align {padding: 0px 30px;}
+	.contact-baner.column-mini-baner .column-60 {padding: 30px 30px 60px;}
+	.contact-form .column-50, .contact-form .column-100 {padding: 0px 15px;}
+	.mini-adr-item a, .mini-adr-item ul li {font-size: 22px; line-height: 22px;}
+	.mini-adr-item span {font-size: 18px; line-height: 26px;}
+	.contact-form {width: auto; margin-left: -15px; margin-right: -15px;}
+	.service-mini-img {display: none;}
+	.column-mini-baner .column-60, .column-mini-baner .column-50 {width: 100%;}
+	.about-mini-desc {padding: 60px 30px 80px;}
+	.about-mini-img {height: 350px;}
+	.blog-mini-item.sm, .client-mini-wrap .client-wrap-desc {width: 100%;}
+	.blog-item-title {padding: 30px;}
+	.client-mini-wrap .bg {width: 100%; height: 350px; position: relative;}
+	.client-wrap-desc, .text-popup-ajax {padding: 60px 30px;}
+	.popup-ajax-wrap {width: 100%;}
+	.close-ajax-popup {right: 30px; top: 30px;}
+	.simple-text-mini.lg p {font-size: 14px; line-height: 22px;}
+	.text-popup-ajax .project-mini-title .title {padding-bottom: 30px;}
+	.quote-mini-block .text blockquote p {font-size: 16px; line-height: 30px; padding-bottom: 30px;}
+	.img-detail {height: 400px;}
+	.quote-mini-block .text {padding: 50px 30px 25px;}
+	.quote-mini-block .text blockquote .bq {font-size: 140px;}
+    .header.mini-style .folow {display: none;}
+    .burger.mini-mobile-open {left: auto; right: 15px; height: 50px;width: 50px;padding: 0;top: 6px; text-align: center;}
+    .burger.mini-mobile-open i {width: 30px; margin: 25px auto;} 
+    .footer-mini .folow {display: inline-block; width: 100%; text-align: center; padding: 10px 0px;
+        & a {margin: 0 10px;}
+    }
+    .footer-mini {position: relative; background: $col-text3;}
+    .footer-mini .copyright {display: inline-block;width: 100%;text-align: center;line-height: 30px; color:rgba(66,60,60,0.5);}
+	.footer-mini .link-contact {width: 100%; display: inline-block; text-align: center; float: none;
+		& a {padding: 0px 10px; color:rgba(66,60,60,0.5);}
+	}
+    .text-change-field {display: block;}
+    .mini-project-filter {position: absolute; left: 0px; top: 100%; width: 100%; background: #fff; padding: 10px 15px; display: none;}
+    .project-filter {display: block; margin: 0 auto; max-width: 320px; z-index: 5;}
+    .project-filter .mini-project-filter a {width: 100%; margin: 0px; padding-bottom: 15px;}
+    .project-filter .mini-project-filter a:before {display: none;}
+}
+@media (max-height: 767px) {
+    .slider-mini-main .swiper-slide {min-height: 670px;}
+}
+@media (max-width: 768px) {
+	.mini-adr-item, .contact-form .column-50 {width: 100%;}
+	.quote-mini-block .bg {width: 100%; height: 300px; position: relative;}
+	.quote-mini-block .text {width: 100%;}
+	.arrow-mini-back .title {font-size: 20px; line-height: 30px;}
+}
+@media (max-width: 480px) {
+    .mini-title-h1 {font-size: 50px; line-height: 60px;}
+	.mini-title-h2 {font-size: 40px; line-height: 50px;}
+	.mini-title-h3 {font-size: 45px; line-height: 55px;}
+	.mini-title-h4 {font-size: 45px; line-height: 55px;}
+	.mini-title-h5 {font-size: 30px; line-height: 40px;}
+	.project-mini-title .title {font-size: 44px; line-height: 50px;}
+	.main-mini-title {padding: 0px 15px;}
+	.main-mini-title .mini-title-h2 span {width: 60px; height: 60px; line-height: 53px; font-size: 23px; border-width: 3px;}
+	.address-item.vertical-align {padding: 0px 15px;}
+	.contact-baner.column-mini-baner .column-60 {padding: 30px 15px 60px;}
+	.contact-baner.column-mini-baner .column-30 {padding: 60px 0px;}
+	.header.mini-style .logo-mini {max-width: 120px;}
+	
+	.about-mini-desc {padding: 30px 15px 30px;}
+	.about-mini-desc .simple-text-mini p {padding-bottom: 0px;}
+	.project-mini-title span {letter-spacing: 3px;}
+	.about-mini-img {height: 250px;}
+	.info-item {width: 100%; padding-right: 0px; text-align: center;}
+	.blog-item-title .title {font-size: 35px;line-height: 40px;}
+	.client-wrap-desc {padding: 30px 15px;} 
+	.client-mini-wrap .bg {height: 250px;}
+	.client-mini-title, .text-popup-ajax, .quote-mini-block .text  {padding: 30px 15px;}
+	.client-mini-title .title {padding-bottom: 0px;}
+	.close-ajax-popup {right: 15px; top: 15px;}
+	.sub-mini-title.sm {font-size: 22px; line-height: 34px;}
+	.popup-ajax .image {height: 300px;}
+	.blog-item-title {padding: 15px;}
+	.img-detail.column-50 {width: 100%;}
+	.img-detail {height: 250px;}
+	.arrow-mini-back .title {display: none;}
+	.arrow-mini-back {padding: 30px 15px;}
+	.arrow-mini-back .sub-mini-title.xxs {line-height: 57px; letter-spacing: 3px;}
+	.arrow-mini-back .circle-link {top: 30px; right: 15px;}
+	.send-mini-button {min-width: 100%; width: 100%;}
+	.project-filter a {margin: 0px 30px 15px; padding-bottom: 7px;}
+}
+
+
+
+
+
+
+
+
+
+

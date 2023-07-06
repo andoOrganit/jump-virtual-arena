@@ -1,0 +1,676 @@
+<!-- ///
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+
+
+   _____ _______       _____ _______   _____   _____ _____  _____  
+  / ____|__   __|/\   |  __ \__   __| |  __ \ / ____|  __ \|  __ \ 
+ | (___    | |  /  \  | |__) | | |    | |__) | |  __| |__) | |  | |
+  \___ \   | | / /\ \ |  _  /  | |    |  _  /| | |_ |  ___/| |  | |
+  ____) |  | |/ ____ \| | \ \  | |    | | \ \| |__| | |    | |__| |
+ |_____/   |_/_/    \_\_|  \_\ |_|    |_|  \_\\_____|_|    |_____/ 
+                                                                   
+                                                                  
+
+
+/*------------------------------------------------------------------------------------------------------------
+
+© :13 Design Creative Lab — 2019   
+From : Paris, London, Orléans.
+
+Designed by https://2points13.fr
+
+-------------------------------------------------------------------------------------------------------------*
+
+
+/// --> 
+
+
+
+       <!-- /// SCRIPT JS MAOU /// --> 
+
+        <script type="text/javascript" src="guardcat_open/guardcat.js"></script>
+      
+
+        <script type="text/javascript">
+        guardcat.init({
+        "privacyUrl": "#", /* Privacy policy url */
+
+        "hashtag": "#guardcat", /* Open the panel with this hashtag */
+        "cookieName": "guardcat", /* Cookie name */
+    
+        "orientation": "bottom", /* Banner position (top - bottom) */
+        "showAlertSmall": false, /* Show the small banner on bottom right */
+        "cookieslist": true, /* Show the cookie list */
+
+        "adblocker": true, /* Show a Warning if an adblocker is detected */
+        "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+        "highPrivacy": true, /* Disable auto consent */
+        "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+        "removeCredit": false, /* Remove credit link */
+        "moreInfoLink": false, /* Show more info link */
+        "useExternalCss": false, /* If false, the guardcat.css file will be loaded */
+
+        //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+                          
+        "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
+        });
+        </script>
+
+
+       <!-- /// END SCRIPT JS MAOU /// --> 
+
+
+
+
+<!-- /// ALL SERVICES RGPD 
+ 
+
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+
+All services to activate or not (fill in your codes per service)
+
+-------------------------------------------------------------------------------------------------------------*
+
+/// --> 
+
+
+ <!-- /// SERVICES /// --> 
+
+
+        <!-- /// Google jsapi /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('jsapi');
+        </script>
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script type="text/javascript" src="//www.google.com/jsapi"></script>  
+
+        /// --> 
+
+
+        <!-- /// Google jsapi /// -->  
+
+
+
+
+        <!-- /// Google Maps /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.googlemapsKey = 'API KEY';
+        (guardcat.job = guardcat.job || []).push('googlemaps');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="googlemaps-canvas" zoom="zoom" latitude="latitude" longitude="longitude" style="width: widthpx; height: heightpx;"></div><script>guardcat.user.mapscallback = 'callback_function';guardcat.user.googlemapsLibraries = 'LIBRARIES';</script>  
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=API KEY" type="text/javascript"></script>
+        <script type="text/javascript">
+        function initialize() {
+        var mapOptions = {
+        center: { lat: latitude, lng: longitude},
+        zoom: zoom
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>  
+
+        /// --> 
+
+
+        <!-- /// Google Maps /// -->  
+
+
+
+
+        <!-- /// Google Maps (search query) /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('googlemapssearch');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="googlemapssearch" data-search="SEARCHWORDS" data-api-key="YOUR_GOOGLE_MAP_API_KEY" width="WIDTH" height="HEIGHT" ></div> 
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="WIDTH" height="HEIGHT" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=SEARCHWORDS" allowfullscreen> </iframe>  
+
+        /// --> 
+
+
+        <!-- /// Google Maps (search query) /// --> 
+
+
+
+
+        <!-- /// Google Tag Manager /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.googletagmanagerId = 'GTM-XXXX';
+        (guardcat.job = guardcat.job || []).push('googletagmanager');
+        </script>
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-XXXX');</script>  
+
+        /// --> 
+
+
+        <!-- /// Google Tag Manager /// -->  
+
+
+
+
+        <!-- /// reCAPTCHA /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('recaptcha');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="g-recaptcha" data-sitekey="sitekey"></div> 
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>  
+
+        /// --> 
+
+
+        <!-- /// reCAPTCHA /// --> 
+
+
+
+
+        <!-- /// TagCommander /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.tagcommanderid = 'tagcommanderid';
+        (guardcat.job = guardcat.job || []).push('tagcommander');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="timelinejs-canvas" spreadsheet_id="spreadsheet_id" width="width" height="height" lang="lang_2_letter" font="font (Bevan-PotanoSans | Georgia-Helvetica | Arvo-PTSans)" map="map (toner | osm)" start_at_end="start_at_end (false | true)" hash_bookmark="hash_bookmark (false | true)" start_at_slide="start_at_slide (0 | ...)" start_zoom="start_zoom (0 | ... | 5)"></div> 
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe src="//cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=spreadsheet_id&font=font&maptype=map&lang=lang_2_letter&start_at_end=start_at_end&hash_bookmark=hash_bookmark&start_at_slide=start_at_slide&start_zoom_adjust=start_zoom_adjust&height=height" width="width" height="height" frameborder="0"></iframe>  
+
+        /// --> 
+
+
+        <!-- /// TagCommander /// -->
+
+
+
+        
+        <!-- /// Timeline JS /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('timelinejs');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="timelinejs-canvas" spreadsheet_id="spreadsheet_id" width="width" height="height" lang="lang_2_letter" font="font (Bevan-PotanoSans | Georgia-Helvetica | Arvo-PTSans)" map="map (toner | osm)" start_at_end="start_at_end (false | true)" hash_bookmark="hash_bookmark (false | true)" start_at_slide="start_at_slide (0 | ...)" start_zoom="start_zoom (0 | ... | 5)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe src="//cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=spreadsheet_id&font=font&maptype=map&lang=lang_2_letter&start_at_end=start_at_end&hash_bookmark=hash_bookmark&start_at_slide=start_at_slide&start_zoom_adjust=start_zoom_adjust&height=height" width="width" height="height" frameborder="0"></iframe>  
+
+        /// --> 
+
+
+        <!-- /// Timeline JS /// -->
+
+
+
+
+        
+        <!-- /// Twitter Widgets API /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('twitterwidgetsapi');
+        </script>
+
+
+        <!-- /// Twitter Widgets API /// -->
+
+
+
+
+        <!-- /// Disqus /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.disqusShortname = 'disqus_shortname';
+        (guardcat.job = guardcat.job || []).push('disqus');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div id="disqus_thread"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script type="text/javascript">
+        var disqus_shortname = 'disqus_shortname';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script> 
+
+        /// --> 
+
+
+        <!-- /// Disqus /// -->
+
+
+
+
+        <!-- /// Facebook (commentaire) /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('facebookcomment');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="fb-comments" data-numposts="5" data-colorscheme="light" data-href="CURRENT_URI"></div>
+
+        <div class="fb-comments" data-numposts="5" data-colorscheme="dark" data-href="CURRENT_URI"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }
+        (document, 'script', 'facebook-jssdk'));
+        </script> 
+
+        /// --> 
+
+
+        <!-- /// Facebook (commentaire) /// -->
+
+
+
+        
+
+
+        <!-- /// Facebook (likebox) /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('facebooklikebox');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="fb-like-box" data-href="page_url" data-width="width" data-height="height" data-colorscheme="light" data-show-faces="faces (true | false)" data-header="header (true | false)" data-stream="posts (false | true)" data-show-border="border (true | false)"></div>
+
+        <div class="fb-like-box" style="background:#141823" data-href="page_url" data-width="width" data-height="height" data-colorscheme="dark" data-show-faces="faces (true | false)" data-header="header (true | false)" data-stream="posts (false | true)" data-show-border="border (true | false)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }
+        (document, 'script', 'facebook-jssdk'));
+        </script>
+
+        /// --> 
+
+
+        <!-- /// Facebook (likebox) /// -->
+
+
+
+
+
+        <!-- /// Facebook Pixel /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.facebookpixelId = 'YOUR-ID'; tarteaucitron.user.facebookpixelMore = function () { /* add here your optionnal facebook pixel function */ };
+        (guardcat.job = guardcat.job || []).push('facebookpixel');
+        </script>
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script> !function(f,b,e,v,n,t,s) { if(f.fbq) return; n=f.fbq=function(){ n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments); }; if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[]; t=b.createElement(e); t.async=!0; t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s); } (window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', 'YOUR-ID'); fbq('track', 'PageView'); </script>
+
+        /// --> 
+
+
+        <!-- /// Facebook Pixel /// -->
+
+
+
+
+
+        <!-- /// Youtube /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('youtube');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="youtube_player" videoID="video_id" width="width" height="height" theme="theme (dark | light)" rel="rel (1 | 0)" controls="controls (1 | 0)" showinfo="showinfo (1 | 0)" autoplay="autoplay (0 | 1)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="width" height="height" src="//www.youtube.com/embed/video_id" frameborder="0" allowfullscreen></iframe>
+
+        /// --> 
+
+
+        <!-- /// Youtube /// -->
+
+
+
+
+
+        <!-- /// Vimeo /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('vimeo');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="vimeo_player" videoID="video_id" width="width" height="height"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="width" height="height" src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe>
+
+        /// --> 
+
+
+        <!-- /// Vimeo /// -->
+
+
+
+
+
+        <!-- /// Dailymotion /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('dailymotion');
+        </script>
+
+
+        <!-- /// Add this part to where the service should appear  
+
+        <div class="dailymotion_player" videoID="video_id" width="width" height="height" showinfo="showinfo (1 | 0)" autoplay="autoplay (0 | 1)"></div>
+
+        /// -->
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <iframe width="width" height="height" src="//www.dailymotion.com/embed/video/video_id" frameborder="0" allowfullscreen></iframe>
+
+        /// --> 
+
+
+        <!-- /// Dailymotion /// -->
+
+
+
+
+
+        <!-- /// Alexa /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.alexaAccountID = 'account_id';
+        (guardcat.job = guardcat.job || []).push('alexa');
+        </script>
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script type="text/javascript">
+        _atrk_opts = { atrk_acct:"account_id", domain:"domain.name",dynamic: true};
+        (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+        </script>
+
+        /// --> 
+
+
+        <!-- /// Alexa /// -->
+
+
+
+
+
+
+        <!-- /// Clicky /// --> 
+
+        <script type="text/javascript">
+        guardcat.user.clickyId = YOUR-ID;
+        guardcat.user.clickyMore = function () { /* add here your optionnal clicky function */ };
+        (guardcat.job = guardcat.job || []).push('clicky');
+        </script>
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script type="text/javascript">
+        var clicky_site_ids = clicky_site_ids || [];
+        clicky_site_ids.push(YOUR-ID);
+        (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s ); })();
+        </script>
+
+        /// --> 
+
+
+        <!-- /// Clicky /// -->
+
+
+
+
+
+        <!-- /// Timeline JS /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('timelinejs');
+        </script>
+
+
+        <!-- /// Service Marker (delete if installed)  
+
+        <script type="text/javascript" src="https://cdn.tagcommander.com/tagcommanderid.js"></script>  
+
+        /// --> 
+
+
+        <!-- /// Timeline JS /// -->
+
+
+
+
+
+        <!-- /// GO Search Maps /// --> 
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('googlemapssearch');
+        </script>
+
+
+        <!-- /// 
+
+        exemples : 
+
+        <div class="googlemapssearch" data-search="SEARCHWORDS" data-api-key="YOUR_GOOGLE_MAP_API_KEY" width="WIDTH" height="HEIGHT" ></div>  
+
+        /// --> 
+
+
+        <!-- /// End Maps /// -->   
+
+
+
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('datatrack');
+        </script>
+
+
+        <script type="text/javascript">
+        guardcat.user.gajsUa = 'UA-1725670-36';
+        guardcat.user.gajsMore = function () { /* add here your optionnal _ga.push() */ };
+        (guardcat.job = guardcat.job || []).push('gajs');
+        </script>
+
+
+        <script type="text/javascript">
+        guardcat.user.gtagUa = 'UA-1725670-36';
+        guardcat.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+        (guardcat.job = guardcat.job || []).push('gtag');
+        </script>
+
+
+
+
+
+        <script type="text/javascript">
+        (guardcat.job = guardcat.job || []).push('twitterwidgetsapi');
+        </script>
+
+
+         <!-- /// End Maps /// -->   
+
+
+
+
+
+
+
+
+
+
+<!-- /// RGPD DATA :13 REDESIGN TARTEAUXCITRONS.JS 
+
+/*------------------------------------------------------------------------------------------------------------
+
+© :13 Design Creative Lab — 2019   
+From : Paris, London, Orléans.
+https://2points13.fr
+
+Designed by https://2points13.fr
+
+-------------------------------------------------------------------------------------------------------------*
+
+
+  ______ _   _ _____    _____   _____ _____  _____  
+ |  ____| \ | |  __ \  |  __ \ / ____|  __ \|  __ \ 
+ | |__  |  \| | |  | | | |__) | |  __| |__) | |  | |
+ |  __| | . ` | |  | | |  _  /| | |_ |  ___/| |  | |
+ | |____| |\  | |__| | | | \ \| |__| | |    | |__| |
+ |______|_| \_|_____/  |_|  \_\\_____|_|    |_____/ 
+                                                    
+
+
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------------------------------------                                
+
+/// --> 

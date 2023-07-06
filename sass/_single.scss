@@ -1,0 +1,197 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 28. SINGLE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.main-baner-full.align-center {padding: 90px 0px;}
+.single-title {text-align: center; position: relative; display: inline-block; width: 100%; padding: 210px 0px 0px; z-index: 1; @include transition (all 0.35s ease-out); 
+	& .title {font-size: 90px; line-height: 100px; padding-bottom: 25px;}
+	& .simple-text {padding-bottom: 40px;}
+}
+.image-offset {position: relative; width: 100%;height: 100%; box-shadow: 0px 38px 98px rgba(0,0,0,0.74);}
+.over-wrapp {position: absolute; overflow: hidden; left: 0px; top: 90px; bottom: 90px; right: 0px;}
+.section-offset-container {position: absolute; width: 100%; height: 100%; z-index: 5; left: 0px; top: 0px; overflow-y: auto; margin-left: 20px; padding-right: 20px;}
+.slide-layer {@extend .pos-absol; background: rgba(49,44,44,0.6); @include transition (all 0.35s ease-out);}
+
+.hold-layer {background: $col-text2; @extend .pos-absol; @include transition (all 0.35s ease-out);}
+.main-baner-full.hold .hold-layer {background: rgba(71,52,52,0.96);}
+
+.slide-elem {position: relative; padding: 35px 0px; width: 100%; height: 100%;
+	& .container {height: 100%; position: relative;}
+}
+.single-caption {right: -240px; max-width: 240px; padding: 0px 20px;
+	& .title {font-size: 36px; line-height: 42px; color: $col-text3; padding-bottom: 10px;}
+}
+
+@media (max-width: 1840px) {
+	.single-caption {position: relative; right: 0px;}
+}
+@media (max-width: 1500px) {
+    .single-title .title {font-size: 50px; line-height: 60px;}
+    .single-title {padding-top: 120px;}
+}
+
+@media (max-width: 1200px) {
+    .single-page .over-wrapp {bottom: 0px;}
+	.slide-elem {height: 500px;}
+}
+@media (max-width: 1400px) {
+    .over-wrapp {top: 66px; bottom:53px;}
+    .slide-elem .container, .single-title .container {width: 100%; padding: 0px;}
+    .image-offset {box-shadow: none;}
+}
+@media (max-width: 1024px) {
+    .single-title {padding-right: 20px;}
+    .slide-elem {padding-right: 20px;}
+}
+@media (max-width: 992px) {
+    .single-page .main-baner-full {min-height: 800px;} 
+	.single-title {padding: 80px 15px 0px;}
+	.single-title .title {font-size: 30px; line-height: 40px; padding-bottom: 15px;}
+	.slide-elem {padding: 15px 30px;}
+    .section-offset-container {margin-left: 0px; padding-right: 0px;}
+}
+@media (max-width: 480px) {
+    .slide-elem {padding: 15px;}
+    .single-title {padding-top: 60px;}
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 29. SINGLE
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.row.row-lg {margin-left: -25px; margin-right: -25px; height: 100%;}
+.col {position: relative; padding: 0px 25px 50px; height: 100%; float: left;}
+.col-100 {width: 100%;}
+.col-60 {width: 60%;}
+.col-40 {width: 40%;}
+.single-slide {position: relative; width: 100%; height: 100%;}
+.single2-slider {padding: 90px 0px 0px 220px;  @include transition (all 0.35s ease-out);}
+.single-desc {z-index: 5; color: $col-text3; position: absolute;
+    & .folow span {font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 1.4px; @extend .font-type-2; text-transform: uppercase;}
+	& .simple-text p {@extend .font-type-4;}
+}
+.single2-desc {background: $bg-type3; max-width: 420px; left:35px; padding: 20px 30px 55px 80px; margin-top: 45px; @include transition (all 0.55s ease-out); 
+	& .title {font-size: 90px; line-height: 90px; display: block; min-width: 607px; padding-bottom: 40px;}
+	& .simple-text {padding-bottom: 25px;}
+}
+.project-author {color: $col-text3; font-size: 15px; line-height: 18px; @extend .font-type-4; display: block; margin-bottom: 50px;}
+.single2-point {position: absolute; right: 25px; top: 115px; width: 65px; padding: 3px; background: rgba(0,0,0,0.25); z-index: 10;
+	& li {position: relative; width: 100%; cursor: pointer;}
+	& li img {width: 100%; height: 33px; margin-bottom: 3px; display: block;}
+	& li:last-child img {margin-bottom: 0px;}
+	& li:before {content: ''; position: absolute; left: -2px; top: -2px; right: -2px; bottom: -2px; background: rgba(255,255,255,0.15); border: 1px solid #fff; opacity: 0; @include transition (all 0.25s ease-out);}
+	& li:hover:before, & li.active:before {opacity: 1;}
+}
+
+    .main-content.open-panel .single2-slider {padding-left: 0px;}
+    .main-content.open-panel .single2-desc {left: -800px;}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 30. SINGLE 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.single3-slider {padding: 90px 550px 0px 0px;}
+.singl3-desc {right: 0px; width: 100%; overflow-y: auto; z-index: 25; max-width: 550px; background: #2f2f2f;top: 90px; bottom: 0px; padding:45px 45px 60px;
+	& .title {font-size: 67px; line-height: 75px; display: block; padding-bottom: 20px;}
+	& .simple-text p {color: $col-text8;}
+	& .simple-text {padding-bottom: 75px;}
+	& .folow a:after {color: $col-text3;}
+	& .folow {position: relative; display: inline-block; width: 100%; padding-bottom: 60px;}
+}
+.single3-point {position: relative; width: 100%; height: 200px;
+	&.active .layer-bg-3 {opacity: 0;}	
+}
+.single3-slider-point {width: 200px; position: absolute; right: 550px; top: 90px; bottom: 0px; z-index: 15; height: auto;@include transform (translateX(100%)); @include transition (all 0.35s ease-out); 
+    & .swiper-slide {height: auto;} 
+	&.active {@include transform (translateX(0%));}
+}
+
+.bar-navigation {position: absolute; left: -50px; width: 50px; z-index: 6;
+    & .nav-arrow {background: $col-text3; text-align: center; width: 100%; height: 50px; line-height: 50px; font-size: 20px; color: #c3c3c3; cursor: pointer;  @include transition (all 0.25s ease-out);}
+	& .nav-arrow:hover {background: #201a1a; color: $col-text3;}
+}
+.close-nav-bar {position: relative; width: 100%; height: 50px; background: #201a1a; text-align: center; cursor: pointer;
+    & i {display: inline-block; margin-top: 23px; width: 25px; height: 2px; background: $col-text3; position: relative; @include transition (all 0.25s ease-out);}
+    & i:before { content: ''; position: absolute; left: 0px; top: -6px; width: 100%; height: 2px; background: $col-text3; backface-visibility: hidden; @include transition (all 0.25s ease-out);}
+    & i:after { content: ''; position: absolute; left: 0px; bottom: -6px; width: 100%; height: 2px; background: $col-text3; backface-visibility: hidden;@include transition (all 0.25s ease-out); }
+    &.active i { background: transparent;}
+    &.active i:before {@include transform (rotate(45deg)); top: 0px; }
+    &.active i:after {@include transform (rotate(-45deg)); bottom: 0px; }
+	
+	&.type-2 {position: fixed; left: 140px; top: 50%; width: 50px; margin-top: -25px; z-index: 50; background: #7f7f7f;}
+	&.type-2 i:before {@include transform (rotate(45deg)); top: 0px; background: #9d9d9d;}
+	&.type-2 i:after {@include transform (rotate(-45deg)); bottom: 0px; background: #9d9d9d}
+	&.type-2 i { background: transparent;}
+	&.type-2.active i:before {@include transform (rotate(-35deg)); top: -6px; width: 90%;}
+	&.type-2.active i:after {@include transform (rotate(35deg)); bottom: -6px; width: 90%;}
+}
+.sliders-wrapp {height: 100%;}
+
+@media (max-width: 1500px) {
+	.single2-desc .title {font-size: 60px; line-height: 60px; padding-bottom: 30px;}
+	.single2-desc {left: 0px; padding: 30px 30px 30px 50px;}
+	.close-nav-bar.type-2 {left: 30px;}
+	.project-author {margin-bottom: 30px;}
+}
+@media (max-width: 1400px) {
+    .singl3-desc .title {font-size: 47px; line-height: 50px}
+    .singl3-desc .simple-text {padding-bottom: 50px;}
+    .single3-slider-point {width: 100px;}
+    .single3-point {height: 100px;}
+    .single3-slider {padding: 66px 550px 0px 0px;}
+	.single3-slider-point {top: 66px;}
+	.singl3-desc {top: 66px;}
+	.single2-desc {margin-top: 33px;}
+	.single2-slider {padding: 66px 0px 0px 220px;}
+	.col {padding: 0px 15px 30px;}
+	.row.row-lg {margin-left: -15px; margin-right: -15px;}
+	
+}
+@media (max-width: 1200px) {
+	.singl3-desc {width: 400px;}
+	.single3-slider {padding: 66px 400px 0px 0px;}
+	.single3-slider-point {right: 400px;}	
+}
+@media (max-width: 992px) {
+	.singl3-desc {position: relative; display: inline-block; width: 100%; top: auto; max-width: 100%; margin-top: 66px; padding: 40px 30px;}
+	.singl3-desc .folow {padding-bottom: 0px;}
+	.singl3-desc .simple-text {padding-bottom: 30px;}
+	.single3-slider-point {right: 0; top: 0;}
+	.top-baner.slider-swiching {height: auto;}
+	.sliders-wrapp {position: relative; width: 100%; height: auto; overflow: hidden;}
+	.single3-slider {height: 450px; padding: 0px;}
+    .close-nav-bar.type-2 {top: 66px; margin-top: 0px;}
+	.single2-point {top: 75px;}
+	.single2-slider {padding: 66px 0px 0px 0px; height: 750px;}
+	.col {padding: 15px;} 
+	.row.row-lg {margin-left: 0px; margin-right: 0px;}
+	.single2-desc {padding: 30px;}
+    .single2-desc.vertical-align {top: 66px; @include transform (translateY(0)); margin-top: 0px; padding: 60px 30px 30px 30px;}
+}
+@media (max-width: 768px) {
+	.singl3-desc .title, .single2-desc .title {font-size: 30px; line-height: 40px;}
+	.singl3-desc .simple-text p, .single2-desc .simple-text p {font-size: 12px; line-height: 20px;}
+	.singl3-desc, .single2-desc {padding: 30px 15px;}
+	.single3-slider {height: 400px;}
+	.col-60, .col-40 {width: 100%; height: 50%;}
+	.single2-desc .title {min-width: 100%;}
+    .single2-desc .project-author {padding-bottom: 30px;}
+}
+@media (max-width: 480px) {
+    .single2-slider {height: 620px;}
+    .single2-desc {z-index: 20;}
+}
+@media (max-width: 378px) {
+    .single2-slider {height: 580px;} 
+    .col {padding: 1px;}
+    .close-nav-bar.type-2 {left: 15px;}
+    .single2-desc.vertical-align {padding: 60px 15px 30px 15px;}
+    .single-title .title {font-size: 20px; line-height: 24px;}
+    .simple-text.sm p {font-size: 13px; line-height: 18px;}
+    .single-title .simple-text {padding-bottom: 20px;}
+}
+
+
+
+

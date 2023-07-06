@@ -1,0 +1,114 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 20. CONTACT PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.effect-push-2 {z-index: 99; overflow: hidden;}
+.left-desc {float: left; height: 100%; padding: 0px 80px 0px 120px; display: inherit;
+	& .title {font-size: 79px; line-height: 84px; padding-bottom: 90px;}
+}
+.bg-contact {background: #565656; padding: 120px 0px;}
+.addr-item-wrap {padding-bottom: 40px;}
+.addr-item { padding-bottom: 50px;
+    & .sub-title {font-size: 15px; color: $col-text6;}
+	& .addr-list li, & .link {font-size: 30px; line-height: 34px; font-weight: 400; @extend .font-type-2; color: $col-text;} 
+	& .link:hover {color: $bg-type1;}
+}
+.right-desc {float: left; height: 100%;  display: inherit;}
+.map-wrapper {position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;}
+
+.questform {position: relative; margin: 0 auto; max-width: 700px; margin-bottom: 110px;}
+.questions {position: relative; display: inline-block; width: 100%;
+	& input {position: relative; height: 100px; padding: 0px 100px 0px 24px; font-size: 50px; @extend .font-type-1; line-height: 100px; color: $col-text3; width: 100%; background-image: -webkit-linear-gradient(90deg, rgba(152,152,152,1) 0, rgba(136,136,136,1) 100%);background-image: -moz-linear-gradient(0deg,rgba(152,152,152,1) 0, rgba(136,136,136,1) 100%);background-image: linear-gradient(0deg, rgba(152,152,152,1) 0, rgba(136,136,136,1) 100%);background-position: 50% 50%;-webkit-background-origin: padding-box;background-origin: padding-box;-webkit-background-clip: border-box;background-clip: border-box;-webkit-background-size: auto auto;background-size: auto auto;}
+	& li {visibility: hidden; position: relative; height: 0; overflow: hidden; opacity: 0;}
+	& li.active {visibility: visible; height: auto; opacity: 1;}
+	& li span {display: block; position: relative; overflow: hidden; margin-bottom: 10px;}
+	& .sub-title {color: #d6d6d6; font-size: 15px; position: relative; @include transform(translateY(100%)); @include transition(all 0.25s ease-out);}
+	& li.active .sub-title {@include transform(translateY(0%));}
+	& li.move .sub-title {@include transform(translateY(-100%));}
+}
+
+.bottom-align {bottom: 0px; left: 0px; width: 100%; position: absolute;}
+.bottom-step-form {position: absolute; left: 0px; bottom: 0px; width: 100%; height: 100%; background: #7f7f7f; visibility: hidden; opacity: 0;}
+.bottom-step-form.active {visibility: visible; opacity: 1;}
+.bottom-step-form .copyright {position: relative; width: 100%; text-align: center; color: $col-text4; font-weight: 100; margin-bottom: 80px; font-size: 14px; line-height: 20px;}
+.simform-inner {position: relative; width: 100%; display: inline-block; min-height: 120px; @include transition(all 0.35s ease-out);}
+.controls {position: absolute; left: 0px; bottom: 0px; width: 100%; left: 0px;}
+.submit-button {display: none; background: none; border: 0px none; z-index: 5;}
+.next-step, .submit-button {position: absolute; right: 0px; height: 100px; top:0px; width: 100px; text-align: center; font-size: 30px; color: $col-text3; line-height: 100px; @include transform(translateY(-100%)); cursor: pointer;}
+.progress {position: absolute; left: 0px; bottom: 0px; width: 100%; height: 7px; background: #666; z-index: 1;}
+.progress-line {content: ''; position: absolute; left: 0px; top: 0px; height: 100%; width: 0%; background: #75acff; display: block;}
+.number-step {position: absolute; right: 0px; top: 10px;
+	& span {font-size: 15px; color: $col-text4; @extend .font-type-2; position: relative; display: inline-block;}
+}
+.error-message {position: absolute; left: 0px; top: 10px; right: 50px; font-size: 13px; font-style: italic; color:#f56060; @extend .font-type-2; opacity: 0; @include transition(all 0.25s ease-out);}
+.error-message.act {opacity: 1;}
+.final-message {visibility: hidden; opacity: 0; font-size: 40px; color: $col-text3; @include transition(all 0.45s ease-out); }
+.marker-tooltip {position: relative; padding: 35px 25px 60px; background: $col-text3; min-width: 260px; height: 170px; text-align: center; overflow: visible; border-radius: 0px; border: 0px none;
+	& .sub-title {padding-bottom: 25px;}
+	& h5 {@extend .font-type-2;}
+}
+.questform.last-step .simform-inner {opacity: 0;}
+.questform.last-step .final-message {visibility: visible; opacity: 1;}
+
+.full-height-baner.upper {z-index: 5;}
+.no-faound-title {position: relative; display: inline-block; z-index: 5; padding: 0px 15px;
+     & b {display: block; font-size: 426px; color: $bg-type2; @extend .font-type-2; font-weight: 700; line-height: 315px; text-shadow: $item-shadow9; padding-bottom: 60px; letter-spacing: -40px; margin-left: -40px;}
+	& .title {display: block; margin-bottom: 30px;}
+} 
+.close-form {position: absolute; display: none;right:15px; top: 15px;width: 30px; height: 30px; cursor: pointer; z-index: 50;
+	& img {width: 100%; height: auto;}
+}
+
+@media (max-height: 870px) {
+	.bottom-step-form .copyright, .questform {margin-bottom: 30px;}
+}
+@media (max-height: 1700px) {
+	.left-desc {padding: 0px 60px;}
+	.left-desc .title {font-size: 50px; line-height: 56px;}
+	.addr-item .addr-list li, .addr-item .link {font-size: 20px; line-height: 24px;}
+}
+@media (max-width: 1400px) {
+	.left-desc .title {padding-bottom: 50px;}
+	.addr-item .addr-list li, .addr-item .link {font-size: 20px; line-height: 24px;}
+	.addr-item {padding-bottom: 30px;}
+	.bottom-step-form .copyright, .questform {margin-bottom: 30px;}
+	.questions input {font-size: 40px;}
+}
+@media (max-width: 992px) {
+	.close-form {display: block;}
+	.addr-item-wrap {padding-bottom: 30px;}
+	.full-height-baner.upper {height: 100vmin; min-height: 800px;}
+	.left-desc.column-50 {width: 100%; height: auto; padding: 0px 30px;
+		& .vertical-align {position: relative; display: inline-block; width: 100%; top: auto; @include transform(translateY(0px));}
+		& .caption {padding: 45px 0px 60px; text-align: center;}
+	}
+	.right-desc.column-50 {width: 100%; height: 400px;}
+	.bottom-step-form .bottom-align {bottom: auto; top: 50px;}
+	
+}
+@media (max-width: 768px) {
+	.no-faound-title b {font-size: 250px; line-height: 200px; padding-bottom: 30px;}
+	.no-faound-title .title {font-size: 40px;}	
+	.questform {max-width: 100%; padding: 0px 15px;}
+}
+@media (max-width: 480px) {
+    .full-height-baner.upper {min-height: 600px;}
+	.no-faound-title b {font-size: 170px; line-height: 130px;}
+	.caption h2.title {font-size: 35px; line-height: 45px; padding-bottom: 30px;}
+	.addr-item .addr-list li, .addr-item .link {font-size: 16px; line-height: 20px;}
+	.addr-item .sub-title {padding-bottom: 10px;}
+	.questions input {height: 60px; line-height: 60px; padding: 0px 60px 0px 15px; font-size: 20px;}
+	.next-step, .submit-button {height: 60px; line-height: 56px; width: 60px; font-size: 20px;}
+	.simform-inner {min-height: 70px;}
+	.questions .sub-title {font-size: 11px;}
+	.final-message {font-size: 24px;}
+	.questform {margin-bottom: 60px;}
+}
+
+
+
+
+
+
+
+
